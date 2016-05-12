@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+
+if [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
+   [ "$TRAVIS_REPO_SLUG" == "hroncok/MI-PYT" ] &&
+   [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]; then
+  bin/create-netrc "$USERNAME" "$PASSWORD" && bin/deploy
+  rm ~/.netrc
+fi
