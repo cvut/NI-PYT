@@ -3,9 +3,8 @@
 git diff-tree --no-commit-id --name-only -r HEAD | egrep '^tutorials/*.md$'
 
 
-if [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
-   [ "$TRAVIS_REPO_SLUG" == "hroncok/MI-PYT" ] &&
-   [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]; then
+if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ] &&
+   [ "$TRAVIS_REPO_SLUG" == "hroncok/MI-PYT" ] && [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]; then
   bin/create-netrc "$USERNAME" "$PASSWORD" && bin/deploy
   rm ~/.netrc
 fi
