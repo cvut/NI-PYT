@@ -19,6 +19,7 @@ after_success:
      [ "$TRAVIS_REPO_SLUG" == "hroncok/MI-PYT" ] &&
      [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]; then
         bin/create-netrc "$USERNAME" "$PASSWORD" && bin/deploy;
+        rm ~/.netrc;
   fi
 
 env:
