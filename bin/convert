@@ -1,0 +1,24 @@
+#!/bin/bash -eu
+
+rm -rf .dokuwiki 2>/dev/null || :
+mkdir -p .dokuwiki/tutorials
+
+for MD in tutorials/*.md; do
+  echo "Converting $MD"
+  TXT=".dokuwiki/${MD%.md}.txt"
+  BASENAME="$(basename "$MD")"
+  NUMBER="${BASENAME%_*}"
+
+  # Convert from Markdown to Dokuwiki
+  pandoc "$MD" --to dokuwiki -o "$TXT"
+
+  # Convert <source> to <code> and correnct links
+  sed -Ei \
+    -e 's@<source lang="(\w+)">@<code \1>@g' \
+    -e 's@</source>@</code>@g' \
+    -e 's@\[\[(.+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
+    "$TXT"
+
+  # Add number as indexmenu
+  echo -e '\n\n{{indexmenu_n>'"$NUMBER"'}}' >> "$TXT"
+done

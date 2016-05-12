@@ -1,0 +1,12 @@
+#!/bin/bash -eu
+
+cd .dokuwiki/tutorials
+
+cadaver https://edux.fit.cvut.cz/data/MI-PYT/pages << EOF
+cd tutorials
+get start.txt start.txt
+delete *
+mput *.txt
+EOF
+
+cd - >/dev/null

@@ -1,0 +1,5 @@
+#!/bin/bash -eu
+
+echo -e "machine edux.fit.cvut.cz" > ~/.netrc
+echo -e "  login $1" >> ~/.netrc
+echo -e "  password $2" >> ~/.netrc
