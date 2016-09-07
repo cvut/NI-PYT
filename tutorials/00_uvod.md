@@ -5,7 +5,7 @@ O materiálech
 -------------
 
 Díváte se na materiály předmětu [MI-PYT (Pokročilý Python)](http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/04/87/12/p4871206.html) na [FIT ČVUT](http://fit.cvut.cz/).
-Materiály jsou dostupné v dvojí podobě, interně pro studenty FITu [na Eduxu](https://edux.fit.cvut.cz/courses/MI-PYT/) a pro všechny veřejně [na GitHubu](https://github.com/hroncok/MI-PYT).
+Materiály jsou dostupné v dvojí podobě, interně pro studenty FITu [na Eduxu](https://edux.fit.cvut.cz/courses/MI-PYT/) a pro všechny veřejně [na GitHubu](https://github.com/cvut/MI-PYT).
 
 Kde není uvedeno jinak, jsou materiály dostupné pod licencí [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/), kde autorem je Petr Viktorin a Miro Hrončok (vyučující předmětu).
 Tento kurz vzniká pod záštitou firmy [Red Hat Czech, s.r.o.](https://www.redhat.com/en/global/czech-republic)
