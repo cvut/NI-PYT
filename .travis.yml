@@ -1,24 +1,19 @@
-# This is bogus, but needs to be here
-language: c
-compiler:
-- gcc
-
-# Install dependencies
+language: python
+python:
+- '3.5'
 sudo: true
 dist: trusty
 install:
- - sudo sed -i 's/trusty/xenial/' /etc/apt/sources.list # for new pandoc
- - sudo rm -rf /etc/apt/sources.list.d/* # disable 3rd party repos
- - sudo apt-get update -qq
- - sudo apt-get install -qq cadaver pandoc ca-certificates
-
+- sudo sed -i 's/trusty/xenial/' /etc/apt/sources.list # for new pandoc
+- sudo rm -rf /etc/apt/sources.list.d/* # disable 3rd party repos
+- sudo apt-get update -qq
+- sudo apt-get install -qq pandoc ca-certificates
+- pip install requests lxml
 script:
-  - bin/convert
-
+- bin/convert
 after_success:
-  - bin/travis-deploy
-
+- bin/travis-deploy
 env:
   global:
-  - secure: WPmhQpa14VDRZLjyJR8+b0p/c9PyWiIvZoZhQeaR/6k0b25DlQe52gkUK9DYTCoaFk4pl7C6dcWgsU7gVcj7kVDSbvhCROYAQFIuMuBcLndjU4Zl++WfAFRwu77Hc1LuqGJJRD8y1K773+1vo9urBt4OQXqZaBTlUMhBChUEEg05AWHUMmVjzwCbSFK+9qVLfRum2eY0HbfdWXmrVJ0nJj9Yvfe7cBv55rrMLrs16HDvhe5fI31Gs9fPI9ouar9GZ/TswAvc+qbHT/pxAZgsiVUyvD5dT1M+YI1XeurnPAPtEG/W56Jew0HxOoaHBqGQP1mAF6PaM3Zt6Ag97u/LnOTT+NX1Ddijt6ftILUfy/VRI/YnRbq4lHfy3Yl7eBblSbQ6WJ2csDWZF17gLNTG99RpbXOk7eaHFaUJcYhbSE2Iaq5BOK2GQ9MGa2xdn8VUxWp7hROXFcZhgAbU0aikpJTnHCn25I191uOyV5uROkU3lq+4My0EMlfioktBpi7gZmTOtRia1qIkHIlgAiG8N84ditvDDVMtxRJOmtHiyW3x3WJrLFtToyifu9t55H0lfE+PipKrRgnHLZb0ab0qp6We4KQGe6YR8T17b4Cw9iSU7SUyY1bqfrTwUkuu7OsnwckKh194phfhSPYEV6Tv/UAmSzbcffEFJroHKLWbJaI=
-  - secure: HBZyNNnkUmlLlUJAGky7AS2qdmmwpzLI/BODBrAaIxIM7jBFpd4XeiorH/26EqiyVHGXZVKxaEpNLdMcztdWSXQmzOcOlxxtFUz9gBy6XE/NF2DNGFyHEJPkBw90RuK8NPI4yDainoKj9Sp7dNb0fvosTzwDk8BdMXBUQs18/JO62sOE0ExnRZpLl8osbyqqR43Rrh/d5nqK3PLRkt4KRWU3gQIjyQ0Nm0eRUIm5F7HuhvlEFJgti1FPk5ouJTQxyccVIkpIcEt+FjynisShL9n7M72WTOWLaWmEknOlPMZdD1xVgbSxekKZGRVpIaR4Rjl1uqN441ar+QUiuY67PVAzdeeco5ZLiwAewfZLlW3KYyzN23tQzOLy0cOZn2HeQxqd3WV4a1F1qH7FCNxpVxb4GpDxitsvMq79e1rL/3kQOHe28zfna/36KE+T5cHE5Hjj72szwiH0v7Rlzh/+LVZj+GEGSMOUfFi3ruCxStwhPtwcIjXhda3+Ksz0JkTRDGmbX2JFPkldKKPwCPaOSM/jREyZtW/THpnA4v0MJVGhCEObjCegShDWT51Pxh5MXPDW8Er5Y9gllYMsaLJNhddpt5DHZFeArE8xcYLQa8kkqm49cltf90HWAul0ihM0DBzYZnFf8daEQWI3WJ2Vlwc80nKgxKjrr0DxyToUBss=
+  - secure: d+IfxS2eWF/ReTAuREYweAONogQZK25gbl78F0ouFpRZymaLZQPGIDnuT80gbict6Jji8CsrUCg9OK2appmWsCB3r0KnXJhDVep/jW3+P+KlOYH1OHtW97RKLk9169w0IF8QmMP9oVSspMdNLb2RUZvr7FX07HRvaRL0YXjc2FRTsI6LlAyz+hdX2G4Hi6B5LbW96b9+MEDRQ6ey8ox6CQ/JcLbvtmEQbAILsE7YIhKVLX7Lec1i+cvUn4N1AKfCMgk3gW6mZ/Qkrxv16qo+E9iYGjqIE1/4C/3IStAldCLCICaNJDQgzVxh0v3YuuRcbixAJqkzouBvBpj6FgwyyDjZ8lgEafa8XNrfhdqYiWN6PJIJ91JzZuckaRWF6ODYI+MU/Ln35N14cKDAdd8GZkbrd8qbE9JOGGHAjytOs7cgymgj2uCntb+0+ayVDNV8eFsoZd4uUW+yFKOw1NcKlDr51QcHdoL2XbCtsvZbSUna7L+5a2I53zzqREJbQCuMccEQev4lmmyu4cVFlDd2IwV0VdUzIU20Kg7jamPx1JEu7iUBZ4SreZIpt7oRHk+XjOywtLTH295/ejBBckLmk54pm+IGj/e6/Q96lA0ZHm4jP20WwF8fhuoB/VJ/KzkV9sZIRkflloN1pfwF+WJH9xnOnILwnaEqj83p+9Dhbrk=
+  - secure: fL5TbkNP0ltn46reSH8lpdkNyRu5pIKK0P6UALLuYK42MYusrTyteRJQuAsVBy0u3mord5nqRNBY0P64zZC6WOvke7z9Et0RbMmpkjXzBXotMJzJSDVQtzJ822LTyQP7yJqfd+pRLy3pMKFBAchwkYNNcyi23EiEg9PyEuBUBrLpAorw9UYQ/Po3JlhQKD/9BRH6j0poYQXaPjN4y2jdOs5UI2IbGW8YaNB2jbEFU8h5+HkCjEIgJcFFmxIg0UcALVuJmJsue9sS/IZMqGD02EpIt27BmMRQAK20Pp0KB41vse2wnpHvokc5KfcGA70OQ7MSiAxx5G1dYbM9Hsxf10zDGLiuUtWQBDIQB1OtJCo9WjYzzLIaWTsCGKRx4ExhrC9GIlqgP0r6SYjQyw6QlAnSih6QeifPKH7kwgAamuAR5Rfc0c1NIN1cx0zhvGtskUPdxCV7VHq0jokcwrDmn7ZyzdBSLvPO8CrBRV7ZefVa7wWvHlZY6JwGbwlQiqsor8DuXoqIgwMCjntfi//IT5YxNyljduJyaEpRnqS3Tn4G2HRkg1wdrhNIHutDdmyVDs5a/J6oaMn8E7OCBuHfO3GZYSM7sWwi5GxESC5GLMbj68vYSuM6KZ5PHa53r4z93sme6T9PCrXetV1249UiB5h6ztbXlvIIa4fwwgo7E7o=

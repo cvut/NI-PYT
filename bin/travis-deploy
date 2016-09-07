@@ -4,7 +4,6 @@ git diff-tree --no-commit-id --name-only -r "${TRAVIS_COMMIT_RANGE/.../..}" | eg
 
 
 if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ] &&
-   [ "$TRAVIS_REPO_SLUG" == "cvut/MI-PYT" ] && [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]; then
-  bin/create-netrc "$USERNAME" "$PASSWORD" && bin/deploy
-  rm ~/.netrc
+   [ "$TRAVIS_REPO_SLUG" == "cvut/MI-PYT" ] && [ -n "$EDUX_COOKIE_NAME" ] && [ -n "$EDUX_COOKIE_VALUE" ]; then
+  bin/deploy
 fi
