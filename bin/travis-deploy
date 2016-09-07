@@ -1,8 +1,5 @@
 #!/bin/bash -eu
 
-git diff-tree --no-commit-id --name-only -r "${TRAVIS_COMMIT_RANGE/.../..}" | egrep '^tutorials/.*.md$'
-
-
 if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ] &&
    [ "$TRAVIS_REPO_SLUG" == "cvut/MI-PYT" ] && [ -n "$EDUX_COOKIE_NAME" ] && [ -n "$EDUX_COOKIE_VALUE" ]; then
   bin/deploy
