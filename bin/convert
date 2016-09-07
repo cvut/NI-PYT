@@ -16,7 +16,7 @@ for MD in tutorials/*.md; do
   sed -Ei \
     -e 's@<source lang="(\w+)">@<code \1>@g' \
     -e 's@</source>@</code>@g' \
-    -e 's@\[\[(.+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
+    -e 's@\[\[([^\|]+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
     "$TXT"
 
   # Add number as indexmenu
