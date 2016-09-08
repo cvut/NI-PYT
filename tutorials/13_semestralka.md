@@ -9,6 +9,7 @@ Ve všech případech musí práce splňovat tyto požadavky:
 
  * musí být napsaná v Pythonu (Cython se samozřejmě také počítá),
  * musí splnit zadání, na kterém jsme se dohodli,
+ * musí být v gitovém repozitáři,
  * kód musí splňovat [konvence](https://www.python.org/dev/peps/pep-0008/),
  * kód, komentáře i dokumentace musí být v angličtině,
  * kód musí být dostatečně pokryt testy (nechceme stanovovat číselnou hranici, použijte selský rozum),
