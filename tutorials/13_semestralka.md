@@ -7,7 +7,7 @@ Komplexnější témata mohou být po konzultaci s cvičícími uznaná jako jed
 
 Ve všech případech musí práce splňovat tyto požadavky:
 
- * musí být napsaná v Pythonu (Cython se samozřejmě také počítá),
+ * musí být napsaná v Pythonu 3 (Cython se samozřejmě také počítá),
  * musí splnit zadání, na kterém jsme se dohodli,
  * musí být v gitovém repozitáři,
  * kód musí splňovat [konvence](https://www.python.org/dev/peps/pep-0008/),
