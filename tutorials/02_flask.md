@@ -317,11 +317,13 @@ Termín odevzdání je začátek příštího cvičení (dřívější paralelky
 ### Twitter Wall
 
 Konzole není pro Twitter Wall dostatečně vhodné médium,
-doplňte do aplikace webový frontend, který bude zobrazovat avatary, obrázky,
-odkazy... Hledaný pojem by měl jít zadat pomocí URL.
+doplňte do aplikace webový frontend, který bude zobrazovat
+výsledky hledání. Hledaný pojem by měl jít zadat pomocí URL.
 
-Pokud to neumíte nebo nechce, netrapte se s JavaScriptem, ale po načtení
-stránky prostě zobrazte několik posledních tweetů.
+Pro plný počet bodů  musí rozhraní zobrazovat avatary uživatelů
+a zpracovávat [entity] jako obrázky, odkazy a hash tagy.
+
+[entity]: https://dev.twitter.com/overview/api/entities-in-twitter-objects
 
 ### GitHub Issues Bot
 
