@@ -12,6 +12,7 @@ Ve všech případech musí práce splňovat tyto požadavky:
  * musí být v gitovém repozitáři,
  * kód musí splňovat [konvence](https://www.python.org/dev/peps/pep-0008/),
  * kód, komentáře i dokumentace musí být v angličtině,
+ * commity musí obsahovat vhodně atomické změny a mít vysvětlující message,
  * kód musí být dostatečně pokryt testy (nechceme stanovovat číselnou hranici, použijte selský rozum),
  * projekt musí být zabalen jako pythonní balíček (za zveřejnění na PyPI pod svobodnou licencí jsou body navíc),
  * projekt by měl stavět na nějakém tématu probraném v předmětu MI-PYT.
