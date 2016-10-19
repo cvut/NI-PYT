@@ -11,6 +11,19 @@ můžeme volat z Pythonu, tak lze volat z příkazové řádky.
 
  * [oskar456/isholiday.py](https://gist.github.com/oskar456/e91ef3ff77476b0dbc4ac19875d0555e)
 
+
+Volání z příkazové řádky, pomocí příkazu `python isholiday.py` nebo
+`python -m isholiday`, zajišťuje blok `if __name__ == '__main__':`.
+Toto je rychlý způsob, jak napsat modul který jde jak importovat, tak spustit.
+Když nějaký modul importujeme, má v proměnné `__name__` k dispozici své jméno.
+„Hlavní” modul ale není importován, a jeho jméno není vždy k dispozici
+(např. v `cat isholiday.py | python`).
+Python proto `__name__` „hlavního” modulu nastavuje na `'__main__'`,
+čehož se často využívá.
+
+Později se podíváme na elegantnější způsob jak to zařídit; teď se vraťme
+zpět k balíčkování.
+
 setup.py
 --------
 
@@ -140,7 +153,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Topic :: Software Development :: Libraries',
-        ]
+        ],
 )
 ```
 
@@ -174,6 +187,9 @@ V takovém případě uděláme modul ve formě složky. V našem případě sou
 
 1 directory, 5 files
 ```
+
+Soubor `__init__.py` jednak značí, že adresář `isholiday` je Pythoní modul,
+také obsahuje kód, který se spustí při importu modulu `isholiday`.
 
 Musíme ještě mírně upravit `setup.py`:
 
@@ -218,6 +234,34 @@ __all__ = ['getholidays', 'isholiday']
 
 Do `__init__.py` ideálně nepatří žádný kód kromě tohoto.
 
+Tečka v příkazu `import` není chyba: je to zkratka pro aktuální modul.
+Můžeme psát i `from isholiday.holidays import ...`,
+což ale trochu ztěžuje případné přejmenování modulu.
+
+
+Spouštění balíčku
+-----------------
+
+Pokusíme-li se teď program spustit pomocí `python -m isholiday`,
+narazíme na problém: na rozdíl od souboru se složka s kódem takto spustit nedá.
+Namísto spuštění souboru (typicky s blokem `if __name__ == '__main__':`) totiž
+Python v tomto případě hledá *soubor* pojmenovaný `__main__.py`, a spustí ten.
+
+Soubor `__main__.py` není určený k tomu, aby se z něho importovalo, proto
+by měl obsahovat co nejméně kódu – ideálně jen folání funkce, která je
+definovaná jinde. Vytvořte proto `__main__.py` s následujícím obsahem:
+
+```python
+from .holidays import main
+
+main()
+```
+
+a v `holidays.py` zaměňte `if __name__ == '__main__':` za `def main():`.
+
+Skript teď bude možné použít pomocí `python -m isholiday`.
+
+
 Programy pro příkazovou řádku
 -----------------------------
 
@@ -230,25 +274,20 @@ použít [entrypoints]:
 setup(
     entry_points={
         'console_scripts': [
-            'executable_name = isholiday.__main__:main'
-        ]
+            'executable_name = isholiday.holidays:main',
+        ],
     },
 )
 ```
 
-`isholiday.__main__:main` je cesta k funkci ve tvaru `modul:funkce`, funkce může
+`isholiday.holidays:main` je cesta k funkci ve tvaru `modul:funkce`, funkce může
 být v modulu definovaná nebo importovaná.
 
-Všimněte si, že je zde použito `__main__`, což předpokládá existenci souboru
-`__main__.py` v modulu. Tento soubor by měl vykonávat funkci skriptu.
-
-Skript bude možné použít takto:
+Skript bude možné použít, je-li aktivní prostředí kde je nainstalován, jen
+zadáním jména *entrypointu*:
 
     $ executable_name
 
-I takto:
-
-    $ python -m module_name
 
 Specifikace závislostí
 ----------------------
@@ -265,6 +304,26 @@ setup(
     install_requires=['Flask', 'click>=6'],
 )
 ```
+
+Kromě závislostí v `setup.py` se u Pythoních projektů často setkáme se souborem
+`requirements.txt`, který obsahuje přesné verze všech závislosti, včetně
+tranzitivních – t.j. závisí-li náš balíček na `Flask`, a `Flask` na `Jinja2`,
+najdeme v `requirements.txt` mimojiné řádky:
+
+```
+Flask==0.11.1
+Jinja2==2.8
+```
+
+Tento soubor se používá, když je potřeba přesně replikovat prostředí, kde
+program běží, například mezi testovacím strojem a produkčním nasazením
+webové aplikace.
+Tento soubor se dá vygenerovat z aktuálního prostředí zadáním
+`python -m pip freeze > requirements.txt`, a nainstalovat pomocí
+`python -m pip install -r requirements.txt`.
+My ho používat nebudeme, vystačíme si s volnější specifikací závislostí
+v `setup.py`.
+
 
 Upload na PyPI
 --------------
@@ -295,6 +354,9 @@ password = <your password goes here>
 ```
 
 Hesla můžete vynechat, pokud je budete chtít pokaždé zadávat.
+
+Používáte-li Windows, je potřeba nastavit proměnnou prostředí `HOME` na adresář
+se souborem `.pypirc`.
 
 Registrace projektu a nahrání na testovací PyPI se provádí pomocí:
 
