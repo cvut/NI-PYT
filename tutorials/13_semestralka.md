@@ -18,3 +18,9 @@ Ve všech případech musí práce splňovat tyto požadavky:
  * projekt by měl stavět na nějakém tématu probraném v předmětu MI-PYT.
 
 Pro nerozhodné časem připravíme několik témat, které můžete použít, budeme ale raději, pokud si zvolíte téma vlastní.
+
+Termíny
+-------
+
+ * **Téma schváleno do:** 21.12.2016 (předposlední cvičení)
+ * **Odevzdáno do:** 31.1.2016 včetně
