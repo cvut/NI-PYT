@@ -23,4 +23,4 @@ Termíny
 -------
 
  * **Téma schváleno do:** 21.12.2016 (předposlední cvičení)
- * **Odevzdáno do:** 31.1.2016 včetně
+ * **Odevzdáno do:** 31.1.2017 včetně
