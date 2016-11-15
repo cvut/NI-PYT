@@ -48,7 +48,7 @@ Projekt je třeba vzít, oprášit a vylepšit. Zejména je třeba:
  * přidat dokumentaci k jednotlivým součástem, aby projekt mohli využít i další vyučující
 
 S přístupem do Eduxu a lehkým úvodem do problému může osobně pomoci
-[@hroncok](http://github.com/hroncok).
+[hroncok](http://github.com/hroncok).
 
 [Eduxator]: https://github.com/hroncok/eduxator
 
@@ -69,10 +69,9 @@ publikovala na webové stránce s permanentním, ale *tajným* URL a vrátila
 GitHubu odkaz a informaci o výsledku. K tomu samozřejmě existuje
 [API](https://developer.github.com/v3/repos/statuses/).
 
-Součástí práce by bylo i přepsání [ošklivého testovacího skriptu]
-(https://github.com/3DprintFIT/hedgehog-task/blob/master/runtests.sh)
+Součástí práce by bylo i přepsání [ošklivého testovacího skriptu](https://github.com/3DprintFIT/hedgehog-task/blob/master/runtests.sh)
 do Pythonu. Bylo by ale dobré, aby aplikace uměla spouštět jakýkoliv kód,
 podobně jako jiné CI systémy.
 
 S úvodem do současného systému může osobně pomoci
-[@hroncok](http://github.com/hroncok).
+[hroncok](http://github.com/hroncok).
