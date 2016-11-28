@@ -84,7 +84,7 @@ Kvíz je vždy otevřen k odpovídání po jistou dobu a student postupně
 odpovídá na zobrazené otázky. Studentovým cílem je získat jistý počet správných
 odpovědí přičemž počet zobrazených otázek není nijak omezen. Po špatné
 odpovědi, nebo sérii špatných odpovědí, může být studentova možnost
-odpovídat na jistou dobu zablokována zablokována.
+odpovídat na jistou dobu zablokována.
 
 Cílem této semestrální práce je pohrát si se záznamy o odpovídání v kvízech a
 provést jejich analýzu. Otevřenou otázkou (nejen) mezi vyučujícími je jak
