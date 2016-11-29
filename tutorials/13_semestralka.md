@@ -112,7 +112,7 @@ K dispozici jsou údaje o jednotlivých otázkách (okamžik zobrazení a
 odpovězení; identifikátor studenta, otázky a kvízu; parametry kvízu).
 Po zběžném pohledu se bude jednat přibližně o 200 000 odpovědí v několika
 kvízech. Před započetím práce konkrétně probereme jaké metody zvolit a
-jaké experimenty provést. V dalším průběhu [kalvotom](http:github/kalvotom)
+jaké experimenty provést. V dalším průběhu [kalvotom](https://github.com/kalvotom)
 rád pomůže při řešení nejasností (např. co se týče matematické stránky
 některých metod).
 
