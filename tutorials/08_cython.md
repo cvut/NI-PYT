@@ -1,3 +1,13 @@
+Dnes budeme potřebovat do virtuálního prostředí nainstalovat tyto knihovny:
+
+    python -m pip install --upgrade pip
+    python -m pip install notebook numpy cython pytest-profiling
+
+Také je potřeba nainstalovat překladač jazyka C (`gcc`)
+a hlavičkové soubory Pythonu (`python3-dev`/`python3-devel`).
+
+---
+
 C API
 =====
 
@@ -19,21 +29,18 @@ k interním strukturám interpretu.
 Správně napsaný pythonní program by neměl na takových detailech záviset, pokud
 není k nekompatibilitě mezi interprety dobrý důvod.
 
-Někdy to ale je potřeba, a dnešní přednáška specifická pro CPython,
+Někdy to ale je potřeba, a dnešní přednáška specifická pro CPython
 a přímé využití jeho API pro jazyk C.
 
 
 Rychlost
 --------
 
-Častý důvod proč sáhnout k C API je rychlost: CPython je celkem pomalý,
-a tradiční metoda optimalizace je zjistit, které části jsou kritické, a přepsat
+Častý důvod proč sáhnout k C API je rychlost: CPython je celkem pomalý.
+Tradiční metoda optimalizace je zjistit, které části jsou kritické, a přepsat
 je do C.
 Využijí se tak výhody obou jazyků: Python pro rychlý vývoj, snadné
 prototypování, a přehlednost kódu, a C pro rychlost.
-
-Jiná možnost, jak program zrychlit, je ho pustit tak jak je pod interpretem
-PyPy, který obsahuje optimalizovaný překladač. To je ale jiná kapitola.
 
 Když je náš program příliš pomalý, je potřeba ho optimalizovat.
 První krok k tomu je vždy zkontrolovat, co zabírá více času, než by mělo.
@@ -50,6 +57,9 @@ Profilovat běh pytest testů se dá jednoduše pomocí modulu [pytest-profiling
 
 Když máme představu o tom, co nás brzdí, můžeme začít přepisovat do C způsoby
 popsanými níže.
+
+Jiná možnost, jak program zrychlit, je ho pustit tak jak je pod interpretem
+PyPy, který obsahuje optimalizovaný překladač. To je ale jiná kapitola.
 
 
 Externí knihovny
@@ -73,14 +83,11 @@ CPython
 
 Třetí důvod, proč použít C API, je práce s CPythonem samotným.
 Když člověk zabředne do složitého problému, může na CPython pustit C debugger
-jako [gdb] nebo [Valgrind] a prozkoumat potíže na nižší úrovni.
-
-Případné chyby v CPythonu pak se znalostmi C API jdou i
-[pomoci opravit][devguide]. tenhle kus není hotový?
+jako [gdb] nebo [Valgrind], prozkoumat potíže na nižší úrovni,
+a zjistit kde přesně se chyba nachází.
 
 [gdb]: https://en.wikipedia.org/wiki/GNU_Debugger]
 [valgrind]: http://valgrind.org/
-[devguide]: https://docs.python.org/devguide/
 
 
 Modul v C
@@ -272,7 +279,7 @@ typedef struct {
 prvky.
 Podobně [objekty typu int][int] (které mají v Pythonu neomezený rozsah) mají délku a pole
 jednotlivých 30bitových "číslic".
-NumPy matice mají metadata (velikost, typ, druh rozložení v paměti) a ukazatel na pole hodnot.
+NumPy matice mají metadata (velikost, typ, popis rozložení v paměti) a ukazatel na pole hodnot.
 
 [float]: https://github.com/python/cpython/blob/3.5/Include/floatobject.h#L15
 [list]: https://github.com/python/cpython/blob/3.5/Include/listobject.h#L23
@@ -301,7 +308,7 @@ Zodpovědnost zavolat na tuto n-tici Py_DECREF má ale volající, ne my.
 Zavoláním funkce `PyArg_ParseTuple` získáme `char*`, který ale můžeme používat jen v rámci naší
 funkce: po jejím skončení může volající argumenty funkce uvolnit, a tím řetězec zrušit.
 
-Funkce, které vracejí pythonní objekty, předpokládají, že volající provede příslušný DECREF.
+Funkce, které vracejí pythonní objekty, předpokládají, že na vrácenou hodnotu provede DECREF volající.
 V modulu `demo` voláme funkci [PyLong_FromLong], která vytvoří nové pythonní číslo.
 Za vzniklou referenci naše funkce přebírá zodpovědnost, je tedy na nás, abychom se postarali
 o zavolání Py_DECREF.
@@ -315,7 +322,7 @@ Vrácením výsledku tuto zodpovědnost ale předáváme na funkci, která volá
 Hodnoty a výjimky
 -----------------
 
-Další konvence, kterou většina funkcí v C API dodržují, je způsob vracení výjimek.
+Další konvence, kterou většina funkcí v C API dodržuje, je způsob vracení výjimek.
 
 Funkce, které vrací pythonní objekty, na úrovni C vrací `PyObject*`.
 Nastane-li výjimka, objekt výjimky se zaznamená do globální (přesněji, *thread-local*)
@@ -372,6 +379,11 @@ Kompilace Pythonu
 Když chceme převést modul z Pythonu do Cythonu, nejjednodušší začátek je přejmenovat soubor `.py`
 na `.pyx`, aby bylo jasné, že jde o jiný jazyk, který nepůjde naimportovat přímo.
 
+
+Jazyky Python a Cython nejsou 100% kompatibilní, ale zvláště u kódu, který pracuje hlavně s
+čísly, se nekompatibilita neprojeví.
+Vývojáři Cythonu považují každou odchylku od specifikace jazyka za chybu, kterou je nutno opravit.
+
 Jako příklad můžete použít tuto naivní implementaci celočíselného a maticového násobení:
 
 ```python
@@ -421,9 +433,13 @@ setup(
 Po zadání `python setup.py develop` nebo `python setup.py build_ext --inplace` atp.
 se modul `matmul.pyx` zkompiluje s použitím nainstalovaného NumPy a bude připraven na použití.
 
-Jazyky Python a Cython nejsou 100% kompatibilní, ale zvláště u kódu, který pracuje hlavně s
-čísly, se nekompatibilita neprojeví.
-Vývojáři Cythonu považují každou odchylku od specifikace jazyka za chybu, kterou je nutno opravit.
+Nevýhoda tohoto přístupu je, že k spuštění takového `setup.py` je již potřeba
+mít nainstalovaný `cython` a `numpy`.
+Instalace z archivu `sdist` se tedy nemusí povést – je potřeba uživatelům říct,
+že dané moduly už musí mít nainstalované.
+Tento problém aktuálně řeší PyPA (správci `pip` a `setuptools`).
+
+Instalace z archivů `wheel` by měla být bezproblémová.
 
 
 Anotace
@@ -530,71 +546,127 @@ directions[maze >= 0] = b' '  # Python level, using b' '
 directions[1, 2] == ord('x')  # C level, using char
 ```
 
-Vypínání kontrol
-----------------
-
-XXX: dekorátor, with, magický komentář, setup.py
-
-
-Struktury
+Direktivy
 ---------
 
-XXX: cdef struct
+Anotací typů matic se naše demo maticového násobení dostalo skoro na úroveň
+C, ale ne úplně: řádky, které pracují s maicemi, jsou ve výstupu `--annotate`
+stále trochu žluté.
+Cython totiž při každém přístupu k matici kontroluje, jestli nečteme nebo
+nezapisujeme mimo pole, a případně vyvolá `IndexError`.
 
+Pokud víme – jako v našem případě – že je takové kontrola zbytečná,
+můžeme Cythonu říct aby ji nedělal.
+Přístupy mimo pole pak způsobí nedefinované chování (většinou program spadne,
+nebo hůř, bude pracovat se špatnými daty).
+Kontrola se vypíná direktivou `boundscheck`, která se dá zadat dvěma hlavními
+způsoby: dekorátorem:
 
-Dynamická alokace
------------------
-
-Přestože v Cythonu můžete používat pythonní tuply, slovníky, seznamy a další podobné nehomogenní typy, jejich použití je pomalé.
-
-Pokud například máte kód, který určitým způsobem skládá do seznamu dvojice čísel (například jako v úkolu metoda `path()`,
-je pro rychlejší kód lepší k problému přistoupit spíše céčkovsky. Mějme následujcí kód:
-
-```python
-def path(...):
-    path = []
-    for ...:
+    @cython.boundscheck(False)
+    cpdef funkce():
         ...
-        path.append((row, column))
-    return path
-```
 
-V Cythonu pak můžete kód upravit například takto:
+... nebo příkazem `with`:
+
+    with cython.boundscheck(False):
+        ...
+
+... případně i pro celý soubor, viz [dokumnetace][set-directives].
+
+Další zajímavá direktiva je `cython.wraparound(False)`, která podobným způsobem
+vypíná pythonní způsob indexování zápornými čísly: místo indexování od konce
+s ní dostaneme nedefinované chování.
+
+Seznam dalších direktiv najdete v [dokumentaci][directives].
+
+Cython podporuje ještě blok `with cython.nogil:`, který je podobný direktivám,
+ale dá se použít jen s `with`.
+V rámci tohoto bloku je odemčený GIL (globální zámek).
+Smí se použít pouze pokud nepracujeme s pythonnímmi objekty – například když
+operujeme jen na obsahu už existujících maticí.
+Opak je `with cython.gil:`, kterým zámek zase zamkneme – například když
+potřebujeme vyhodit výjimku.
+
+[set-directives]: http://cython.readthedocs.io/en/latest/src/reference/compilation.html#how-to-set-directives
+[directives]: http://cython.readthedocs.io/en/latest/src/reference/compilation.html#compiler-directives
+
+
+Struktury, ukazatele, a dynamická alokace
+-----------------------------------------
+
+Přestože v Cythonu můžete používat pythonní tuply, slovníky, seznamy a další podobné nehomogenní typy, jejich použití je pomalé, protože vždy pracují s pythoními objekty.
+
+Pokud máte kód, který potřebuje dočasné pole takových záznamů,
+je pro časově kritické části kódu lepší k problému přistoupit spíše céčkovsky,
+přes alokaci paměti a ukazatele.
+
+Následující příklad ukazuje, jak naplnit pole heterogenních záznamů:
 
 ```python
+# Import funkcí pro alokaci paměti – chovají se jako malloc() apod.
 from cpython.mem cimport PyMem_Malloc, PyMem_Realloc, PyMem_Free
 
+# Definice struktury
 cdef struct coords:
     int row
     int column
+    char data
+
+MAXSIZE = ...
 
 def path(...):
+    # Definice ukazatele, přetypování
     cdef coords * path = <coords *>PyMem_Malloc(MAXSIZE*sizeof(coords))
     if path == NULL:
         # no available memory left
         raise MemoryError()
+
     cdef int used = 0
     for ...:
         ...
-        path[used] = coords(row, column)
+
+        #
+        path[used] = coords(row, column, data)
         used += 1
 
-    lpath = []
-    cdef size_t i
-    for i in range(used):
-        lpath.append((path[i].r, path[i].c))
+    # pole můžeme používat
+    ...
 
     PyMem_Free(path)
     return lpath
 ```
 
-Vyplatí se to samozřejmě, jen pokud vnitřní cyklus bude dostatečně časově kritický.
+Pro homogenní pole ale doporučujeme spíše NumPy matice.
 
 
 pyximport a %%cython
 --------------------
 
-XXX
+Pro interaktivní práci vJupyter Notebook má Cython vlastní „magii“.
+Na začátku Notebooku můžeme zadat:
+
+    %load_ext cython
+
+a potom můžeme na začátku kterékoli buňky zadad ``%%cython`:
+
+    %%cython
+
+    cpdef int mul(int a, int b):
+        return a * b
+
+Kód v takové buňce pak Notebook zkompiluje Cythonem, a funkce/proměnné v něm
+nadefinované dá k dispozici.
+
+Můžeme použít i `%%cython --annotate`, což vypíše anotace přímo do Notebooku.
+
+Další zkratka je modul `pyximort`, který dává možnost importovat moduly `.pyx`
+přímo: hledají se podobně jako `.py` nebo `.so`, a před importem se zkompilují.
+Zapíná se to následovně:
+
+    import pyximport
+    pyximport.install()
+
+    import demo
 
 
 Video
