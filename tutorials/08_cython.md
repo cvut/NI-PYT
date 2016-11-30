@@ -500,6 +500,15 @@ Tím se zbavíme nákladného převodu výsledku na PyObject.
 Bohužel ale toto zrychlení pocíte jen když takovou funkci zavoláme z jiné funkce napsané v
 Cythonu.
 
+Tři typy funkcí
+---------------
+
+XXX
+
+Třídy
+-----
+
+XXX
 
 Používání NumPy
 ---------------
@@ -638,6 +647,34 @@ def path(...):
 
 Pro homogenní pole ale doporučujeme spíše NumPy matice.
 
+Následující příklad ukazuje, jak lze přiřazovat do struktur:
+
+```python
+cdef struct coord:
+    float x
+    float y
+    float z
+
+cdef coord a = coord(0.0, 2.0, 1.5)
+
+cdef coord b = coord(x=0.0, y=2.0, z=1.5)
+
+cdef coord c
+
+c.x = 42.0
+c.y = 2.0
+c.z = 4.0
+
+cdef coord d = {'x':2.0,
+                'y':0.0,
+                'z':-0.75}
+```
+
+Použití knihoven z C
+--------------------
+
+XXX příklad s rand()
+
 
 pyximport a %%cython
 --------------------
@@ -697,4 +734,3 @@ python -c 'from maze import analyze; analyze(...)'  # lze importovat a použít 
 ```
  
 Nepoužívejte pyximport.
-
