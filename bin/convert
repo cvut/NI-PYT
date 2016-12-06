@@ -13,10 +13,13 @@ for MD in tutorials/*.md; do
   pandoc "$MD" --to dokuwiki -o "$TXT"
 
   # Convert <source> to <code> and correnct links
+  # Also <html>
   sed -Ei \
     -e 's@<source lang="(\w+)">@<code \1>@g' \
     -e 's@</source>@</code>@g' \
     -e 's@\[\[([^\|]+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
+    -e 's@<html><kbd></html>@//@g' \
+    -e 's@<html></kbd></html>@//@g' \
     "$TXT"
 
   # Add number as indexmenu
