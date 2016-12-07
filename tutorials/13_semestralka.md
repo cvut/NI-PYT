@@ -52,7 +52,7 @@ S přístupem do Eduxu a lehkým úvodem do problému může osobně pomoci
 
 [Eduxator]: https://github.com/hroncok/eduxator
 
-### Odevzdávací mechanismus pro úlohy z předmětu BI-3DT
+### Odevzdávací mechanismus pro úlohy z předmětu BI-3DT (zabráno)
 
 Studenti předmětu [BI-3DT](https://edux.fit.cvut.cz/courses/BI-3DT/) odevzdávají
 tento semestr poprvé domácí úkol na GitHub. Máme v současnosti velmi
