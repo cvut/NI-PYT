@@ -116,3 +116,47 @@ jaké experimenty provést. V dalším průběhu [kalvotom](https://github.com/k
 rád pomůže při řešení nejasností (např. co se týče matematické stránky
 některých metod).
 
+
+### Evidence stravenek
+
+#### Současný stav
+
+Každý měsíc Ing. Malá (personální FIT) rozesílá zaměstnancům e-mail s připomínkou, aby nahlásili případnou změnu v počtu stravenek, které chtějí na příští měsíc dostat.
+V případě, kdy zaměstnanec chce méně stravenek než obvykle, na tento e-mail odpoví a Ing. Malá si to někde poznamená.
+Stejným způsobem se tato agenda řeší i na SVTI FEL a nejspíš dalších pracovištích ČVUT.
+
+#### Problém
+
+1. Dochází ke zbytečnému spamování zaměstnanců.
+2. Zaměstnanci ani personální nemají jasný přehled o nahlášeném počtu stravenek, vše se řeší jen přes e-mail.
+3. Nahlašování změn na delší období dopředu je problematické.
+
+#### Zadání
+
+Navrhněte a implementujte jednoduchou webovou aplikaci, která bude řešit výše uvedené problémy.
+Aplikace bude poskytovat rozhraní pro zaměstnance a pro správce (personální oddělení). 
+
+##### Funkční požadavky
+
+1. Rozhraní pro zaměstnance umožní uživateli:
+    1. zobrazit přehled svých stravenek na příští měsíce,
+    1. nastavit implicitní počet stravenek na nové měsíce,
+    1. změnit požadovaný počet stravenek na příští měsíce;
+        1. pokud ještě neuplynula nastavená lhůta pro změny.
+1. Rozhraní pro správce/personální umožní uživateli:
+    1. zobrazit tabulku nahlášeného počtu stravenek na aktuální a příští měsíc;
+        1. pro zaměstnance, za které odpovídá,
+        1. s možností exportu do CSV,
+    1. změnit počet nahlášených stravenek libovolnému zaměstnanci, za kterého odpovídá,
+    1. nastavit implicitní lhůtu pro změnu počtu stravenek,
+    1. změnit lhůtu pro změnu počtu stravenek na příští měsíc(e).
+
+##### Kvalitativní požadavky
+
+1. **Multi-tenancy**: Aplikace bude připravena pro budoucí použití více odděleními (skupinami zaměstnanců), kde každé bude mít přiděleného svého správce.
+   Nemusí být implementované všechny s tím související funkcionality, ale je potřeba to brát v úvahu při návrhu.
+1. **Autentizace**: Uživatelé se budou přihlašovat prostřednictvím školního [OAuth 2.0 autorizačního serveru](https://rozvoj.fit.cvut.cz/Main/oauth2) (stejně jako [MARAST](https://marast.fit.cvut.cz/) či [fittable](https://timetable.fit.cvut.cz/new/)).
+1. **Autorizace**: Role uživatelů a jejich příslušnost k oddělení budou přebírány z [Usermap API](https://rozvoj.fit.cvut.cz/Main/usermap-api).
+1. **Persistence:** Data budou ukládaná do relační databáze [PostgreSQL](http://www.postgresql.org/).
+1. **Testování:** Aplikace bude pokrytá jednotkovými a integračními testy.
+1.  **(Bonus) RESTful API**: Aplikace bude vystavovat RESTful API podporující formát JSON a zabezpečené pomocí OAuth 2.0 s využitím školního [autorizačního serveru](https://rozvoj.fit.cvut.cz/Main/oauth2).
