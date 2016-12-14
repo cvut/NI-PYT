@@ -151,6 +151,7 @@ Pokud se změní události na straně Siria, změny se projeví v rozvrzích už
   * Pomocí autorizačního tokenu unikátního pro každého uživatele z API Sirius.
   * Přes OAuth server FIT.
 * Aplikace bude respektovat oprávnění uživatelů stanovená serverem Sirius.
+* Aplikace bude ukládat data do vlastní databáze; doporučená je relační databáze PostgreSQL, po diskuzi můžete zvolit i jiné řešení.
 
 #### Kontaktní osoby
 
@@ -167,11 +168,11 @@ ICT oddělení, místnost TH-A:1324
 
 Podstata práce je stejná jako u zadání [CalDAV server pro Sirius](#caldav-server-pro-sirius). Google Calendar podporuje přístup přes CalDAV, ale slouží pouze jako CalDAV server, nikoliv klient. Synchronizace s Google Calendar by proto byla řešená samostatnou aplikací, která by importovala data do Google Calendar přes [CalDAV rozhraní](https://developers.google.com/google-apps/calendar/caldav/v2/guide), nebo přes [Google Calendar API](https://developers.google.com/google-apps/calendar/overview).
 
-Aplikace by měla webové rozhraní, přes které by uživatel:
+Aplikace bude mít webové rozhraní, přes které uživatel:
 
-* autorizoval přístup k API Sirius přes OAuth server,
-* udělil přístup ke svému Google kalendáři a zvolil do kterého kalendáře se mají události importovat;
-  * alternativně by mu byl zpřístupněn již vytvořený kalendář.
+* autorizuje přístup k API Sirius přes OAuth server,
+* udělí přístup ke svému Google kalendáři a zvolí do kterého kalendáře se mají události importovat;
+  * alternativně mu je zpřístupněn samostatný kalendář ve správě aplikace.
 
 Aplikace musí umožňovat autentizaci proti [Google Apps for Education](https://ict.fit.cvut.cz/~web/current/web/ict/GoogleApps/) na FIT. Volitelně by aplikace mohla pracovat se _zdroji_ ([Calendar Resources](https://support.google.com/a/answer/1686462?hl=en)), pro alokaci místnosti, ve které se událost koná.
 
