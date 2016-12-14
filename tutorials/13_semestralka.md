@@ -116,3 +116,63 @@ jaké experimenty provést. V dalším průběhu [kalvotom](https://github.com/k
 rád pomůže při řešení nejasností (např. co se týče matematické stránky
 některých metod).
 
+### CalDAV server pro Sirius
+
+Na FIT funguje API [Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu [iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
+
+Cílem projektu je exponovat kalendářní data přes standardní protokol [CalDAV] a umožnit uživatelům osobní úpravy rozvrhu. Individuální změny se uloží pro každého uživatele zvlášť (tj. pokud změním poznámku u přednášky, ostatní uživatelé jí neuvidí). Synchronizace změn bude pouze jednosměrná, ze Siria do CalDAV; například pokud si smažu z osobního rozvrhu cvičení, v kalendářní aplikaci jej neuvidím, ale nadále jej uvidím v aplikaci Fittable.
+
+Pro implementaci využijte existující implementace CalDAV pro Python, například [Radicale](http://radicale.org/) nebo [CalendarServer](https://www.calendarserver.org/). Projekt může být implementovaný jako rozšíření stávajícího kalendářního serveru nebo jako samostatná aplikace, která synchronizuje Sirius s CalDAV serverem.
+
+#### Funkční požadavky
+
+Uživatel si bude moci:
+
+* přidat osobní rozvrh do kalendářní aplikace
+  * (volitelně) přidat přes CalDAV i ostatní rozvrhy, např. místností, vyučujících a předmětů
+* upravit události v osobním rozvrhu z kalendářní aplikace
+  * smazat událost
+  * změnit název a poznámku události
+  * (volitelně) změnit účast u události
+  * (volitelně) přesunout událost
+  * (volitelně) přidávat přílohy k událostem
+* (volitelně) měnit události u jiných rozvrhů, než osobního
+
+Pokud se změní události na straně Siria, změny se projeví v rozvrzích uživatelů. Aplikace však zachová uživatelské změny v událostech (např. pokud se v Siriovi změní čas události, nezmění se poznámka uživatele).
+
+(Volitelně / dle potřeby) Aplikace bude mít webové rozhraní, které uživateli poskytne autentizační údaje pro CalDAV a případně možnost nastavit další volby.
+
+#### Nefunkční požadavky
+
+* Aplikace bude poskytovat CalDAV rozhraní s autentizací pro přístup k rozvrhům uživatelů.
+* Aplikace bude uchovávat změny událostí pro každého uživatele.
+* Aplikace bude využívat [REST rozhraní pro Sirius](https://cvut.github.io/sirius/docs/api-v1.html), případně ICS export.
+* Autentizace bude prováděná jednou z následujících metod:
+  * Pomocí autorizačního tokenu unikátního pro každého uživatele z API Sirius.
+  * Přes OAuth server FIT.
+* Aplikace bude respektovat oprávnění uživatelů stanovená serverem Sirius.
+
+#### Kontaktní osoby
+
+ICT oddělení, místnost TH-A:1324
+
+* [Jan Vlnas](https://usermap.cvut.cz/profile/vlnasjan/)
+* [Jakub Jirůtka](https://usermap.cvut.cz/profile/jirutjak/)
+
+[Sirius]: https://github.com/cvut/sirius
+[iCalendar]: https://en.wikipedia.org/wiki/ICalendar
+[CalDAV]: https://en.wikipedia.org/wiki/CalDAV
+
+### Synchronizace Sirius s Google Calendar
+
+Podstata práce je stejná jako u zadání [CalDAV server pro Sirius](#caldav-server-pro-sirius). Google Calendar podporuje přístup přes CalDAV, ale slouží pouze jako CalDAV server, nikoliv klient. Synchronizace s Google Calendar by proto byla řešená samostatnou aplikací, která by importovala data do Google Calendar přes [CalDAV rozhraní](https://developers.google.com/google-apps/calendar/caldav/v2/guide), nebo přes [Google Calendar API](https://developers.google.com/google-apps/calendar/overview).
+
+Aplikace by měla webové rozhraní, přes které by uživatel:
+
+* autorizoval přístup k API Sirius přes OAuth server,
+* udělil přístup ke svému Google kalendáři a zvolil do kterého kalendáře se mají události importovat;
+  * alternativně by mu byl zpřístupněn již vytvořený kalendář.
+
+Aplikace musí umožňovat autentizaci proti [Google Apps for Education](https://ict.fit.cvut.cz/~web/current/web/ict/GoogleApps/) na FIT. Volitelně by aplikace mohla pracovat se _zdroji_ ([Calendar Resources](https://support.google.com/a/answer/1686462?hl=en)), pro alokaci místnosti, ve které se událost koná.
+
+Kontaktní osoba: [Jan Vlnas](https://usermap.cvut.cz/profile/vlnasjan/).
