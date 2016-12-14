@@ -32,7 +32,7 @@ Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud ne
 V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte.
 I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
-### Eduxator
+### Eduxator (zabráno)
 
 Existuje rozpracovaný a nikdy nedokončený projekt [Eduxator], který umožňuje
 z příkazové řádky zadávat klasifikaci do Eduxu.
