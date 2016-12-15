@@ -5,7 +5,7 @@ Součástí hodnocení je semestrální práce. Uvítáme, pokud si vyberete vla
 Téma je třeba nechat si od nás schválit.
 Komplexnější témata mohou být po konzultaci s cvičícími uznaná jako jediná podmínka pro splnění předmětu.
 
-Ve všech případech musí práce splňovat tyto požadavky:
+Ve všech případech (kromě případných explicitních výjimek) musí práce splňovat tyto požadavky:
 
  * musí být napsaná v jazyce Python verze 3.3 nebo vyšší (Cython se samozřejmě také počítá),
  * musí splnit zadání, na kterém jsme se dohodli,
