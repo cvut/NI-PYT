@@ -116,7 +116,7 @@ jaké experimenty provést. V dalším průběhu [kalvotom](https://github.com/k
 rád pomůže při řešení nejasností (např. co se týče matematické stránky
 některých metod).
 
-### CalDAV server pro Sirius
+### CalDAV server pro Sirius (zabráno)
 
 Na FIT funguje API [Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu [iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
 
