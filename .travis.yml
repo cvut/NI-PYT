@@ -10,9 +10,7 @@ install:
 - sudo apt-get install -qq pandoc ca-certificates
 - pip install requests lxml
 script:
-- bin/convert
-after_success:
-- bin/travis-deploy
+- bin/travis-make
 notifications:
   email: false
 branches:

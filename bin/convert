@@ -1,27 +1,21 @@
 #!/bin/bash -eu
+MD="$1"
+TXT=".dokuwiki/${MD%.md}.txt"
+BASENAME="$(basename "$MD")"
+NUMBER="${BASENAME%%_*}"
 
-rm -rf .dokuwiki 2>/dev/null || :
-mkdir -p .dokuwiki/tutorials
+# Convert from Markdown to Dokuwiki
+pandoc "$MD" --to dokuwiki -o "$TXT"
 
-for MD in tutorials/*.md; do
-  echo "Converting $MD"
-  TXT=".dokuwiki/${MD%.md}.txt"
-  BASENAME="$(basename "$MD")"
-  NUMBER="${BASENAME%%_*}"
+# Convert <source> to <code> and correnct links
+# Also <html>
+sed -Ei \
+  -e 's@<source lang="(\w+)">@<code \1>@g' \
+  -e 's@</source>@</code>@g' \
+  -e 's@\[\[([^\|]+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
+  -e 's@<html><kbd></html>@//@g' \
+  -e 's@<html></kbd></html>@//@g' \
+  "$TXT"
 
-  # Convert from Markdown to Dokuwiki
-  pandoc "$MD" --to dokuwiki -o "$TXT"
-
-  # Convert <source> to <code> and correnct links
-  # Also <html>
-  sed -Ei \
-    -e 's@<source lang="(\w+)">@<code \1>@g' \
-    -e 's@</source>@</code>@g' \
-    -e 's@\[\[([^\|]+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
-    -e 's@<html><kbd></html>@//@g' \
-    -e 's@<html></kbd></html>@//@g' \
-    "$TXT"
-
-  # Add number as indexmenu
-  echo -e '\n\n{{indexmenu_n>'"$NUMBER"'}}' >> "$TXT"
-done
+# Add number as indexmenu
+echo -e '\n\n{{indexmenu_n>'"$NUMBER"'}}' >> "$TXT"
