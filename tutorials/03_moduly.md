@@ -427,6 +427,38 @@ Zde pak na umístění balíčku ani verzi nezáleží:
 (env)$ python -m pip install https://testpypi.python.org/packages/.../<název_balíčku>-0.3.tar.gz
 ```
 
+Instalace pomocí pip
+--------------------
+
+Projekt nahraný na PyPi by mělo jít nainstalovat pomocí pipu. V případě použití ostré verze PyPi stačí k instalaci zadat název projektu:
+
+```bash
+(env)$ python -m pip install nazev_projektu
+```
+
+Pokud však použijeme testovací PyPi, je nutné pipu říct, aby balíček hledal tam. [Postup](https://wiki.python.org/moin/TestPyPI) uvedený v dokumentaci není v tomto případě nejvhodnější, protože z testovací PyPi vezme jak náš balíček, tak i případné závislosti, které mohou být zastaralé, rozbité či jinak škodlivé.
+
+Lepší by bylo, kdyby pip nainstaloval závislosti z ostré PyPi a na testovací hledal jen náš projekt. Toho se dá docílit přepínačem `--extra-index-url`.
+
+```bash
+(env)$ python -m pip install --extra-index-url https://testpypi.python.org/pypi nazev_projektu
+```
+
+V tomto případě pip nejdřív prohledá ostrou PyPi a pokud nenajde požadovaný balíček, použije testovaci PyPi. Zde je potřeba dávat pozor na název projektu, protože případné konflikty mezi ostrou a testovací PyPi se nekontrolují. Pokud tedy máme projekt na testovací PyPi a na ostré existuje projekt se stejným názvem, nainstaluje se ten z ostré verze.
+
+V případě, že tento problém nastane, je možné ho částečně obejít specifikací verze instalovaného balíčku:
+```bash
+(env)$ python -m pip install --extra-index-url https://testpypi.python.org/pypi nazev_projektu==0.3
+```
+
+Pokud u duplicitního projektu na ostré PyPi neexistuje požadovaná verze, nainstaluje se náš projekt z testovací PyPi.
+
+Jiná možnost je zadat přímo cestu k archivu s balíčkem misto jeho názvu. Zde pak na umístění balíčku ani verzi nezáleží:
+
+```bash
+(env)$ python -m pip install https://testpypi.python.org/packages/.../nazev_projektu-0.3.tar.gz
+```
+
 Další
 -----
 
