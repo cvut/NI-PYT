@@ -13,6 +13,7 @@ deploy: $(deploys)
 
 phony/tutorials/%: .dokuwiki/tutorials/%.txt
 	bin/deploy "$<"
+	while read img; do bin/post-image tutorials/"$$img"; done < "$<".images
 
 clean:
 	rm .dokuwiki -rf || :
