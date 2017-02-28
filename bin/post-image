@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+import os
+import sys
+
+import requests
+from lxml import etree
+
+
+URL = 'https://edux.fit.cvut.cz/courses/MI-PYT/lib/exe/mediamanager.php'
+path = sys.argv[1]
+filename = os.path.basename(path)
+session = requests.Session()
+
+
+cookies = {
+    os.environ.get('EDUX_COOKIE_NAME'): os.environ.get('EDUX_COOKIE_VALUE'),
+}
+
+
+r = session.get(URL, cookies=cookies)
+
+
+tree = etree.HTML(r.text)
+sectok = None
+for inp in tree.findall('.//input'):
+    if inp.attrib.get('name') == 'sectok':
+        sectok = inp.attrib.get('value')
+        break
+if sectok is None:
+    raise ValueError('Could not find sectok on parsed page')
+
+
+data = {
+    'sectok': sectok,
+    'ns': 'tutorials',
+    'id': filename,
+    'ow': 1,
+}
+
+with open(path, 'rb') as f:
+    files = {'upload': (filename, f)}
+    r = session.post(URL, files=files, data=data)
+
+ret = 0
+tree = etree.HTML(r.text)
+for div in tree.findall('.//div'):
+    if div.attrib.get('class') == 'error':
+        ret = 1
+        print(div.text, file=sys.stderr)
+
+sys.exit(ret)
