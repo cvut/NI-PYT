@@ -1,16 +1,16 @@
 NumPy
 =====
 
-Materiály jsou opět [na Githubu](https://github.com/cvut/MI-PYT/blob/master/tutorials/07-numpy/numpy-intro.ipynb).
+Materiály jsou opět [na Githubu](https://github.com/cvut/MI-PYT/blob/b161/tutorials/07-numpy/numpy-intro.ipynb).
 
 Na příklady budete potřebovat následující soubory:
 
 
-* [matrixdemo.py](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/matrixdemo.py)
-* [python.jpg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/python.jpg)
-* [sample.wav](https://github.com/cvut/MI-PYT/raw/master/tutorials/07-numpy/sample.wav)
-* [secret.png](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/secret.png)
-* [python-logo-template.svg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/python-logo-template.svg)
+* [matrixdemo.py](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/07-numpy/matrixdemo.py)
+* [python.jpg](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/07-numpy/python.jpg)
+* [sample.wav](https://github.com/cvut/MI-PYT/raw/b161/tutorials/07-numpy/sample.wav)
+* [secret.png](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/07-numpy/secret.png)
+* [python-logo-template.svg](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/07-numpy/python-logo-template.svg)
 
 ---
 

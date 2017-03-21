@@ -456,7 +456,7 @@ Nyní by již bludiště mělo být v okně vidět barevně.
 
 Protože barvičky jsou příliš nudné, přidáme do bludiště obrázky.
 
-Veškerou ke cvičení i k úkolu potřebnou grafiku najdete na [GitHubu](https://github.com/cvut/MI-PYT/tree/master/tutorials/09-qt/pics).
+Veškerou ke cvičení i k úkolu potřebnou grafiku najdete na [GitHubu](https://github.com/cvut/MI-PYT/tree/b161/tutorials/09-qt/pics).
 Je k dispozici pod public domain (tj. „dělej si s tím, co chceš“), pochází ze studia [Kenney],
 a je (společně se další volně licencovanou grafikou) ke stažení z [OpenGameArt.org].
 
@@ -490,8 +490,8 @@ A poté je na správných místech vyrendrujeme:
                     SVG_WALL.render(painter, rect)
 ```
 
-* [grass.svg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/09-qt/pics/grass.svg)
-* [wall.svg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/09-qt/pics/wall.svg)
+* [grass.svg](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/09-qt/pics/grass.svg)
+* [wall.svg](https://raw.githubusercontent.com/cvut/MI-PYT/b161/tutorials/09-qt/pics/wall.svg)
 
 
 Model/View
