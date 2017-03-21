@@ -1,18 +1,12 @@
 NumPy
 =====
 
-Materiály jsou opět [na Githubu](https://github.com/cvut/MI-PYT/blob/master/tutorials/07-numpy/numpy-intro.ipynb).
+Výukové materiály:
+[naucse.python.cz](http://naucse.python.cz/lessons/intro/numpy/),
+[GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/numpy).
 
-Na příklady budete potřebovat následující soubory:
-
-
-* [matrixdemo.py](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/matrixdemo.py)
-* [python.jpg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/python.jpg)
-* [sample.wav](https://github.com/cvut/MI-PYT/raw/master/tutorials/07-numpy/sample.wav)
-* [secret.png](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/secret.png)
-* [python-logo-template.svg](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/07-numpy/python-logo-template.svg)
-
----
+Úkol
+----
 
 Vaším úkolem je vytvořit funkci `analyze(array)` v modulu `maze`.
 

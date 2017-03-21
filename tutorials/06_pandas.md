@@ -1,17 +1,12 @@
 Pandas
 ======
 
-Materiály k tomuto cvičení jsou k dispozici [na GitHubu][nb].
+Výukové materiály:
+[naucse.python.cz](http://naucse.python.cz/lessons/intro/pandas/),
+[GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/pandas).
 
-[nb]: https://github.com/cvut/MI-PYT/blob/master/tutorials/06-pandas/pandas-intro.ipynb
-
-Budete si potřebovat stáhnout tři soubory:
-[actors.csv](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/06-pandas/actors.csv),
-[spouses.csv](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/06-pandas/spouses.csv), a
-[style-table.css](https://raw.githubusercontent.com/cvut/MI-PYT/master/tutorials/06-pandas/style-table.css).
-
-
----
+Úkol
+----
 
 Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže.
 
