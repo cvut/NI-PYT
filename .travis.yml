@@ -7,7 +7,7 @@ install:
 - sudo sed -i 's/trusty/xenial/' /etc/apt/sources.list # for new pandoc
 - sudo rm -rf /etc/apt/sources.list.d/* # disable 3rd party repos
 - sudo apt-get update -qq
-- sudo apt-get install -qq pandoc ca-certificates
+- sudo apt-get install -qq pandoc ca-certificates wkhtmltopdf
 - pip install requests lxml
 script:
 - bin/travis-make

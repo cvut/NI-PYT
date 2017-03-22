@@ -17,9 +17,18 @@ sed -Ei \
   -e 's@<html></kbd></html>@//@g' \
   "$TXT"
 
+# Export image list
 grep '{{:' "$TXT" | sed -E -e 's/\{\{://g' -e 's/\|.*//g' > "$TXT.images" || :
 
+# Export link list
+egrep -o '\[\[https?://naucse.python.cz/lessons/[^\|]*\|naucse.python.cz\]\]' \
+  "$TXT" | sed -E -e 's/^\[\[([^|]*)\|naucse.python.cz\]\]/\1/' > "$TXT.links" || :
+
+# Change images links
 sed -Ei 's@\{\{:([^/]*/)*([^|]*)@\{\{:tutorials:\2@g' "$TXT"
+
+# Add PDF links
+sed -Ei 's@(\[\[https?://naucse.python.cz/lessons/(([^/]*)/)*[^|]*\|naucse.python.cz\]\])@\1, {{:tutorials:\3.pdf|}}@' "$TXT"
 
 # Add number as indexmenu
 echo -e '\n\n{{indexmenu_n>'"$NUMBER"'}}' >> "$TXT"

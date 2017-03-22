@@ -1,0 +1,8 @@
+.header {
+    display: none !important; 
+}
+
+body div.content div.alert-danger {
+    display: none !important; 
+}
+
