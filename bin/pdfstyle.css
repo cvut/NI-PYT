@@ -6,3 +6,6 @@ body div.content div.alert-danger {
     display: none !important; 
 }
 
+pre {
+    font-family: "Liberation Mono" !important;
+}
