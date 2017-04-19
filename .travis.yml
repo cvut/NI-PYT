@@ -4,7 +4,7 @@ python:
 sudo: true
 dist: trusty
 install:
-- sudo sed -i 's/trusty/xenial/' /etc/apt/sources.list # for new pandoc
+- sudo sed -i 's/trusty/yakkety/' /etc/apt/sources.list # for new pandoc and wkhtmltopdf
 - sudo rm -rf /etc/apt/sources.list.d/* # disable 3rd party repos
 - sudo apt-get update -qq
 - sudo apt-get install -qq pandoc ca-certificates wkhtmltopdf
