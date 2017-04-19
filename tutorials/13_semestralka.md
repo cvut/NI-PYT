@@ -32,7 +32,7 @@ Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud ne
 V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte.
 I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
-### Eduxator (zabráno)
+### Eduxator
 
 Existuje rozpracovaný a nikdy nedokončený projekt [Eduxator], který umožňuje
 z příkazové řádky zadávat klasifikaci do Eduxu.
@@ -51,30 +51,6 @@ S přístupem do Eduxu a lehkým úvodem do problému může osobně pomoci
 [hroncok](http://github.com/hroncok).
 
 [Eduxator]: https://github.com/hroncok/eduxator
-
-### Odevzdávací mechanismus pro úlohy z předmětu BI-3DT (zabráno)
-
-Studenti předmětu [BI-3DT](https://edux.fit.cvut.cz/courses/BI-3DT/) odevzdávají
-tento semestr poprvé domácí úkol na GitHub. Máme v současnosti velmi
-komplikovaný a nepěkně napsaný systém, který pomocí Bashe a GitLab CI dokáže
-pustit nad všemi odevzdanými úlohami nějaké testy.
-
-Příští semestr bychom však rádi nasadili systém, který umožní studentům
-automaticky pouštět testy při pushnutí do vlastního repozitáře
-a zobrazovat výsledky těchto testů. Je však žádoucí, aby studenti
-neviděli obsah testů, pouze jejich výsledek.
-
-Šlo by o webovou aplikaci, která by po pushnutí provedla testy, výsledky
-publikovala na webové stránce s permanentním, ale *tajným* URL a vrátila
-GitHubu odkaz a informaci o výsledku. K tomu samozřejmě existuje
-[API](https://developer.github.com/v3/repos/statuses/).
-
-Součástí práce by bylo i přepsání [ošklivého testovacího skriptu](https://github.com/3DprintFIT/hedgehog-task/blob/master/runtests.sh)
-do Pythonu. Bylo by ale dobré, aby aplikace uměla spouštět jakýkoliv kód,
-podobně jako jiné CI systémy.
-
-S úvodem do současného systému může osobně pomoci
-[hroncok](http://github.com/hroncok).
 
 ### Analýza dat z MARAST kvízů
 
@@ -116,7 +92,7 @@ jaké experimenty provést. V dalším průběhu [kalvotom](https://github.com/k
 rád pomůže při řešení nejasností (např. co se týče matematické stránky
 některých metod).
 
-### CalDAV server pro Sirius (zabráno)
+### CalDAV server pro Sirius
 
 Na FIT funguje API [Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu [iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
 
