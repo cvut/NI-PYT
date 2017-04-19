@@ -9,6 +9,10 @@ install:
 - sudo apt-get update -qq
 - sudo apt-get install -qq pandoc ca-certificates wkhtmltopdf
 - pip install requests lxml
+before_script:
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
+- sleep 3 # give xvfb some time to start
 script:
 - bin/travis-make
 notifications:
