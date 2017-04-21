@@ -153,3 +153,27 @@ Aplikace bude mít webové rozhraní, přes které uživatel:
 Aplikace musí umožňovat autentizaci proti [Google Apps for Education](https://ict.fit.cvut.cz/~web/current/web/ict/GoogleApps/) na FIT. Volitelně by aplikace mohla pracovat se _zdroji_ ([Calendar Resources](https://support.google.com/a/answer/1686462?hl=en)), pro alokaci místnosti, ve které se událost koná.
 
 Kontaktní osoba: [Jan Vlnas](https://usermap.cvut.cz/profile/vlnasjan/).
+
+### git2edux
+
+[Tento repozitář](https://github.com/cvut/MI-PYT) obsahuje sadu skriptů a jiných souborů,
+které obstarávají nahrávání obsahu na Edux.
+Podstatou této práce je udělat stejnou věc pořádně, konfigurovatelně a znovupoužitelně.
+Pokud se autor nějakého předmětu na FITu rozhodne, že chce tento nástroj využít,
+vytvoří konfigurační soubor,
+použije předpřipravenou šablonu pro konfigurační soubor Travis CI a je hotovo.
+Nástroj by měl umět:
+
+ * zajistit převod Markdown souborů na dokuwiki syntaxi pomocí pandocu
+ * umožnit registraci vlastních filtrů aplikovaných před a po převodu
+ * aplikovat mapování na Edux filesystem načtené z konfiguračního souboru
+ * automaticky nahrávat na Edux obrázky a převádět reference na ně tak, aby fungovaly
+ * podporovat nahrávání vlastních souborů z filtrů
+ * převádět a nahrávat data na Edux asynchronně pomocí asyncio
+ * více nahrávacích mechanismů (HTTP POST a WebDAV)
+ * více možností přihlášení u HTTP POST (cookie a jméno s heslem)
+ * obsahovat interaktivní průvodce pro vytvoření konfiguračních souborů (vlastního a pro Travis CI)
+ * (nástroj by měl být jednoduše rozšířitelný pro použití s jinými CI)
+
+S přístupem do Eduxu a lehkým úvodem do problému může osobně pomoci
+[hroncok](http://github.com/hroncok).
