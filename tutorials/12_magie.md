@@ -2,7 +2,7 @@ Magie
 =====
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/magic/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/magic/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/magic).
 
 Úkol

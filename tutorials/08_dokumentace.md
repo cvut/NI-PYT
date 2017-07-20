@@ -2,7 +2,7 @@ Dokumentace
 ===========
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/docs/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/docs/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/docs).
 
 Úkol

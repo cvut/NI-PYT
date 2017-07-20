@@ -2,7 +2,7 @@ Moduly
 ======
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/distribution/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/distribution/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/distribution).
 
 Úkol

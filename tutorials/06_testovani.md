@@ -2,7 +2,7 @@ Testování
 =========
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/testing/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/testing/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/testing).
 
 Úkol

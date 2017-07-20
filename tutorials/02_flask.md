@@ -2,7 +2,7 @@ Webové aplikace: Flask
 ======================
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/flask/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/flask/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/flask).
 
 Úkol

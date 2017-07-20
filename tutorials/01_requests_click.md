@@ -2,15 +2,15 @@ requests a click
 ================
 
 Výukové materiály o virtuálním prostředí:
-[naucse.python.cz](http://naucse.python.cz/lessons/fast-track/install/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/fast-track/install/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/fast-track/install/).
 
 Výukové materiály o requests:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/requests/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/requests/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/requests).
 
 Výukové materiály o clicku:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/click/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/click/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/click).
 
 Úkol

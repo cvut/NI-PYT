@@ -2,7 +2,7 @@ GUI v Pythonu: PyQt5
 ====================
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/pyqt/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/pyqt/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/pyqt).
 
 Úkol

@@ -2,7 +2,7 @@ Pandas
 ======
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/pandas/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/pandas/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/pandas).
 
 Úkol

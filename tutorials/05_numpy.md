@@ -2,7 +2,7 @@ NumPy
 =====
 
 Výukové materiály:
-[naucse.python.cz](http://naucse.python.cz/lessons/intro/numpy/),
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/numpy/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/numpy).
 
 Úkol
