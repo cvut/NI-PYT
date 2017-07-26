@@ -8,32 +8,69 @@ Výukové materiály:
 Úkol
 ----
 
-Vaším úkolem je vytvořit funkci `analyze(array)` v modulu `maze`.
+Vaším úkolem za 5 bodů je vytvořit třídu `WaTor` v modulu `wator`
+reprezentující simulaci [Wa-Tor].
+Wa-Tor je vodní planeta ve tvaru dvoudimenzionálního toroidu,
+na které žijí ryby a žraloci. Čas na planetě Wa-Tor plyne diskrétně
+v jednotlivých skocích zvaných chronony. Za každý chronon se ryby a žraloci
+pohybují o jedno políčko v mřížce toroidu (pokud je to možné).
 
-Na vstupu bude bludiště uložené v matici, kde:
+Konkrétní pravidla simulace najdete na stránce [Wa-Tor] anglické Wikipedie.
 
-* záporné honoty představují zeď (kterou nejde projít)
-* nezáporné hodnoty předstvaují průchozí prostor
-* 1 představuje cíl (ten je jen jeden, ale můžete to napsat i tak, aby jich mohlo být víc)
+[Wa-Tor]: https://en.wikipedia.org/wiki/Wa-Tor
 
-V bludišti se lze pohybovat pouze horizontálně nebo veritkálně. Hranice matice jsou neprůchozí.
+Třída v konstruktoru přijme dvourozměrnou matici ryb a žraloků, kde 0
+představuje prázdné políčko, kladná čísla představují ryby a záporná čísla
+představují žraloky. Absolutní hodnota udává, kolik chrononů uplynulo od
+poslední reprodukce daného tvora (po reprodukci se resetuje na 1).
+Alternativně přijme velikost planety Wa-Tor,
+počet ryb a počet žraloků a ty umístí náhodně s náhodným „věkem“.
 
-Funkce vrátí objekt, který má:
+Dále konstruktor přejímá několik údajů ovlivňujících simulaci
+(výchozí hodnoty uvedeny v závorce):
 
-* atribut `distances`: matice, kde pro každé políčko, ze kterého se dá dostat do cíle, bude délka nejkratší cesty k cíli, jinak -1
-* atribut `directions`, matice, kde je pro každé takové políčko směr, kterým se odtud dá nejrychleji dostat do cíle, jako ASCII byte `^`, `v`, `<` nebo `>`; pro nedostupná políčka (ale průchozí, ne zdi) mezeru, pro cíl `X` a pro zeď `#`
-* atribut `is_reachable`: `True` pokud se dá z každého políčka, kde není zeď, dostat do cíle, jinak `False`
-* metodu `path(row, column)`: vrátí souřadnice nejkratší cesty z políčka `(row, column)` jako seznam dvojic včetně cíle a startu (pro souřadnice zdí a nedostupných políček vyhodí výjimku)
+ * po kolika chrononech se reprodukuje ryba (5),
+ * po kolika chrononech se reprodukuje žralok (10),
+ * jakou mají žraloci počáteční energii (5), volitelně matice energií definována dále,
+ * kolik energie dostane žralok po snědení ryby (3).
 
-K funkci napište testy pomocí pytestu, hezká bludiště na testování můžete získat
-[generátorem](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
+Můžete předpokládat, že věky nebudou dosahovat stovek a můžete tedy využít
+nějaký „malý“ datový typ. Velkost matice však není omezena ničím jiným než
+dostupnými prostředky. Žraločí energie také může dosahovat vyšších hodnot.
+
+Poznámka: Pokud se zvíře má zrovna reprodukovat, ale nemůže, protože nemá kam,
+nezvedejte mu věk, aby vám hodnoty nepřetekly.
+Na chování simulace by to nemělo mít vliv.
+
+Třída bude obsahovat dvě „veřejné“ NumPy matice:
+
+ * `.creatures` (stejný význam jako matice na vstupu),
+ * `.energies` (množství energie pro žraloky na daných políčkách - int)
+
+Třída bude obsahovat metodu `.tick()`, která provede uplynutí jednoho chrononu
+a pohne rybami a žraloky.
+Nejdříve se hýbou ryby, pak žraloci, pak případní hladoví žraloci umírají.
+Pohyby v rámci druhu probíhají postupně v libovolném pořadí, dejte si ale
+pozor, aby se některé ryby nebo žraloci nepohybovali v jednom chrononu vícekrát.
+
+Když se žralok reprodukuje (dělí), oba jeho potomci mají stejnou energii
+(o jedna menší než měl žralok v minulém chrononu). Pokud se žralok reprodukuje
+a zároveň jí rybu, novou energii dostane pouze ten, který je na políčku,
+kde původně byla ryba.
+
+Dále bude obsahovat metody `.count_fish()` a `.count_sharks()`, které vrátí
+počet ryb, respektive žraloků (tato čísla není nutné si uchovávat, stačí je
+při zavolání metody zjistit).
+
+Přesné rozhraní a chování třídy je dané přiloženými testy.
+Testy najdete v repozitáři [hroncok/wator_tests](https://github.com/hroncok/wator_tests).
 
 Odevzdávání:
 
-* vytvořte si nový privátní git repozitář s názvem `maze` (do něj nás pozvěte, případné kolize s existujícími repozitáři řešte e-mailem)
-* pokud ještě nemáte v tabulce hodnocení link na váš GitHub, pošlete nám jej na e-mail
-* na tuto úlohu budou navazovat další, všechny se budou tématicky věnovat bludišti
-* v repozitáři odevzdávejte pomocí tagu `v0.1`
-* všechny závislosti (včetně `numpy` a `pytest`) uveďte v souboru `requirements.txt` (nemusí být s konkrétní verzí)
-* příkaz `python -m pytest` musí po instalaci závislostí spouštět testy
-* z kořenového adresáře repozitáře musí jít po instalaci závislostí udělat v Pythonu `from maze import analyze` a `analyze(array)`
+* vytvořte si nový privátní git repozitář s názvem `wator` (do něj nás pozvěte, případné kolize s existujícími repozitáři řešte e-mailem);
+* pokud ještě nemáte v tabulce hodnocení link na váš GitHub, pošlete nám jej na e-mail;
+* na tuto úlohu budou navazovat další, všechny se budou tématicky věnovat simulaci Wa-Tor;
+* v repozitáři odevzdávejte pomocí tagu `v0.1`;
+* všechny závislosti pro spuštění testů (včetně `numpy` a `pytest`) uveďte v souboru `requirements.txt` (nemusí být s konkrétní verzí);
+* naše testy můžete a nemusíte přidat do repozitáře;
+* z kořenového adresáře repozitáře musí jít po instalaci závislostí udělat v Pythonu `from wator import WaTor` a nad danou třídou spustit testy.
