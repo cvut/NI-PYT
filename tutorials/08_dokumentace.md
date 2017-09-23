@@ -5,17 +5,17 @@ Výukové materiály:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/docs/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/docs).
 
-Úkol
-----
+Úkol - Labelord V
+-----------------
 
 Vaším úkolem za 5 bodů je vytvořit pomocí Sphinx dokumentaci k vašemu projektu.
 
 Měla by obsahovat textovou část, ze které bude jasné, co je, k čemu je,
 jak se nainstaluje a jak se používá vaše aplikace.
-Můžete předpokládat, že uživatel ví, co je to Twitter, tweet, hashtag, retweet
-apod.; GitHub, issue, pull request, label, repozitář apod.
-Nepředpokládejte ale, že ví, kde najde API klíče či tokeny, že ví, co to je,
-jak se k nim chovat apod. U GitHubu nepředpokládejte, že ví, co je to webhook.
+Můžete předpokládat, že uživatel ví, co je to GitHub, issue, pull request,
+label, repozitář apod.
+Nepředpokládejte ale, že ví, kde najde API token či webhook, že ví, co to je,
+jak se k nim chovat apod.
 
 Pokud hypoteticky ukážeme dokumentaci kolegům, kteří nikdy neviděli zadání
 vašeho úkolu, musí to pro ně být stejně pochopitelné.
