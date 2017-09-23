@@ -13,64 +13,241 @@ Výukové materiály o clicku:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/click/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/click).
 
-Úkol
-----
+Úkol - Labelord I
+-----------------
 
-Vaším úkolem za 5 bodů je vytvořit command line aplikaci nad vybraným webovým
-API, pomocí knihoven [requests] a [click].
-Hotovou aplikaci odevzdáte jako gitový repozitář na GitHubu, případně fakultním
-GitLabu. V obou případech nám nezapomeňte [dát přístup](00_uvod.md).
+Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s [GitHub API](https://developer.github.com/v3/),
+pomocí knihoven [requests](http://docs.python-requests.org) a [click](http://click.pocoo.org).
+Hotovou aplikaci odevzdáte jako gitový repozitář na [GitHubu](https://github.com),
+případně [fakultním GitLabu](https://gitlab.fit.cvut.cz). V obou případech
+nám nezapomeňte [dát přístup](TODO).
 
-Nebráníme se veřejným repozitářům, ale neradi bychom viděli, že jednu úlohu
-odevzdá úplně stejně několik různých lidí, pokud chcete, udělejte repozitář
-privátní.
+Vzhledem k tomu, že všichni máte stejné zadání, doporučujeme použít privátní
+repozitář. Svůj kód můžete zveřejnit pod nějakou open-source licencí po našem
+zkontrolování všech navazujících úloh.
 
-Odkaz na repozitář nám pošlete e-mailem.
-V repozitáři prosím nastavte tag `v0.1`.
-Termín odevzdání je začátek příštího cvičení (dřívější paralelky).
+Odkaz na repozitář nám pošlete e-mailem. Pro odevzdání v repozitáři prosím
+nastavte tag `v0.1`. Termín odevzdání je začátek příštího cvičení (dřívější
+paralelky). *TODO: termín*
 
-Co by aplikace měla dělat? Můžete si vybrat:
+### Intro
 
-### Twitter Wall
+Aplikace bude sloužit pro globální správu štítků (labels), kterými se
+na GitHubu označují issues, napříč více projekty. Cílem je usnadnit práci
+s více repozitáři tak, aby nebylo nutné vytvářet štítky ručně u jednotlivých
+repozitářů a aby byly všude stejné (barvy + názvy) dle zadané specifikace.
 
-Twitter Wall pro terminál. Aplikace, která bude zobrazovat tweety odpovídající
-určitému hledání do terminálu v nekonečné smyčce.
+Terminálová aplikace musí splňovat požadavky na jednotlivé příkazy,
+přepínače, výstupy a návratové kódy uvedené v tomto textu. To můžete
+ověřovat pomocí poskytnutých testů (a měli byste).
 
-Aplikace načte určitý počet tweetů odpovídající hledanému výrazu, zobrazí je
-a v nějakém intervalu se bude dotazovat na nové tweety (použijte API argument
-`since_id`).
+### Konfigurace
 
-Pomocí argumentů půjde nastavit:
+Základním vstupem je konfigurační soubor ve formátu [INI](https://en.wikipedia.org/wiki/INI_file)
+(použijte [ConfigParser](https://docs.python.org/3/library/configparser.html)),
+některá nastavení lze ale provádět i jiným způsobem dle následujícího popisu.
 
- * cesta ke konfiguračnímu souboru s přístupovými údaji
- * hledaný výraz
- * počet na začátku načtených tweetů
- * časový interval dalších dotazů
- * nějaké vlastnosti ovlivňující chování (např. zda zobrazovat retweety)
+Bez ohledu na zvolený příkaz se cesta ke konfiguračnímu souboru zadává
+nepovinným přepínačem (option) `-c`/`--config`. Pokud není specifikován,
+bere se výchozí cesta `./config.cfg` (avšak ani tento soubor nemusí existovat).
 
-### GitHub Issues Bot
+:bulb: Je vhodné do repozitáře vložit vzorový konfigurační soubor, aby uživatelé
+věděli, jak má vypadat, aniž by pročítali dokumentaci, a mohli jej
+použít jako šablonu.
 
-Robot (založte mu vlastní účet na GitHubu), který v intervalech projde issues
-v repozitáři na GitHubu a ty neolabelované olabeluje podle zadaných pravidel.
-Nezapomeňte robotovi dát přístup do vašeho testovacího repozitáře.
+#### GitHub token
 
-Pravidla by měla být nějakým způsobem konfigurovatelná
-(např. páry regulární výraz → label).
+GitHub token lze zadat třemi způsoby (seřazeno podle priority od nejmenší):
 
-Pomocí argumentů půjde nastavit:
+1. V konfiguračním souboru může být direktiva s tokenem:
 
- * cesta ke konfiguračnímu souboru s přístupovými údaji
- * který repozitář se má procházet
- * kde je soubor s definovanými pravidly
- * jak často issues kontrolovat
- * jaký label nastavit, pokud žádné pravidlo nezabralo
- * nějaké vlastnosti ovlivňující chování (např. zda má robot vyhodnocovat i komentáře, či procházet i Pull Requesty)
+```ini
+[github]
+token = MY_SECRET_TOKEN
+```
 
-### Vlastní nápad
+2. Token může být v proměnné prostředí `GITHUB_TOKEN` (hint: použijte [click](http://click.pocoo.org/6/arguments/#environment-variables))
 
-Můžete využít i jiné API (např. místní [Sirius] či [KOSapi]) a vymyslet vlastní aplikaci.
-Zadání vám ale musí schválit cvičící **už na cvičení**, protože v dalších cvičeních na tuto
-aplikaci budeme nabalovat další a další funkce.
+3. Nejvyšší prioritu má hodnota přepínače `-t`/`--token`
 
-[Sirius]: https://github.com/cvut/sirius/wiki
-[KOSapi]: https://kosapi.fit.cvut.cz/projects/kosapi/wiki
+Obdobně priorita funguje v celé aplikaci – argument/přepínač „vítězí“ nad
+konfiguračním souborem.
+
+Pokud aplikace nedostane token ani jednou cestou, tak musí vypsat na standardní
+chybový výstup `No GitHub token has been provided` a skončit s kódem 3. V případě,
+že je zadán neplatný token, program vypíše příslušné chybové hlášení (identické
+z GitHubu *401*, viz testy) a skončí s kódem 4.
+
+:exclamation: Dávejte pozor, aby se váš soukromý token neobjevil na GitHubu!
+
+### Příkazy
+
+Aplikace je rozdělena na jednotlivé příkazy realizující danou
+požadovanou funkcionalitu.
+
+#### list_repos
+
+Aplikace na příkaz `list_repos` vypíše všechny repozitáře, se kterými může
+na základě zadaného tokenu pracovat (na každý řádek jeden `owner/name`):
+
+```console
+$ python labelord.py --config my-config.cfg list_repos
+MarekSuchanek/repo1
+MarekSuchanek/repo2
+CVUT/MI-PYT
+```
+
+Všechny ostatní GitHub chyby než *Bad credentials* končí kódem 10. GitHub
+chybou se rozumí odpověď s jiným HTTP stavovým kódem, než je očekávaný.
+
+#### list_labels
+
+Aplikace na příkaz `list_labels <reposlug>` vypíše všechny štítky, které jsou
+aktuálně pro zadaný repozitář nastavené (na každý řádek `#XXXXXX name`):
+
+```console
+$ python labelord.py --config my-config.cfg list_labels MarekSuchanek/repo1
+#AAAAAA help wanted
+#FF0000 bug
+#00FF00 fixed
+#0000FF feature request
+```
+
+Pokud není zadaný repozitář nalezen (*404*), program skončí s příslušným
+chybovým hlášením a kódem 5. Všechny ostatní GitHub chyby končí kódem 10.
+
+#### run
+
+Aplikace na příkaz `run` provede aktualizaci štítků. Úspěch či selhání se
+signalizuje návratovým kódem a dle zvoleného režimu případně i výstupem.
+
+
+##### Specifikace štítků
+
+Specifikace štítků se může nacházet v konfiguračním souboru:
+
+```ini
+[labels]
+Bug = FF0000
+Last year = 23FB89
+```
+
+(Seznam může být prázdný. Pozor na zachování velikostí písma názvů štítků.)
+
+Případně je možné specifikovat vzorový repozitář (vlastní nebo veřejný cizí)
+pomocí `-r`/`--template-repo` nebo přes konfigurační soubor:
+
+```ini
+[others]
+template-repo = MarekSuchanek/myLabels
+```
+
+Pokud nejsou štítky specifikované ani jedním způsobem,
+pak program na standardní chybový výstup vypíše
+`No labels specification has been found`, skončí s kódem 6.
+
+##### Specifikace repozitářů
+
+Repozitáře, ve kterých program bude provádět změny, se definují opět
+v konfiguračním souboru:
+
+```ini
+[repos]
+MarekSuchanek/repo1 = on
+MarekSuchanek/repo2 = on
+CVUT/MI-PYT = off
+```
+
+(„Vypnutý“ repozitář se chová stejně, jako by tam nebyl.)
+
+(Seznam může být prázdný. Použijte `getboolean` z `ConfigParser`.)
+
+Nebo pomocí přepínače `-a`/`--all-repos` pro výběr všech dostupných
+repozitářů (které vypíše `list_repos`).
+
+Pokud nejsou repozitáře specifikované ani jedním způsobem,
+pak program na standardní chybový výstup vypíše
+`No repositories specification has been found`, skončí s kódem 7.
+
+##### Módy
+
+Módy (argument `run <mode>`):
+* `update` = Pokud specifikovaný štítek s daným jménem v repozitáři
+  neexistuje, je vytvořen s příslušnou barvou. V opačném případě je jeho
+  barva upravena, je-li jiná než ve specifikaci. Štítky, které jsou v
+  repozitáři *navíc* (jejich jméno není ve specifikaci), jsou ponechány.
+* `replace` = Pracuje jako `update`, ale štítky *navíc* jsou odstraněny.
+
+:bulb: Například pokud je specifikovaný prázdný seznam štítků, v módu
+`update` se nestane vůbec nic, ale v módu `replace` jsou odstraněny
+všechny štítky.
+
+V případě, že uživatel zadá jiný mód nebo nezadá žádný, musí být informován
+příslušnou chybovou hláškou a návratovým kódem. Ušetřete si práci a použijte
+argument s typem `click.Choice` (viz [dokumentace pro option](http://click.pocoo.org/6/options/#choice-options)).
+
+##### Běh na nečisto
+
+Při běhu s přepínačem `-d`/`--dry-run` se program chová stejně (výpisy), ale
+neprovádí žádné změny na GitHubu. Slouží ke zjištění potřebných změn, které
+chce program provést.
+
+Příklad výstup běhu na nečisto v režimu `verbose` (viz níže):
+
+```
+[ADD][DRY] MarekSuchanek/repo1; #AAAAAA; help wanted
+[DEL][DRY] MarekSuchanek/repo1; #ABBABA; help wanted
+[LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
+[UPD][DRY] MarekSuchanek/repo3; #AAAAAA; help wanted
+[SUMMARY] 1 error(s) in total, please check log above
+```
+
+##### Výstup a chyby
+
+Výstup aplikace je dán tím, zda je zvolen přepínač `-v`/`--verbose`,
+`-q`/`--quiet` nebo ani jeden z nich (případně oba).
+
+Pokud je zvoleno `-v`/`--verbose`, tak se následující vypisuje na standardní
+výstup:
+
+```
+[ADD][SUC] MarekSuchanek/repo1; #AAAAAA; help wanted
+[DEL][ERR] MarekSuchanek/repo1; #ABBABA; help wanted; 500 - Internal Server Error
+[LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
+[UPD][SUC] MarekSuchanek/repo3; #AAAAAA; help wanted
+[SUMMARY] 2 error(s) in total, please check log above
+```
+
+Pokud je zvoleno `-q`/`--quiet`, tak se logicky nevypisuje nic na
+standardní výstup (ani chybový) a informací o běhu je pouze návratový kód.
+
+V případě, že není zvolena ani jedna z předchozích, nebo jsou zvoleny obě,
+pak se na chybový výstup vypisují chyby a na standardní výstup se vypíše shrnutí:
+ - `SUMMARY: X repo(s) updated successfully`, (kód 0)
+ - `SUMMARY: there were X errors, please error check log`, (kód 10)
+
+
+```
+ERROR: UPD; MarekSuchanek/repo1; ABC; CCAXXF; 422 - Validation Failed
+ERROR: LBL; MarekSuchanek/repo2; 404 - Not Found
+ERROR: ADD; pyvec/naucse.python.cz; ABC; CCAXXF; 404 - Not Found
+SUMMARY: 3 error(s) in total, please check log above
+```
+
+Pro jednoduchost se vypisují chyby identické s těmi, které vrací GitHub
+včetně chybového HTTP kódu. Hypotetický uživatel aplikace si pak chybu
+zjistí v dokumentaci GitHub API (na kterou se můžete odkázat). Ostatní
+chyby a nesprávná ukočení aplikace ošetřete volitelně nad rámec úlohy
+(například případ selhání připojení k API - timeout).
+
+Další detaily o výstupech a chování programu můžete zjistit v přiložených
+testech, kterými musí vaše implementace projít.
+
+------------------------------------------------------------------------
+
+Ačkoliv je dodán předpřipravný skeleton společně s testy, které je nutné
+splnit, fantazii se meze nekladou. Dobrovolně můžete udělat navíc další
+možnosti, například možnost obarvení výstupu přepínačem `-y`/`--colorful`,
+další styl výpisu nebo vstupu nebo i něco složitějšího (celý nový příkaz),
+pokud si chcete vyzkoušet další pythonní knihovny a další funkce nad rámec
+této úlohy.
