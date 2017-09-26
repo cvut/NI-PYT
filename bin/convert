@@ -10,6 +10,8 @@ pandoc "$MD" --to dokuwiki -o "$TXT"
 # Convert <source> to <code> and correnct links
 # Also <html>
 sed -Ei \
+  -e 's@:exclamation: (.*)@<note important>\1</note>@g' \
+  -e 's@:bulb: (.*)@<note tip>\1</note>@g' \
   -e 's@\[\[([^\|]+)\.md\|([^]]*)\]\]@\[\[tutorials:\1\|\2\]\]@g' \
   -e 's@<html><kbd></html>@//@g' \
   -e 's@<html></kbd></html>@//@g' \

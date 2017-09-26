@@ -67,8 +67,7 @@ přímo na GitHubu a aplikace se postará o master-to-master replikaci.
    údaji z konfiguračního souboru (pokud nejsou oba nastavené, pak je
    zcela autentizace vypnuta).
 
-   :exclamation: Pokud na veřejném hostingu nebudete mít také HTTPS,
-   doporučujeme vytvořit si testovací účet na GitHub a použít ten.
+   :exclamation: Pokud na veřejném hostingu nebudete mít také HTTPS, doporučujeme vytvořit si testovací účet na GitHub a použít ten.
 
 6. Cesty v aplikaci
     * `GET /` (HTML)
