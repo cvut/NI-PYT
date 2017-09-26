@@ -5,8 +5,8 @@ Výukové materiály:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/flask/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/flask).
 
-Úkol - Labelord II
-------------------
+Úkol
+----
 
 Vaším úkolem za 5 bodů je rozšířit command line aplikaci z minulého
 cvičení o webové rozhraní. Stávající funkcionalita ale musí být zachována,

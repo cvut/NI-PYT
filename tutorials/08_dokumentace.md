@@ -5,8 +5,8 @@ Výukové materiály:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/docs/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/docs).
 
-Úkol - Labelord V
------------------
+Úkol
+----
 
 Vaším úkolem za 5 bodů je vytvořit pomocí Sphinx dokumentaci k vašemu projektu.
 
