@@ -32,6 +32,9 @@ nastavte tag `v0.1`.
 Přesné rozhraní a chování třídy je dané přiloženými testy.
 Testy najdete v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests).
 
+Termín odevzdání je u této úlohy mimořádně v pondělí (včetně) za 19 dní, termín je tedy shodný s příští úlohou.
+Důrazně však doporučujeme odevzdat ji dříve.
+
 ### Intro
 
 Aplikace bude sloužit pro globální správu štítků (labels), kterými se

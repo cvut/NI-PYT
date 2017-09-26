@@ -16,8 +16,9 @@ Průběh cvičení
 
 Na cvičení se od nás na začátku vždy dozvíte nějaké informace o probíraném tématu, většinou doplněné o ukázky nad rámec textu v těchto materiálech.
 Na cvičeních vytvořené ukázky k textu vždy připojíme.
-Na (téměř) každém cvičení dostanete nějakou úlohu, kterou můžete plnit na cvičení a/nebo doma, do příštího týdne (respektive do dalšího cvičení).
-Protože úlohy na sebe mnohdy navazují, dáme vám k dispozici vždy na dalším cvičení referenční řešení úlohy z minulé hodiny, aby vám tz. neujel vlak.
+Na (téměř) každém cvičení dostanete nějakou úlohu, kterou můžete plnit na cvičení a/nebo doma.
+Termín odevzdání úlohy je zpravidla pondělí (včetně) 12 dní po cvičení, na kterém byl úkol zadán. U některých úloh se termín může lišit.
+Protože úlohy na sebe mnohdy navazují, dáme vám někdy k dispozici referenční řešení úlohy z minula, aby vám tz. neujel vlak.
 
 Úlohy se odevzdávají výhradně jako gitové repozitáře. Preferujeme použití [GitHubu](https://github.com/), kde jako studenti s e-mailovou adresou `@fit.cvut.cz` máte nárok na [Student Developer Pack](https://education.github.com/pack) a tedy na neomezené množství privátních repozitářů. V případě, že si velmi nepřejete používat GitHub, můžete využít místo toho například [fakultní GitLab](https://gitlab.fit.cvut.cz/). Nezapomeňte do repozitářů pozvat jako spolupracovníky nás, tedy uživatele [hroncok](https://github.com/hroncok) a [MarekSuchanek](https://github.com/MarekSuchanek). Pokud s gitem a GitHubem nejste velcí kamarádi, doporučujeme ještě před kurzem pročíst [GitHub Bootcamp](https://help.github.com/categories/bootcamp/) a použít [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf), případně [GitHowTo](https://githowto.com/). Podrobnosti k odevzdání zjistíte u zadání jednotlivých úloh.
 
