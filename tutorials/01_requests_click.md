@@ -56,9 +56,7 @@ Bez ohledu na zvolený příkaz se cesta ke konfiguračnímu souboru zadává
 nepovinným přepínačem (option) `-c`/`--config`. Pokud není specifikován,
 bere se výchozí cesta `./config.cfg` (avšak ani tento soubor nemusí existovat).
 
-:bulb: Je vhodné do repozitáře vložit vzorový konfigurační soubor, aby uživatelé
-věděli, jak má vypadat, aniž by pročítali dokumentaci, a mohli jej
-použít jako šablonu.
+:bulb: Je vhodné do repozitáře vložit vzorový konfigurační soubor, aby uživatelé věděli, jak má vypadat, aniž by pročítali dokumentaci, a mohli jej použít jako šablonu.
 
 #### GitHub token
 
@@ -183,9 +181,7 @@ Módy (argument `run <mode>`):
   repozitáři *navíc* (jejich jméno není ve specifikaci), jsou ponechány.
 * `replace` = Pracuje jako `update`, ale štítky *navíc* jsou odstraněny.
 
-:bulb: Například pokud je specifikovaný prázdný seznam štítků, v módu
-`update` se nestane vůbec nic, ale v módu `replace` jsou odstraněny
-všechny štítky.
+:bulb: Například pokud je specifikovaný prázdný seznam štítků, v módu `update` se nestane vůbec nic, ale v módu `replace` jsou odstraněny všechny štítky.
 
 V případě, že uživatel zadá jiný mód nebo nezadá žádný, musí být informován
 příslušnou chybovou hláškou a návratovým kódem. Ušetřete si práci a použijte
