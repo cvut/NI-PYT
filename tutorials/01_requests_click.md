@@ -27,8 +27,10 @@ repozitář. Svůj kód můžete zveřejnit pod nějakou open-source licencí po
 zkontrolování všech navazujících úloh.
 
 Odkaz na repozitář nám pošlete e-mailem. Pro odevzdání v repozitáři prosím
-nastavte tag `v0.1`. Termín odevzdání je začátek příštího cvičení (dřívější
-paralelky). *TODO: termín*
+nastavte tag `v0.1`.
+
+Přesné rozhraní a chování třídy je dané přiloženými testy.
+Testy najdete v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests).
 
 ### Intro
 

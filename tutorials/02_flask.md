@@ -17,6 +17,10 @@ Výslednou aplikaci nasaďte na PythonAnywhere, nebo jiný veřejný hosting.
 Odkaz na běžící aplikaci (včetně přihlašovacích údajů do aplikace) a
 repozitář nám pošlete e-mailem. V repozitáři prosím nastavte tag `v0.2`.
 
+Testy specifikující detailní chování a možné použít ke kontrole opět
+najdete v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests)
+ve větvi `flask`.
+
 ### Intro
 
 Současná aplikace vám sice umožňuje snadno nastavit štítky pro více
