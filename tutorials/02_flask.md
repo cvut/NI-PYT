@@ -42,63 +42,62 @@ přímo na GitHubu a aplikace se postará o master-to-master replikaci.
    CLI aplikace (`run update/replace`). Při startu aplikace se tedy pouze
    načte konfigurace ze souboru.
 
-3. Mimo spouštění přes `flask run` je možné aplikaci spustit pomocí
-   `click` příkazu `run_server`:
-   * `--host`/`-h` = specifikace hostname (shodně jako `flask run`, výchozí `127.0.0.1`)
-   * `--port`/`-p` = specifikace portu (shodně jako `flask run`, výchozí `5000`)
-   * `--debug`/`-d` = debug mód (shodně jako nastavení `FLASK_DEBUG=true`, flag)
-   * (dobrovolně) další možnosti z `flask run`
+3. Mimo spouštění přes `flask run` je možné aplikaci spustit pomocí `click` příkazu `run_server`:
+    * `--host`/`-h` = specifikace hostname (shodně jako `flask run`, výchozí `127.0.0.1`)
+    * `--port`/`-p` = specifikace portu (shodně jako `flask run`, výchozí `5000`)
+    * `--debug`/`-d` = debug mód (shodně jako nastavení `FLASK_DEBUG=true`, flag)
+    * (dobrovolně) další možnosti z `flask run`
 
 4. Aplikace má dvě části:
 
-   1. *Webhook část* - GitHub zašle požadavek s informací o změně štítků
+    * *Webhook část* - GitHub zašle požadavek s informací o změně štítků
       a aplikace jej zpracuje a změny zpropaguje do ostatních repozitářů.
       Tyto změny a pokusy o ně se logují do souboru. Je nutné si dát pozor
       na to, že změna štítků provedená aplikací opět vyvolá ze strany
       GitHubu požadavek s informací o změně.
 
-   2. *Administrační část* - umožňuje přístup k informacím o běhu aplikace
+    * *Administrační část* - umožňuje přístup k informacím o běhu aplikace
       a funkce pro znovunačtení konfiguračního souboru za běhu a přidání
-       webhooku do repozitáře na GitHubu.
+      webhooku do repozitáře na GitHubu.
 
 5. Obě části aplikace musí být ze zřejmých důvodů zabezpečené. Webhooky
    je možné zabezpečit položkou `secret` (viz níže). Administrační část
    musí být zabezpečena pomocí [HTTP Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication)
    údaji z konfiguračního souboru (pokud nejsou oba nastavené, pak je
    zcela autentizace vypnuta).
-
    :exclamation: Pokud na veřejném hostingu nebudete mít také HTTPS, doporučujeme vytvořit si testovací účet na GitHub a použít ten.
 
 6. Cesty v aplikaci
+
     * `GET /` (HTML)
-      - úvodní statická stránka s informací o aplikaci a případně odkazy
+        * úvodní statická stránka s informací o aplikaci a případně odkazy
     * `GET /repos` (HTML+JSON)
-      - seznam spravovaných repozitářů (z konfiguračního souboru)
-      - v JSON jako seznam řetězců
-      - (dobrovolně) v HTML přidejte k repozitářům odkaz na GitHub, na
-        stránku `/labels/<repo>` a také tlačítko pro odeslání AJAX
-        požadavku `POST /repos/webhook` a zobrazení výsledku pomocí
-        JavaScriptu. Na stránku pak můžete obdobně přidat i tlačítko
-        pro AJAX `POST /reload`.
+        * seznam spravovaných repozitářů (z konfiguračního souboru)
+        * v JSON jako seznam řetězců
+        * (dobrovolně) v HTML přidejte k repozitářům odkaz na GitHub, na
+          stránku `/labels/<repo>` a také tlačítko pro odeslání AJAX
+          požadavku `POST /repos/webhook` a zobrazení výsledku pomocí
+          JavaScriptu. Na stránku pak můžete obdobně přidat i tlačítko
+          pro AJAX `POST /reload`.
     * `GET /labels/<repo>` (HTML+JSON)
-      - seznam aktuálních štítků pro zadaný repozitář
-      - pro HTML použijte filtr pro zobrazení čtverečku s barvou štítku
-        `colorbox` (název funkce `colorbox_filter`)
-      - přijímá `repo` jako část URI (např. `/labels/MarekSuchanek/repo1`)
-      - v JSON jako slovník název-barva
+        * seznam aktuálních štítků pro zadaný repozitář
+        * pro HTML použijte filtr pro zobrazení čtverečku s barvou štítku
+          `colorbox` (název funkce `colorbox_filter`)
+        * přijímá `repo` jako část URI (např. `/labels/MarekSuchanek/repo1`)
+        * v JSON jako slovník název-barva
     * `POST /repos/webhook`
-      - přidá webhook do zadaného repozitáře (pokud to lze)
-      - přijímá `repo` jako data z formuláře - nikoliv jako část URI
+        * přidá webhook do zadaného repozitáře (pokud to lze)
+        * přijímá `repo` jako data z formuláře - nikoliv jako část URI
     * `POST /hooks`
-      - přijímá verifikované webhooks z GitHub
-      - nejprve ověřte, že přijatý webhook má správný podpis (viz níže)
-      - poté zjistěte, zda zpráva obsahuje správnou událost a repozitář
-        (je v seznamu aktuálně povolených repozitářů)
-      - váše aplikace musí odpovědět na události `ping` a `label`
-      - pro vyzkoušení, co GitHub posílá, doporučujeme https://requestb.in
+        * přijímá verifikované webhooks z GitHub
+        * nejprve ověřte, že přijatý webhook má správný podpis (viz níže)
+        * poté zjistěte, zda zpráva obsahuje správnou událost a repozitář
+          (je v seznamu aktuálně povolených repozitářů)
+        * váše aplikace musí odpovědět na události `ping` a `label`
+        * pro vyzkoušení, co GitHub posílá, doporučujeme https://requestb.in
     * `POST /reload`
-      - znovunačte konfigurační soubor (musíte si uchovat, z jakého souboru
-        byla konfigurace načtena při startu)
+        * znovunačte konfigurační soubor (musíte si uchovat, z jakého souboru
+          byla konfigurace načtena při startu)
 
 JSON vracejte, pokud je preferováný typ pomocí `Accept` nastaven na
 `application/json` a to i v případě chyb. V ostatních případech pošlete
