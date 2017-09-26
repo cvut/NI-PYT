@@ -8,6 +8,8 @@ Výukové materiály:
 Úkol
 ----
 
+:exclamation: Pozor, toto zadání je z minula a bude se ještě měnit.
+
 Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže.
 
 Řešení může být zpracováno buď jako Jupyter Notebook, ve kterém bude patrné,

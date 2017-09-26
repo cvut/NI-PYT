@@ -8,6 +8,8 @@ Výukové materiály:
 Úkol
 ----
 
+:exclamation: Pozor, toto zadání je z minula a bude se ještě měnit.
+
 Vaším úkolem za 5 bodů je napsat testy k dosavadním úlohám pomocí pytestu.
 Není nutné použít `flexmock` pokud to nepotřebujete.
 Využití `betamax`u je silně doporučeno.
