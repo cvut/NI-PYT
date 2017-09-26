@@ -13,8 +13,8 @@ Výukové materiály o clicku:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/click/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/click).
 
-Úkol - Labelord I
------------------
+Úkol
+----
 
 Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s [GitHub API](https://developer.github.com/v3/),
 pomocí knihoven [requests](http://docs.python-requests.org) a [click](http://click.pocoo.org).

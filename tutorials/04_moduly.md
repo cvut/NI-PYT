@@ -5,8 +5,8 @@ Výukové materiály:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/distribution/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/distribution).
 
-Úkol - Labelord III
--------------------
+Úkol
+----
 
 Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu balíček
 instalovatelný přes pip a nahrát jej na testovací nebo opravdovou PyPI.
