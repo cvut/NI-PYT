@@ -20,7 +20,7 @@ Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s [Git
 pomocí knihoven [requests](http://docs.python-requests.org) a [click](http://click.pocoo.org).
 Hotovou aplikaci odevzdáte jako gitový repozitář na [GitHubu](https://github.com),
 případně [fakultním GitLabu](https://gitlab.fit.cvut.cz). V obou případech
-nám nezapomeňte [dát přístup](TODO).
+nám nezapomeňte [dát přístup](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/).
 
 Vzhledem k tomu, že všichni máte stejné zadání, doporučujeme použít privátní
 repozitář. Svůj kód můžete zveřejnit pod nějakou open-source licencí po našem
