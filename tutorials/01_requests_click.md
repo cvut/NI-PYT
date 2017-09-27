@@ -62,16 +62,16 @@ bere se výchozí cesta `./config.cfg` (avšak ani tento soubor nemusí existova
 
 GitHub token lze zadat třemi způsoby (seřazeno podle priority od nejmenší):
 
-1. V konfiguračním souboru může být direktiva s tokenem:
+1. V konfiguračním souboru může být direktiva s tokenem (viz níže)
+
+2. Token může být v proměnné prostředí `GITHUB_TOKEN` (hint: použijte [click](http://click.pocoo.org/6/arguments/#environment-variables))
+
+3. Nejvyšší prioritu má hodnota přepínače `-t`/`--token`
 
 ```ini
 [github]
 token = MY_SECRET_TOKEN
 ```
-
-2. Token může být v proměnné prostředí `GITHUB_TOKEN` (hint: použijte [click](http://click.pocoo.org/6/arguments/#environment-variables))
-
-3. Nejvyšší prioritu má hodnota přepínače `-t`/`--token`
 
 Obdobně priorita funguje v celé aplikaci – argument/přepínač „vítězí“ nad
 konfiguračním souborem.
