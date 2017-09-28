@@ -33,3 +33,5 @@ sed -Ei 's@(\[\[https?://naucse.python.cz/2017/mipyt-zima/(([^/]*)/)*[^|]*\|nauc
 # Add number as indexmenu
 echo -e '\n\n{{indexmenu_n>'"$NUMBER"'}}' >> "$TXT"
 
+# Check plain <HTML> tags in the output
+! grep -i '<HTML>' "$TXT"
