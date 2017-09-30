@@ -32,26 +32,6 @@ Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud ne
 V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte.
 I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
-### Eduxator
-
-Existuje rozpracovaný a nikdy nedokončený projekt [Eduxator], který umožňuje
-z příkazové řádky zadávat klasifikaci do Eduxu.
-Projekt je třeba vzít, oprášit a vylepšit. Zejména je třeba:
-
- * při komunikaci s Eduxem použít session
- * vylepšit testy (použít betamax a spol.)
- * rozšířit *knihovní* funkcionalitu o zatím nedokončenou část
- * implementovat interaktivní rozhraní pro příkazovou řádku (viz [README](https://github.com/hroncok/eduxator#the-idea))
- * implementovat neinteraktivní rozhraní pro příkazovou řádku
- * implementovat jednoduché REST API ve Flasku nebo jiném microframeworku
- * umožnit autentizaci pomocí jména a hesla, protože autentizace pomocí cookie neškáluje
- * přidat dokumentaci k jednotlivým součástem, aby projekt mohli využít i další vyučující
-
-S přístupem do Eduxu a lehkým úvodem do problému může osobně pomoci
-[hroncok](http://github.com/hroncok).
-
-[Eduxator]: https://github.com/hroncok/eduxator
-
 ### Analýza dat z MARAST kvízů
 
 [MARAST](https://marast.fit.cvut.cz) je systém pro podporu výuky matematiky
