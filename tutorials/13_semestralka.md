@@ -32,6 +32,10 @@ Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud ne
 V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte.
 I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
+### Python klientská knihovna pro nový portál Klasifikace
+
+Více informací bude doplněno později.
+
 ### Analýza dat z MARAST kvízů
 
 [MARAST](https://marast.fit.cvut.cz) je systém pro podporu výuky matematiky
