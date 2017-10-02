@@ -34,7 +34,10 @@ přímo na GitHubu a aplikace se postará o master-to-master replikaci.
 ### Specifikace
 
 1. Konfigurační soubor je totožný pro konzolovou i webovou aplikaci. Navíc
-   se v sekci `[github]` přidá pouze položka `webhook_secret`.
+   se v sekci `[github]` přidá pouze položka `webhook_secret`. Jelikož je
+   nutné umožnit spouštět aplikaci pomocí `flask run`, musí být umožněno
+   specifikovat konfigurační soubor přes proměnnou prostředí `LABELORD_CONFIG`,
+   výchozí hodnota zůstává totožná (`./config.cfg`).
 
 2. Počáteční stav si uživatel aplikace provede pomocí již implementované
    CLI aplikace (`run update/replace`). Při startu webové aplikace se tedy
