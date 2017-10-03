@@ -165,6 +165,8 @@ CVUT/MI-PYT = off
 
 (Seznam může být prázdný. Použijte `getboolean` z `ConfigParser`.)
 
+:exclamation: Klíče v konfiguračním souboru (v tomto případě názvy repozitářů) si `ConfigParser` převede na lowercase. Pro zachování velikosti písmen použijte před načtením souboru `cfg.optionxform = str`.
+
 Nebo pomocí přepínače `-a`/`--all-repos` pro výběr všech dostupných
 repozitářů (které vypíše `list_repos`).
 
