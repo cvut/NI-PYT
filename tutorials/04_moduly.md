@@ -26,7 +26,7 @@ Podmínky (je jich hodně, ale jsou triviální):
  * Musí instalovat potřebné závislosti.
  * Musí obsahovat rozumný počet classsifiers a voleb pro `setup.py`.
  * Podpříkaz `sdist` nesmí skončit chybou ani vyvolat varování.
- * Musí splňovat zde uvedené konvence.
+ * Musí splňovat konvence uvedené ve výukových materiálech.
  * Hlavní skript musí jít spouštět pomocí entry pointu `labelord` i pomocí `-m`.
  * Modul musí obsahovat `__init__.py` a logiku importovat z ostatních souborů.
  * Pokud jste již tak neučinili, tak rozdělte aplikaci na jednotlivé
