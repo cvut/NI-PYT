@@ -50,3 +50,8 @@ Odevzdáte tagem `v0.3` v obvyklém repozitáři
 (ten můžete klidně přejmenovat podle modulu - na GitHubu v *Settings*).
 Odkaz na (testovací) PyPI můžete napsat někam do README, do release na GitHubu apod.
 V každém případě bychom ho měli mít možnost jednoduše najít.
+
+Jednoduchý skript pro rychlé ověření **podmnožiny** povinných podmínek najdete
+opět (společně s přechozími testy, kterými by měla aplikace stále projít)
+v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests)
+ve větvi `setup`.
