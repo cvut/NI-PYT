@@ -7,7 +7,7 @@ Komplexnější témata mohou být po konzultaci s cvičícími uznaná jako jed
 
 Ve všech případech (kromě případných explicitních výjimek) musí práce splňovat tyto požadavky:
 
- * musí být napsaná v jazyce Python verze 3.3 nebo vyšší (Cython se samozřejmě také počítá),
+ * musí být napsaná v jazyce Python verze 3.4 nebo vyšší (Cython se samozřejmě také počítá),
  * musí splnit zadání, na kterém jsme se dohodli,
  * musí být v gitovém repozitáři,
  * kód musí splňovat [konvence](https://www.python.org/dev/peps/pep-0008/),
