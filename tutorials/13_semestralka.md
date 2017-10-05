@@ -22,8 +22,8 @@ Pro nerozhodné časem připravíme několik témat, které můžete použít, b
 Termíny
 -------
 
- * **Téma schváleno do:** 21.12.2016 (předposlední cvičení)
- * **Odevzdáno do:** 31.1.2017 včetně
+ * **Téma schváleno do:** 20.12.2017 (předposlední cvičení)
+ * **Odevzdáno do:** 31.1.2018 včetně
 
 Volná témata
 ------------
