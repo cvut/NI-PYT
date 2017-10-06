@@ -110,7 +110,7 @@ aktuálně pro zadaný repozitář nastavené (na každý řádek `#XXXXXX name`
 
 ```console
 $ python labelord.py --config my-config.cfg list_labels MarekSuchanek/repo1
-#AAAAAA help wanted
+#AaAaAa help wanted
 #FF0000 bug
 #00FF00 fixed
 #0000FF feature request
@@ -118,6 +118,9 @@ $ python labelord.py --config my-config.cfg list_labels MarekSuchanek/repo1
 
 Pokud není zadaný repozitář nalezen (*404*), program skončí s příslušným
 chybovým hlášením a kódem 5. Všechny ostatní GitHub chyby končí kódem 10.
+
+(Štítky musí zachovávat velikost písmen z konfiguračního souboru či z
+GitHub API. Pořadí ve výpisu nehraje roli.)
 
 #### run
 
@@ -199,7 +202,7 @@ Příklad výstup běhu na nečisto v režimu `verbose` (viz níže):
 
 ```
 [ADD][DRY] MarekSuchanek/repo1; #AAAAAA; help wanted
-[DEL][DRY] MarekSuchanek/repo1; #ABBABA; help wanted
+[DEL][DRY] MarekSuchanek/repo1; #ABBaBa; help wanted
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
 [UPD][DRY] MarekSuchanek/repo3; #AAAAAA; help wanted
 [SUMMARY] 1 error(s) in total, please check log above
@@ -215,7 +218,7 @@ výstup:
 
 ```
 [ADD][SUC] MarekSuchanek/repo1; #AAAAAA; help wanted
-[DEL][ERR] MarekSuchanek/repo1; #ABBABA; help wanted; 500 - Internal Server Error
+[DEL][ERR] MarekSuchanek/repo1; #ABBaBa; help wanted; 500 - Internal Server Error
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
 [UPD][SUC] MarekSuchanek/repo3; #AAAAAA; help wanted
 [SUMMARY] 2 error(s) in total, please check log above
@@ -231,9 +234,9 @@ pak se na chybový výstup vypisují chyby a na standardní výstup se vypíše 
 
 
 ```
-ERROR: UPD; MarekSuchanek/repo1; ABC; CCAXXF; 422 - Validation Failed
+ERROR: UPD; MarekSuchanek/repo1; ABC; CCaXXF; 422 - Validation Failed
 ERROR: LBL; MarekSuchanek/repo2; 404 - Not Found
-ERROR: ADD; pyvec/naucse.python.cz; ABC; CCAXXF; 404 - Not Found
+ERROR: ADD; pyvec/naucse.python.cz; ABC; CCaXXF; 404 - Not Found
 SUMMARY: 3 error(s) in total, please check log above
 ```
 
@@ -245,6 +248,16 @@ chyby a nesprávná ukočení aplikace ošetřete volitelně nad rámec úlohy
 
 Další detaily o výstupech a chování programu můžete zjistit v přiložených
 testech, kterými musí vaše implementace projít.
+
+#### Velikost znaků ve štítcích
+
+* Při výpisu se vždy vypisují písmena podle vstupu z API nebo konfiguračního
+souboru.
+* Při změně hraje velikost znaků v barvě roli (například ve specifikaci je
+#AAAAAA a na GitHubu u příslušného štítku #AAAaaa, update tento štítek
+změní, ačkoliv se jedná o stejnou barvu a jen jiný zápis).
+* Podobně je tomu i u názvů štítků. Štítek by měl být upraven pokud je ve
+specifikaci napsáno "stejné" jméno jinak - například "Bug" a "bug".
 
 ------------------------------------------------------------------------
 
