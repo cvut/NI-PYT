@@ -201,10 +201,10 @@ chce program provést.
 Příklad výstup běhu na nečisto v režimu `verbose` (viz níže):
 
 ```
-[ADD][DRY] MarekSuchanek/repo1; #AAAAAA; help wanted
-[DEL][DRY] MarekSuchanek/repo1; #ABBaBa; help wanted
+[ADD][DRY] MarekSuchanek/repo1; help wanted; AAAAAA
+[DEL][DRY] MarekSuchanek/repo1; help wanted; ABBaBa
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
-[UPD][DRY] MarekSuchanek/repo3; #AAAAAA; help wanted
+[UPD][DRY] MarekSuchanek/repo3; help wanted; AAAAAA
 [SUMMARY] 1 error(s) in total, please check log above
 ```
 
@@ -217,10 +217,10 @@ Pokud je zvoleno `-v`/`--verbose`, tak se následující vypisuje na standardní
 výstup:
 
 ```
-[ADD][SUC] MarekSuchanek/repo1; #AAAAAA; help wanted
-[DEL][ERR] MarekSuchanek/repo1; #ABBaBa; help wanted; 500 - Internal Server Error
+[ADD][SUC] MarekSuchanek/repo1; help wanted; AAAAAA
+[DEL][ERR] MarekSuchanek/repo1; help wanted; ABBaBa; 500 - Internal Server Error
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
-[UPD][SUC] MarekSuchanek/repo3; #AAAAAA; help wanted
+[UPD][SUC] MarekSuchanek/repo3; help wanted; AAAAAA
 [SUMMARY] 2 error(s) in total, please check log above
 ```
 
