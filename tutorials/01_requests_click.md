@@ -202,7 +202,7 @@ Příklad výstup běhu na nečisto v režimu `verbose` (viz níže):
 
 ```
 [ADD][DRY] MarekSuchanek/repo1; help wanted; AAAAAA
-[DEL][DRY] MarekSuchanek/repo1; help wanted; ABBaBa
+[DEL][DRY] MarekSuchanek/repo1; wont fix; ABBaBa
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
 [UPD][DRY] MarekSuchanek/repo3; help wanted; AAAAAA
 [SUMMARY] 1 error(s) in total, please check log above
@@ -218,7 +218,7 @@ výstup:
 
 ```
 [ADD][SUC] MarekSuchanek/repo1; help wanted; AAAAAA
-[DEL][ERR] MarekSuchanek/repo1; help wanted; ABBaBa; 500 - Internal Server Error
+[DEL][ERR] MarekSuchanek/repo1; wont fix; ABBaBa; 500 - Internal Server Error
 [LBL][ERR] MarekSuchanek/repo2; 404 - Not Found
 [UPD][SUC] MarekSuchanek/repo3; help wanted; AAAAAA
 [SUMMARY] 2 error(s) in total, please check log above
@@ -258,6 +258,17 @@ souboru.
 změní, ačkoliv se jedná o stejnou barvu a jen jiný zápis).
 * Podobně je tomu i u názvů štítků. Štítek by měl být upraven pokud je ve
 specifikaci napsáno "stejné" jméno jinak - například "Bug" a "bug".
+
+#### Tagy ve výpisu
+
+* `ADD` = Operace přidání štítku
+* `UPD` = Operace aktualizace štítku
+* `DEL` = Operace odstranění štítku
+* `LBL` = Operace čtení štítků z repozitáře (pouze pokud dojde k chybě v 
+této fázi)
+* `DRY` = Operace proběhla v pořádku nanečisto (žádná reálná změna na GitHub)
+* `SUC` = Operace proběhla v pořádku naostro
+* `ERR` = Operace neproběhla v pořádku (indikace chyby)
 
 ------------------------------------------------------------------------
 
