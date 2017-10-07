@@ -141,7 +141,8 @@ Last year = 23FB89
 (Seznam může být prázdný. Pozor na zachování velikostí písma názvů štítků.)
 
 Případně je možné specifikovat vzorový repozitář (vlastní nebo veřejný cizí)
-pomocí `-r`/`--template-repo` nebo přes konfigurační soubor:
+pomocí `-t`/`--template-repo` nebo přes konfigurační soubor (vzorovy repozitář 
+má přednost před specifikací štíků v konfigurační souboru):
 
 ```ini
 [others]
@@ -277,4 +278,6 @@ splnit, fantazii se meze nekladou. Dobrovolně můžete udělat navíc další
 možnosti, například možnost obarvení výstupu přepínačem `-y`/`--colorful`,
 další styl výpisu nebo vstupu nebo i něco složitějšího (celý nový příkaz),
 pokud si chcete vyzkoušet další pythonní knihovny a další funkce nad rámec
-této úlohy.
+této úlohy. Dobré by také bylo, aby váš script obsahoval informaci o verzi 
+(--version).
+
