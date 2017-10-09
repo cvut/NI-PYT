@@ -278,6 +278,6 @@ splnit, fantazii se meze nekladou. Dobrovolně můžete udělat navíc další
 možnosti, například možnost obarvení výstupu přepínačem `-y`/`--colorful`,
 další styl výpisu nebo vstupu nebo i něco složitějšího (celý nový příkaz),
 pokud si chcete vyzkoušet další pythonní knihovny a další funkce nad rámec
-této úlohy. Dobré by také bylo, aby váš script obsahoval informaci o verzi 
+této úlohy. Dobré by také bylo, aby váš skript obsahoval informaci o verzi 
 (--version).
 
