@@ -141,7 +141,7 @@ Last year = 23FB89
 (Seznam může být prázdný. Pozor na zachování velikostí písma názvů štítků.)
 
 Případně je možné specifikovat vzorový repozitář (vlastní nebo veřejný cizí)
-pomocí `-t`/`--template-repo` nebo přes konfigurační soubor (vzorovy repozitář 
+pomocí `-r`/`--template-repo` nebo přes konfigurační soubor (vzorovy repozitář 
 má přednost před specifikací štíků v konfigurační souboru):
 
 ```ini
