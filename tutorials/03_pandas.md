@@ -34,13 +34,13 @@ Tyto soubory není třeba přidávat do repozitáře; pokud se pro tuto možnost
 rozhodnete, vhodně nastavte `.gitignore` a v README uveďte, kde se data dají
 získat.
 
-Kód musí názorným způsobem vypočítat výsledek ze zadaných dat, a nesmí způsobit
+Kód musí názorným způsobem vypočítat výsledek ze zadaných dat a nesmí způsobit
 neošetřenou výjimku.
 V případě Notebooku nesmí neošetřenou výjimku způsobit žádná buňka.
 
 Váš kód nesmí používat cykly na procházení jednotlivých záznamů.
 Použijte funkcionalitu Pandas.
-Na procházení sloupců (jejichž počet by se nezměnil kdyby na dotazník
+Na procházení sloupců (jejichž počet by se nezměnil, kdyby na dotazník
 odpovědělo více lidí) cyklus použít můžete.
 
 U úloh, kde je výstupem graf, skript graf uloží do souboru a odkáže na něj
@@ -66,9 +66,9 @@ Otázky a úkoly:
 * Kolik z nich chce v používání* Pythonu pokračovat?
 * Kolik lidí Python nepoužívá*, ale chce ho začít používat*?
 
-* Předcházející tři otázky odpovězte pro Javu místo Pythonu.
+* Předcházející tři otázky odpovězte také pro Javu místo Pythonu.
 
-* Vykreslete graf, který pro každý jazyk průměrnou měsíční mzdu lidí
+* Vykreslete graf, který pro každý jazyk ukáže průměrnou měsíční mzdu lidí
   z ČR/SR, kteří tento jazyk používají* (podle dat dostupných
   z dotazníku).
 
