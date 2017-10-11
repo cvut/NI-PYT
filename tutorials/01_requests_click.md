@@ -138,7 +138,7 @@ Bug = FF0000
 Last year = 23FB89
 ```
 
-(Seznam může být prázdný. Pozor na zachování velikostí písma názvů štítků.)
+(Prázdný seznam je validní vstup. Pozor na zachování velikostí písma názvů štítků.)
 
 Případně je možné specifikovat vzorový repozitář (vlastní nebo veřejný cizí)
 pomocí `-r`/`--template-repo` nebo přes konfigurační soubor (vzorovy repozitář 
@@ -167,7 +167,7 @@ CVUT/MI-PYT = off
 
 („Vypnutý“ repozitář se chová stejně, jako by tam nebyl.)
 
-(Seznam může být prázdný. Použijte `getboolean` z `ConfigParser`.)
+(Prázdný seznam je validní vstup. Použijte `getboolean` z `ConfigParser`.)
 
 :exclamation: Klíče v konfiguračním souboru (v tomto případě názvy repozitářů) si `ConfigParser` převede na lowercase. Pro zachování velikosti písmen použijte před načtením souboru `cfg.optionxform = str`.
 
