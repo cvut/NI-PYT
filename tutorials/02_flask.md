@@ -14,8 +14,8 @@ mimo konzole půjde tedy nevíc spustit web server a to pomocí `flask run` a
 zároveň vlastním příkazem `run_server` (viz níže, hint: [application factory](http://flask.pocoo.org/docs/0.12/patterns/appfactories/)).
 
 Výslednou aplikaci nasaďte na PythonAnywhere, nebo jiný veřejný hosting.
-Odkaz na běžící aplikaci (včetně přihlašovacích údajů do aplikace) a
-repozitář nám pošlete e-mailem. V repozitáři prosím nastavte tag `v0.2`.
+Odkaz na běžící aplikaci a repozitář nám pošlete e-mailem. V repozitáři prosím 
+nastavte tag `v0.2`.
 
 Testy specifikující detailní chování a možné použít ke kontrole opět včetně
 skeletonu najdete v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests)
@@ -60,8 +60,13 @@ přímo na GitHubu a aplikace se postará o master-to-master replikaci.
 5. Webhook část aplikace = `POST /`:
     * GitHub na tuto cestu zašle `POST` požadavek s informací o změně
       štítků a aplikace jej zpracuje - změny zpropaguje do ostatních repozitářů.
-      Je nutné si dát pozor na to, že změna štítků provedená aplikací může opět
-      vyvolat ze strany GitHubu požadavek s informací o změně.
+      Například přijde-li informace o události vytvoření štítku z `repo1` (je 
+      povolen v konfiguračním souboru a podpis sedí), tak aplikace pošlě požadavek
+      na vytvoření tohoto štítku pro všechno ostatní repozitáře z konfiguračního
+      souboru (to, že neskončí dobře - například štítek v některém repozitáři už
+      existuje - aplikaci nezajímá). Je nutné si dát pozor na to, že změna štítků 
+      provedená aplikací může opět vyvolat ze strany GitHubu požadavek s informací 
+      o změně.
     * Nejprve ověřte, že přijatý webhook má správný podpis (viz níže).
     * Poté zjistěte, zda zpráva obsahuje správnou událost a repozitář
       (je v seznamu povolených repozitářů k replikaci).
