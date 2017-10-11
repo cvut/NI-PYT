@@ -8,8 +8,6 @@ Výukové materiály:
 Úkol
 ----
 
-:exclamation: Pozor, toto zadání je z minula a bude se ještě měnit.
-
 Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže.
 
 Řešení může být zpracováno buď jako Jupyter Notebook, ve kterém bude patrné,
@@ -23,16 +21,25 @@ který otázky a odpovědi bude vypisovat na standardní výstup např. tímto s
     56289
 
 Repozitář musí obsahovat všechny soubory potřebné k běhu skriptu či Notebooku,
-včetně vstupních dat.
+kromě vstupních dat (viz níže).
 Můžete předpokládat, že skript/notebook bude spouštěn z kořenového adresáře
 repozitáře.
 
-Kód musí názorným způsobem vypočítat výsledek ze zadaných dat, a nesmí způsobit
-neošetřenou výjimku.
-V případě Notebooku nesmí výjimku způsobit žádná buňka.
+K řešení použijte data z programátorského dotazníku [*Stack Overflow Annual Developer Survey*](https://insights.stackoverflow.com/survey/) roku 2017.
+Soubory se vstupními daty uložte do adresáře `data`, tj. jako
+`data/survey_results_public.csv` a `data/survey_results_schema.csv`.
+Tyto soubory není třeba přidávat do repozitáře; pokud se pro tuto možnost
+rozhodnete, vhodně nastavte `.gitignore` a v README uveďte, kde se data dají
+získat.
 
-Je zakázáno používat zkratky, zejména `import *` a výběr prvků bez použití
-indexeru.
+Kód musí názorným způsobem vypočítat výsledek ze zadaných dat a nesmí způsobit
+neošetřenou výjimku.
+V případě Notebooku nesmí neošetřenou výjimku způsobit žádná buňka.
+
+Váš kód nesmí používat cykly na procházení jednotlivých záznamů.
+Použijte funkcionalitu Pandas.
+Na procházení sloupců (jejichž počet by se nezměnil, kdyby na dotazník
+odpovědělo více lidí) cyklus použít můžete.
 
 U úloh, kde je výstupem graf, skript graf uloží do souboru a odkáže na něj
 ze std. výstupu.
@@ -44,34 +51,27 @@ propojeny čárou, pokud interpolace mezi nimi nedává smysl.
 Kód musí korektně zpracovávat neznámé hodnoty (např. člověk s neznámým věkem
 nemá 0 let).
 
-K řešení použijte klasická data o pasažérech Titanicu, která jsou distribuována
-s jazykem R.
-Jsou ke stažení v repozitáři [vincentarelbundock/Rdatasets][data-repo],
-konkrétně [zde][data-csv].
-Dokumentace k datům je k dispozici [ve stejném repozitáři][data-docs].
-
-[data-repo]: https://github.com/vincentarelbundock/Rdatasets
-[data-csv]: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/datasets/Titanic.csv
-[data-docs]: http://vincentarelbundock.github.io/Rdatasets/doc/datasets/Titanic.html
-
-Tato data jsou z dnešního pohledu nekompletní, nicméně pro úkol použijte
-právě je.
-
-Řešení se odevzdává jako repozitář jménem `titanic` pod studentovým
-účtem na GitHubu.
-Případné výjimky (např. jméno `titanic` už používáte na něco jiného)
-řešte e-mailem.
-
-Termín je začátek příštího prvního cvičení (23.11.2016 11:00). Budeme kontrolovat větev master, není třeba vytvářet speciální tag.
+Nezapomeňte uvést jednotky (např. km, %, Kč) v případech, kdy nestačí samotné
+číslo. (Viz příklad odpovědí výše.)
 
 Otázky a úkoly:
 
-* O kolika pasažérech Titanicu víme?
-* Kolik procent jich přežilo?
-* Kolik procent žen přežilo? Kolik procent mužů?
-* Pro každou třídu vypište kolik pasažérů dané třídy nastoupilo na loď, kolik
-  jich přežilo, a kolik to dělá procent přeživších.
-* Vykreslete graf procenta přeživších podle dekády věku (t.j. procento pro
-  0-9 let, 10-19 let, atd.).
-* Závisí na sobě třída a věk pasažéra? Jak? Vykreslete graf(y), které tuto
-  závislost znázorňují.
+* Kolik lidí celkem vyplnilo dotazník?
+* Kolik z nich bylo z ČR/SR?
+* Jaká je, podle dotazníku, průměrná mzda programátorů v ČR/SR? Ve světě?
+
+* Kolik lidí z ČR/SR uvedlo, že používá* Python?
+* Kolik z nich chce v používání* Pythonu pokračovat?
+* Kolik lidí Python nepoužívá*, ale chce ho začít používat*?
+
+* Předcházející tři otázky odpovězte také pro Javu místo Pythonu.
+
+* Vykreslete graf, který pro každý jazyk ukáže průměrnou měsíční mzdu lidí
+  z ČR/SR, kteří tento jazyk používají* (podle dat dostupných
+  z dotazníku).
+
+Zkratka „ČR/SR” znamená Česko a Slovensko dohromady; není potřeba udávat
+výsledek pro každou z těchto zemí zvlášť.
+
+\* Používání jazyka znamená, že v něm daný člověk poslední rok intenzivně
+pracoval.
