@@ -231,7 +231,7 @@ standardní výstup (ani chybový) a informací o běhu je pouze návratový kó
 V případě, že není zvolena ani jedna z předchozích, nebo jsou zvoleny obě,
 pak se na chybový výstup vypisují chyby a na standardní výstup se vypíše shrnutí:
  - `SUMMARY: X repo(s) updated successfully`, (kód 0)
- - `SUMMARY: there were X errors, please error check log`, (kód 10)
+ - `SUMMARY: X error(s) in total, please check log above`, (kód 10)
 
 
 ```
