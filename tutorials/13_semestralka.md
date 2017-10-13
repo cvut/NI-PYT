@@ -36,7 +36,7 @@ I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde
 
 Více informací bude doplněno později.
 
-### Analýza dat z MARAST kvízů
+### Analýza dat z MARAST kvízů (předběžně zabráno)
 
 [MARAST](https://marast.fit.cvut.cz) je systém pro podporu výuky matematiky
 na FIT. Jednou z jeho funkcí je testování studentů formou kvízu (*self-test*).
