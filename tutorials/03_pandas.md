@@ -5,6 +5,20 @@ Výukové materiály:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/pandas/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/pandas).
 
+Instalace:
+
+```console
+$ python -m venv __venv__
+$ . __venv__/bin/activate
+
+$ python -m pip install --upgrade pip wheel
+$ python -m pip install notebook pandas matplotlib
+```
+
+Soubory ke stažení (do pracovního adresáře):
+[actors.csv](http://naucse.python.cz/lessons/intro/pandas/static/actors.csv),
+[spouses.csv](http://naucse.python.cz/lessons/intro/pandas/static/spouses.csv).
+
 Úkol
 ----
 
