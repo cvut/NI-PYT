@@ -124,7 +124,7 @@ ICT oddělení, místnost TH-A:1324
 [iCalendar]: https://en.wikipedia.org/wiki/ICalendar
 [CalDAV]: https://en.wikipedia.org/wiki/CalDAV
 
-### Synchronizace Sirius s Google Calendar
+### Synchronizace Sirius s Google Calendar (předběžně zabráno)
 
 Podstata práce je stejná jako u zadání [CalDAV server pro Sirius](#caldav-server-pro-sirius). Google Calendar podporuje přístup přes CalDAV, ale slouží pouze jako CalDAV server, nikoliv klient. Synchronizace s Google Calendar by proto byla řešená samostatnou aplikací, která by importovala data do Google Calendar přes [CalDAV rozhraní](https://developers.google.com/google-apps/calendar/caldav/v2/guide), nebo přes [Google Calendar API](https://developers.google.com/google-apps/calendar/overview).
 
