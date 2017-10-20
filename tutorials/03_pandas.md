@@ -80,9 +80,9 @@ Otázky a úkoly:
 
 * Předcházející tři otázky odpovězte také pro Javu místo Pythonu.
 
-* Vykreslete graf, který pro každý jazyk ukáže průměrnou měsíční mzdu lidí
-  z ČR/SR, kteří tento jazyk používají* (podle dat dostupných
-  z dotazníku).
+* Vykreslete graf, který pro každý programovací jazyk, který lidi z ČR/SR
+  uvedli, ukáže průměrnou měsíční mzdu lidí z ČR/SR, kteří tento jazyk
+  používají* (podle dat dostupných z dotazníku).
 
 Zkratka „ČR/SR” znamená Česko a Slovensko dohromady; není potřeba udávat
 výsledek pro každou z těchto zemí zvlášť.
