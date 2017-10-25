@@ -23,6 +23,7 @@ dejte nám vědět a domluvíme se.
 Podmínky (je jich hodně, ale jsou triviální):
 
  * Váš balíček musí fungovat (viz zadání předchozích úkolů) po instalaci pomocí pipu do "prázdného" virtualenvu.
+   * *Pozn.:* Pokud jste přechozí úkoly nedělali a nebo neprochází testy, můžete použít naše [referenční řešení](https://github.com/MarekSuchanek/labelord).
  * Musí instalovat potřebné závislosti.
  * Musí obsahovat rozumný počet classsifiers a voleb pro `setup.py`.
  * Podpříkaz `sdist` nesmí skončit chybou ani vyvolat varování.
