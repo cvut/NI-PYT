@@ -14,6 +14,9 @@ Wa-Tor je vodní planeta ve tvaru dvoudimenzionálního toroidu,
 na které žijí ryby a žraloci. Čas na planetě Wa-Tor plyne diskrétně
 v jednotlivých skocích zvaných chronony. Za každý chronon se ryby a žraloci
 pohybují o jedno políčko v mřížce toroidu (pokud je to možné).
+Žraloci mají energii, která ubývá, a musí jíst ryby, aby ji doplnili.
+Ryby energii nepotřebují (živí se planktonem, kterého je všude nekonečně).
+Oba druhy se po dosažení určitého věku množí dělením.
 
 Konkrétní pravidla simulace najdete na stránce [Wa-Tor] anglické Wikipedie.
 
