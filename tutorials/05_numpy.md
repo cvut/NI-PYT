@@ -19,14 +19,14 @@ Konkrétní pravidla simulace najdete na stránce [Wa-Tor] anglické Wikipedie.
 
 [Wa-Tor]: https://en.wikipedia.org/wiki/Wa-Tor
 
-Třída v konstruktoru přijme dvourozměrnou matici ryb a žraloků, kde 0
+Třída při inicializaci přijme dvourozměrnou matici ryb a žraloků, kde 0
 představuje prázdné políčko, kladná čísla představují ryby a záporná čísla
 představují žraloky. Absolutní hodnota udává, kolik chrononů uplynulo od
 poslední reprodukce daného tvora (po reprodukci se resetuje na 1).
 Alternativně přijme velikost planety Wa-Tor,
 počet ryb a počet žraloků a ty umístí náhodně s náhodným „věkem“.
 
-Dále konstruktor přejímá několik údajů ovlivňujících simulaci
+Dále inicializátor třídy přejímá několik údajů ovlivňujících simulaci
 (výchozí hodnoty uvedeny v závorce):
 
  * po kolika chrononech se reprodukuje ryba (5),
