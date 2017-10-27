@@ -32,7 +32,7 @@ Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud ne
 V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte.
 I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
-### Python klientská knihovna pro nový portál Klasifikace
+### Python klientská knihovna pro nový portál Klasifikace (předběžně zabráno)
 
 Více informací bude doplněno později.
 
