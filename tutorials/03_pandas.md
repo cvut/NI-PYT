@@ -1,7 +1,11 @@
 Pandas
 ======
 
-Výukové materiály:
+Výukové materiály o Jupyter Notebooku:
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/notebook/),
+[GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/notebook).
+
+Výukové materiály o Pandas:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/pandas/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/pandas).
 

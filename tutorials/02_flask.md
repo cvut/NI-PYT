@@ -1,9 +1,17 @@
 Webové aplikace: Flask
 ======================
 
-Výukové materiály:
+Výukové materiály o Flasku:
 [naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/flask/),
 [GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/flask).
+
+Výukové materiály o deploymentu:
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/deployment/),
+[GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/deployment).
+
+Výukové materiály o PythonAnywhere:
+[naucse.python.cz](http://naucse.python.cz/2017/mipyt-zima/intro/deployment/pythonanywhere/),
+[GitHub](https://github.com/pyvec/naucse.python.cz/tree/master/lessons/intro/deployment).
 
 Úkol
 ----
