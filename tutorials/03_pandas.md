@@ -93,3 +93,7 @@ výsledek pro každou z těchto zemí zvlášť.
 
 \* Používání jazyka znamená, že v něm daný člověk poslední rok intenzivně
 pracoval.
+
+### Referenční řešení
+
+Naše refereční řešení si můžete prohlédnout zde: https://gist.github.com/hroncok/83cbe33ee97377627b0b441756a6446b

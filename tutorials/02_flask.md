@@ -120,3 +120,7 @@ webové aplikace, pak byste ji měli adekvátně zabezpečit (například pomoc�
 v kombinaci s HTTPS).
 
 Během vývoje je vhodné využít i logování: http://flask.pocoo.org/docs/dev/logging/
+
+### Referenční řešení
+
+Naše refereční řešení si můžete prohlédnout zde: [v0.2@MarekSuchanek/labelord](https://github.com/MarekSuchanek/labelord/releases/tag/v0.2)

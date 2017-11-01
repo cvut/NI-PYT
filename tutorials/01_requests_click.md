@@ -281,3 +281,6 @@ pokud si chcete vyzkoušet další pythonní knihovny a další funkce nad ráme
 této úlohy. Dobré by také bylo, aby váš skript obsahoval informaci o verzi 
 (--version).
 
+### Referenční řešení
+
+Naše refereční řešení si můžete prohlédnout zde: [v0.1@MarekSuchanek/labelord](https://github.com/MarekSuchanek/labelord/releases/tag/v0.1)
