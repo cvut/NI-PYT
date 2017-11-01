@@ -17,6 +17,10 @@ Ve všech případech (kromě případných explicitních výjimek) musí práce
  * projekt musí být zabalen jako pythonní balíček (za zveřejnění na PyPI pod svobodnou licencí jsou body navíc),
  * projekt by měl stavět na nějakém tématu probraném v předmětu MI-PYT.
 
+Nemusí jít nutně o nový projekt nebo nápad. **Přispění do existujícího open-source
+projektu je také možné.** Máte oblíbenou knihovnu v Pythonu a chybí vám funkce
+na zalévání kočiček? Dopiště ji. Na čemkoliv, co dává smysl, se dá domluvit.
+
 Pro nerozhodné časem připravíme několik témat, které můžete použít, budeme ale raději, pokud si zvolíte téma vlastní.
 
 Termíny
