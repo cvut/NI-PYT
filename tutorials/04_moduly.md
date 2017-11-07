@@ -56,3 +56,7 @@ Testy pro automatizované ověření **podmnožiny** povinných podmínek najdet
 opět (společně s přechozími testy, kterými by měla aplikace stále projít)
 v repozitáři [MarekSuchanek/labelord_tests](https://github.com/MarekSuchanek/labelord_tests)
 ve větvi `setup`.
+
+### Referenční řešení
+
+Naše refereční řešení si můžete prohlédnout zde: [v0.3@MarekSuchanek/labelord](https://github.com/MarekSuchanek/labelord/releases/tag/v0.3)
