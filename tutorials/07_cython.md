@@ -16,11 +16,9 @@ Náhodné generování takto velké simulace musí trvat méně než čtvrt seku
 
 Úkol musí splňovat všechny náležitosti z minulého týdne + podmínku na čas.
 
-Pokud teprve začínáte, můžete použít naše řešení minulé úlohy, které bude
-zveřejněno, až nepůjde minulá úloha odevzdat. Pokud věříte, že toto již nastalo,
-ale není zde dokaz, založte prosím [issue](https://github.com/cvut/MI-PYT/issues).
+Pokud teprve začínáte, můžete použít [naše řešení minulé úlohy](https://github.com/hroncok/wator).
 
-Můžete využít naše rychlostní testy. Ty najdete opět v repozitáři
+Doporučujeme využít naše rychlostní testy. Ty najdete opět v repozitáři
 [hroncok/wator_tests](https://github.com/hroncok/wator_tests/tree/cython),
 ve větvi `cython`.
 
