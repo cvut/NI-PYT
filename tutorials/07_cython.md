@@ -14,7 +14,7 @@ tak, aby zvládal řešit i simulaci o rozměrech v řádech *nižší jednotky 
 učebně) v průměrném čase maximálně 15 sekund na chronon.
 Náhodné generování takto velké simulace musí trvat méně než čtvrt sekundy.
 
-Úkol musí splňovat všechny náležitosti z minulého týdne + podmínku na čas.
+Úkol musí splňovat všechny náležitosti z úlohy na NumPy + podmínku na čas.
 
 Pokud teprve začínáte, můžete použít [naše řešení minulé úlohy](https://github.com/hroncok/wator).
 
