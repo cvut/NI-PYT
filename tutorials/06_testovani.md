@@ -17,9 +17,7 @@ Námi dodávané testy jsou tz. _akceptační_, skoro až _integrační_.
 Testují aplikaci z venku, jako black box. Rozšiřte testovací sadu o testy
 _jednotkové_: tedy testy, které testují vaše vlastní metody, funkce, třídy apod.
 
-V případě, že jste předchozí úlohy nedělali, můžete použít naše řešení,
-na které zde najdete včas odkaz. (Pokud se domníváte, že už by tu měl být, ale
-není tu, založte prosím issue.)
+V případě, že jste předchozí úlohy nedělali, můžete použít naše [referenční řešení](https://github.com/MarekSuchanek/labelord).
 
 Podmínky:
 
