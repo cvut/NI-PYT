@@ -48,3 +48,5 @@ Dosavadní funkcionalita aplikace musí být samozřejmě zachována.
 této verze.)
 
 Za fungující publikaci smysluplné dokumentace na [Read the Docs] je bod navíc.
+
+[Read the Docs]: https://readthedocs.org/
