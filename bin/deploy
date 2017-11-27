@@ -5,19 +5,43 @@ import sys
 import requests
 from lxml import etree
 
+
+BASE = 'https://edux.fit.cvut.cz/courses/MI-PYT'
+
+login_url = '{}/start?do=login'.format(BASE)
+session = requests.Session()
+
+r = session.get(login_url)
+tree = etree.HTML(r.text)
+sectok = None
+for inp in tree.findall('.//input'):
+    if inp.attrib.get('name') == 'sectok':
+        sectok = inp.attrib.get('value', '')
+        break
+if sectok is None:
+    raise ValueError('Could not find sectok on login page')
+
+login_data = {
+    'sectok': sectok,
+    'id': 'start',
+    'do': 'login',
+    'authnProvider': '2',
+    'u': os.environ.get('EDUX_USER'),
+    'p': os.environ.get('EDUX_PASSWORD'),
+    'r': '1',
+}
+
+r = session.post(login_url, params={'sectok': sectok}, data=login_data)
+if 'Přihlášen(a) jako' not in r.text:
+    raise ValueError('Could not login')
+
+
 with open(sys.argv[1], 'r') as f:
     content = f.read()
 
 url = sys.argv[1][len('.dokuwiki'):-len('.txt')]
-url = 'https://edux.fit.cvut.cz/courses/MI-PYT{}?do=edit'.format(url)
-
-session = requests.Session()
-
-cookies = {
-    os.environ.get('EDUX_COOKIE_NAME'): os.environ.get('EDUX_COOKIE_VALUE'),
-}
-
-r = session.get(url, cookies=cookies)
+url = '{}{}?do=edit'.format(BASE, url)
+r = session.get(url)
 
 tree = etree.HTML(r.text)
 edit_form = None

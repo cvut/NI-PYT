@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
 if [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
-   [ "$TRAVIS_REPO_SLUG" == "cvut/MI-PYT" ] && [ -n "$EDUX_COOKIE_NAME" ] && [ -n "$EDUX_COOKIE_VALUE" ]; then
+   [ "$TRAVIS_REPO_SLUG" == "cvut/MI-PYT" ] && [ -n "$EDUX_USER" ] && [ -n "$EDUX_PASSWORD" ]; then
   make -j4 deploy
 fi
