@@ -6,18 +6,41 @@ import requests
 from lxml import etree
 
 
-URL = 'https://edux.fit.cvut.cz/courses/MI-PYT/lib/exe/mediamanager.php'
+BASE = 'https://edux.fit.cvut.cz/courses/MI-PYT'
+URL = '{}/lib/exe/mediamanager.php'.format(BASE)
 path = sys.argv[1]
 filename = os.path.basename(path)
 session = requests.Session()
 
 
-cookies = {
-    os.environ.get('EDUX_COOKIE_NAME'): os.environ.get('EDUX_COOKIE_VALUE'),
+login_url = '{}/start?do=login'.format(BASE)
+session = requests.Session()
+
+r = session.get(login_url)
+tree = etree.HTML(r.text)
+sectok = None
+for inp in tree.findall('.//input'):
+    if inp.attrib.get('name') == 'sectok':
+        sectok = inp.attrib.get('value', '')
+        break
+if sectok is None:
+    raise ValueError('Could not find sectok on login page')
+
+login_data = {
+    'sectok': sectok,
+    'id': 'start',
+    'do': 'login',
+    'authnProvider': '2',
+    'u': os.environ.get('EDUX_USER'),
+    'p': os.environ.get('EDUX_PASSWORD'),
+    'r': '1',
 }
 
+r = session.post(login_url, params={'sectok': sectok}, data=login_data)
+if 'Přihlášen(a) jako' not in r.text:
+    raise ValueError('Could not login')
 
-r = session.get(URL, cookies=cookies)
+r = session.get(URL)
 
 
 tree = etree.HTML(r.text)
