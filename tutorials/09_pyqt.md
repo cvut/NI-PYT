@@ -36,7 +36,7 @@ Rozhraní umožní:
     * stručný popis
     * autor/autoři (vy, případně i my, pokud používáte náš kód)
     * odkaz na repozitář
-    * informace o licenci
+    * informace o licenci (pozor na licenci PyQt!)
     * pokud používáte public domain grafiku z [OpenGameArt.org], nemáte právní povinnost zdroj zmínit, ale považujeme to za slušnost
 
 ### Grafika
