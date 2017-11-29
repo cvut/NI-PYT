@@ -69,9 +69,7 @@ To nám umožní testovat vaší implementaci s vlastními soubory.
 
 Jako obvykle. Tag `v0.3`.
 
-Pokud teprve začínáte, můžete použít naše řešení minulé úlohy, které bude
-zveřejněno, až nepůjde minulá úloha odevzdat. Pokud věříte, že toto již nastalo,
-ale není zde dokaz, založte prosím [issue](https://github.com/cvut/MI-PYT/issues).
+Pokud teprve začínáte, můžete použít [naše řešení minulé úlohy](https://github.com/hroncok/wator).
 
 Uvítáme, pokud přidáte další testy k nově implementované logice, ale není to nutné.
 
