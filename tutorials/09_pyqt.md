@@ -67,7 +67,7 @@ To nám umožní testovat vaší implementaci s vlastními soubory.
 
 ### Odevzdání
 
-Jako obvykle. Tag `v0.3`.
+Jako obvykle. Tag `v0.3`. Deadline je prodloužen do pondělí 18.12. včetně.
 
 Pokud teprve začínáte, můžete použít [naše řešení minulé úlohy](https://github.com/hroncok/wator).
 
