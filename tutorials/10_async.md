@@ -6,14 +6,14 @@ Výukové materiály:
 
 ## Úkol
 
-Vaším úkolem za 5 bodů je implementovat funkci `gather_acquaintances`, která pomocí asynchronní komunikace s [GitHub API] (včetně [GitHub Search API]) ze všech* issues podle zadané specifikace zjistí všechny uživatele, kteří tyto issue komentovali a to včetně počtu komentářů. Tato funkce nebude mít asynchronní API (tedy nebude `async def`, ale jen `def`).
+Vaším úkolem za 5 bodů je implementovat funkci `gather_acquaintances`, která pomocí asynchronní komunikace s [GitHub API] (včetně [GitHub Search API]) ze všech* issues podle zadané specifikace zjistí všechny uživatele, kteří tyto issue komentovali, a to včetně počtu komentářů. Tato funkce nebude mít asynchronní API (tedy nebude `async def`, ale jen `def`).
 
 *) [GitHub Search API] má limit na 1000 výsledků
 
 Funkce `asya.logic.gather_acquaintances` (v projektu [MarekSuchanek/asya]):
 
 * parametr `search_specs` = slovník obsahující specifikaci vyhledávání issues pro [GitHub Search API] (možné rovnou používat pro požadavky)
-* parametr `supervisor` = objekt, na kterém vaše implementace volá příslušné metody v daných částech kódu (třídu `AsyaSupervisor` není možné měnit, ale lze "registrovat" vlastní funkce, které se budou volat, není to však vyžadováno - viz dokumentace třídy)
+* parametr `supervisor` = objekt, na kterém vaše implementace volá příslušné metody v daných částech kódu (třídu `AsyaSupervisor` není možné měnit, ale lze "registrovat" vlastní funkce, které se budou volat, není to však vyžadováno - viz [dokumentace třídy](http://asya.readthedocs.io/en/latest/api.html#module-asya.supervisor))
 * vrací slovník, kde klíčem je uživatelské jméno a hodnotou příslušný počet komentářů
 
 ```python
