@@ -13,7 +13,7 @@ Vaším úkolem za 5 bodů je implementovat funkci `gather_acquaintances`, kter�
 Funkce `asya.logic.gather_acquaintances` (v projektu [MarekSuchanek/asya]):
 
 * parametr `search_specs` = slovník obsahující specifikaci vyhledávání issues pro [GitHub Search API] (možné rovnou používat pro požadavky)
-* parametr `supervisor` = objekt, na kterém vaše implementace volá příslušné metody v daných částech kódu (třídu `AsyaSupervisor` není možné měnit, ale lze "registrovat" vlastní funkce, které se budou volat, není to však vyžadováno - viz [dokumentace třídy](http://asya.readthedocs.io/en/latest/api.html#module-asya.supervisor); zda voláte metody správně zjistíte například chováním CLI s progressbarem):
+* parametr `supervisor` = objekt, na kterém vaše implementace volá příslušné metody v daných částech kódu (třídu `AsyaSupervisor` není možné měnit, ale lze "registrovat" vlastní funkce, které se budou volat, není to však vyžadováno - viz [dokumentace třídy](http://asya.readthedocs.io/en/latest/api.html#module-asya.supervisor); zda voláte metody správně, zjistíte například chováním CLI s progressbarem):
   * `supervisor.report_issues_search_page(page, number)` - volat před zpracováním dané stránky výsledků hledání issues, `page` = `dict` s tělem odpovědi, `number` = číslo stránky
   * `supervisor.report_issue(issue)` - volat po zpracování daného issue, `issue` = `dict` s daty issue
   * `supervisor.report_comment(comment)` - volat po zpracování daného komentáře, `comment` = `dict` s daty komentáře
