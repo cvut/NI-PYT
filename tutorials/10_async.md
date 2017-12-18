@@ -8,6 +8,8 @@ Výukové materiály:
 
 Vaším úkolem za 5 bodů je implementovat funkci `gather_acquaintances`, která pomocí asynchronní komunikace s [GitHub API] (včetně [GitHub Search API]) ze všech* issues podle zadané specifikace zjistí všechny uživatele, kteří tyto issue komentovali, a to včetně počtu komentářů. Tato funkce nebude mít asynchronní API (tedy nebude `async def`, ale jen `def`).
 
+:bulb: *Toto je jen pro zjednodušení úkolu a jeho opravování; obecně není dobré kombinovat logiku a ovládání smyčky událostí do jedné funkce.*
+
 *) [GitHub Search API] má limit na 1000 výsledků
 
 Funkce `asya.logic.gather_acquaintances` (v projektu [MarekSuchanek/asya]):
