@@ -30,7 +30,7 @@ Další požadavky:
 
 * Použijte `asyncio` a `aiohttp` pro asynchronní požadavky na [GitHub API].
 * Pro stránkování použijte velikost stránky (parametr `per_page`) nastavenou na objektu `supervisor` (pomocí `supervisor.per_page`) a to jak pro výsledky issues, tak i komentáře.
-* Použijte [personal access token] pro autorizaci požadavků (ovlivňuje výsledky a [API Rate Limit]) ze `supervisor.token`, je-li nastavený.
+* Použijte [personal access token] pro autorizaci požadavků ze `supervisor.token`, je-li nastavený. Token ovlivňuje výsledky a [API Rate Limit].
 * [GitHub API] endpoint nepište "natvrdo", ale využijte `supervisor.api_endpoint`.
 * Chybu způsobenou vyčerpáním [API Rate Limit] řešte podle nastavení příslušného flagu `wait_rate_limit` (pokud `True`, pak se čeká do vypršení limitu, jinak se vyhodí příslušná vyjímka `AsyaException`).
 * Chyby způsobené nepřístupností issue/komentářů (404) přeskočte podle nastavení příslušného flagu `skip_404` (pokud `True`, pak se přeskakuje, jinak se vyhodí příslušná vyjímka `AsyaException`).
@@ -38,7 +38,7 @@ Další požadavky:
 
 Vytvořte nový privátní repozitář s obsahem z [MarekSuchanek/asya] (release `v0.0`), dejte nám cvičícím přístup a pro odevzdání vytvořte tag `v0.1`. Úpravy mimo modul `asya.logic` (soubor `asya/logic.py`) budou ignorovány, ale je vhodné se podívat na [dokumentaci] a zdrojový kód ostatních modulů.
 
- Za bonusový bod implementujte také klasické synchronní řešení (opět se stejným formátem funkce `gather_acquaintances`, pracujte třeba v jiné větvi a řešení otagujte `v0.1-alt`) s knihovnou `requests` a porovnejte rychlost obou řešení s různými dotazy (a počty výsledků).
+Za bonusový bod implementujte také klasické synchronní řešení s knihovnou `requests` a porovnejte rychlost obou řešení s různými dotazy (a počty výsledků). Použijte stejný formát funkce `gather_acquaintances`, pracujte třeba v jiné větvi a řešení otagujte `v0.1-alt`.
 
 [GitHub API]: https://developer.github.com/v3/
 [GitHub Search API]: https://developer.github.com/v3/search/
