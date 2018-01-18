@@ -29,7 +29,7 @@ Termíny
  * **Téma schváleno do:** 20.12.2017 (předposlední cvičení)
  * **Odevzdáno do:** 31.1.2018 včetně, možnost pozdního odevzdání do 9.2.1018 s penalizací
 
-Pozdní odevzdání semestrálky do 9.2.2018 včetně s penalizací -10 bodů. Tato penalizace se nepočítá do podmínky 25 bodů za semestrálku. Je tedy možné mít 35 bodů ze smestru a 25-10 ze semestrálky a stále dostat E.
+Pozdní odevzdání semestrálky do 9.2.2018 včetně s penalizací -10 bodů. Tato penalizace se nepočítá do podmínky 25 bodů za semestrálku. Je tedy možné mít 35 bodů ze semestru a 25-10 ze semestrálky a stále dostat E.
 
 Volná témata
 ------------
