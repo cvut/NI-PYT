@@ -49,13 +49,13 @@ nemá 0 let).
 
 K řešení použijte klasická data o pasažérech Titanicu, která jsou distribuována
 s jazykem R.
-Jsou ke stažení v repozitáři [vincentarelbundock/Rdatasets][data-repo],
+Jsou ke stažení v historii repozitáře [vincentarelbundock/Rdatasets][data-repo],
 konkrétně [zde][data-csv].
 Dokumentace k datům je k dispozici [ve stejném repozitáři][data-docs].
 
 [data-repo]: https://github.com/vincentarelbundock/Rdatasets
-[data-csv]: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/datasets/Titanic.csv
-[data-docs]: http://vincentarelbundock.github.io/Rdatasets/doc/datasets/Titanic.html
+[data-csv]: https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/a4ec76b6cdb9939e594c8d44d718741c63db72bc/csv/datasets/Titanic.csv
+[data-docs]: https://github.com/vincentarelbundock/Rdatasets/blob/a4ec76b6cdb9939e594c8d44d718741c63db72bc/doc/datasets/Titanic.html
 
 Tato data jsou z dnešního pohledu nekompletní, nicméně pro úkol použijte
 právě je.
