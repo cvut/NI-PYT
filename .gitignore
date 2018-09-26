@@ -1,2 +1,3 @@
-.dokuwiki
-.pdfs
+.dokuwiki/
+.pdfs/
+_build/

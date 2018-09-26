@@ -1,0 +1,12 @@
+= Úlohy (nejen na doma)
+:toc:
+
+
+Součástí hodnocení jsou především úlohy.
+Uvítáme, pokud je budete řešit na cvičeních, po skončení výkladu.
+Rádi vám poradíme osobně.
+Co nestihnete na cvičeních doděláte doma.
+Rádi vám poradíme i v GitHub issue.
+
+
+WARNING: Zde budou odkazy na zadání jednotlivých úloh a jejich deadliny.

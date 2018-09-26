@@ -1,1 +1,0 @@
-tutorials/00_uvod.md

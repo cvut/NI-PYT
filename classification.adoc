@@ -1,0 +1,69 @@
+= Hodnocení
+
+== Položky hodnocení
+
+Hodnocení předmětu se skládá z částí uvedených v následující tabulce.
+Druhý sloupeček obsahuje maximální počet bodů, které mohou studenti získat.
+Třetí sloupeček určuje minimální počet bodů nutný k úspěšnému získání zápočtu a zkoušky.
+
+[options="header"]
+|===
+| Položka                                  | Max. poč. bodů | Min. poč. bodů
+| xref:tasks#[Úlohy] (10)                  | 50             | 25
+| xref:semestralka#[Semestrální práce] (1) | 50             | 25
+| Body za aktivitu                         | 5              | 0
+| *Celkem*                                 | 105            | 50
+|===
+
+NOTE: Váš aktuální počet bodů najdete v aplikaci https://grades.fit.cvut.cz/courses/MI-PYT/classification[Klasifikace].
+
+
+== Záchranná úloha
+
+V případě, že má student za úlohy z hodin (úkoly) na konci semestru alespoň 15 bodů,
+ale méně než 25, může vypracovat bonusovou úlohu dle zadání,
+na kterém se s vyučujícími explicitně dohodne.
+Za tuto úlohu může dostat až 5 bodů.
+Pokud získá alespoň 2,5, bude mu povoleno získat zápočet
+(i kdyby celkem na 25 bodů z úkolů nedosáhl; podmínka na 25 bodů za semestrálku zůstává platná).
+V takové případě budou body za bonusovou úlohu přičteny k bodům z úloh,
+ale pouze do maximální výše 25.
+
+.Příklad 1
+Anna získá z úloh na konci semestru pouze 22 bodů,
+protože měla moc starostí s předmětem MI-MPI a nestíhala úlohy včas vypracovávat.
+Za normálních okolností tedy nemá nárok na zápočet.
+Naštěstí existuje záchranná úloha.
+Tu Anna vypracuje na 5 bodů.
+22 + 5 je 27, takže celkem končí semestr s 25 body (body za záchranou úlohu jsou přičteny do maximální výše 25).
+Může odevzdat semestrálku a když dostane aspoň 25 bodů, má zápočet a adekvátní známku.
+
+.Příklad 2
+Robert získá z úloh na konci semestru jen 18 bodů.
+Záchrannou úlohu vypracuje na 3 body.
+Celkem má tedy 21 bodů, což by na zápočet nestačilo,
+ale protože vypracoval záchrannou úlohu alespoň na 2,5 bodu,
+může taktéž odevzdat semestrálku a pokud z ní bude mít alespoň 25, dostat známku.
+Pokud ale nemá nějaké body za aktivitu, tak fakticky potřebuje ze semestrálky alespoň 29,
+jinak by totiž dostal F.
+
+.Příklad 3
+Pepíček má na konci semestru z úloh jen 12 bodů.
+Pepíček má bohužel smůlu a zápočet nedostane.
+Semestrálku však může vypracovat pro radost.
+
+
+== Celkové hodnocení
+
+Hodnocení se řídí https://www.cvut.cz/sites/default/files/content/7e72349e-3ea5-4693-9853-5147f1238481/cs/20160519-studijni-a-zkusebni-rad-pro-studenty-cvut-ze-dne-8-7-2015.pdf[Studijním a zkušebním řádem ČVUT].
+
+[options="header"]
+|===
+| Známka | Bodové rozmezí | Slovní hodnocení
+| A      | 90 a více      | výborně
+| B      | 80 - 89        | velmi dobře
+| C      | 70 - 79        | dobře
+| D      | 60 - 69        | uspokojivě
+| E      | 50 - 59        | dostatečně
+| F      | méně než 50    | nedostatečně
+|===

@@ -1,3 +1,0 @@
-#!/bin/bash -eu
-NAME=$(echo "$1" | sed -E 's@(([^/]*)/)*@\2@')
-wkhtmltopdf "$1" --user-style-sheet  bin/pdfstyle.css .pdfs/tutorials/"$NAME.pdf"

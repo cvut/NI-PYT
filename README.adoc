@@ -1,0 +1,58 @@
+= MI-PYT
+
+Díváte se na materiály předmětu
+http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/04/87/12/p4871206.html[MI-PYT (Pokročilý Python)]
+na http://fit.cvut.cz/[FIT ČVUT].
+Materiály jsou dostupné v dvojí podobě,
+interně pro studenty FITu https://courses.fit.cvut.cz/MI-PYT/[na Course Pages]
+a https://gitlab.fit.cvut.cz/MI-PYT/MI-PYT/[na GitLabu],
+a pro všechny veřejně https://github.com/cvut/MI-PYT[na GitHubu].
+V repozitáři na GitHubu jsou pouze věci specifické pro předmět,
+výukové materiály vznikají v projektu http://naucse.python.cz/2018/mipyt-zima/[Nauč se Python],
+taktéž dostupné na https://github.com/pyvec/naucse.python.cz[GitHubu].
+
+Kde není uvedeno jinak,
+jsou materiály dostupné pod licencí
+http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International],
+kde autorem je Petr Viktorin, Miro Hrončok a Marek Suchánek (vyučující předmětu)
+a https://github.com/cvut/MI-PYT/graphs/contributors[další přispěvatelé].
+Tento kurz vzniká pod záštitou firmy https://www.redhat.com/en/global/czech-republic[Red Hat Czech, s.r.o.]
+
+image:https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png[width=88,height=31]
+
+NOTE: http://naucse.python.cz/2018/mipyt-zima/[Materiály a harmonogram.]
+
+== Průběh cvičení
+
+Na cvičení se od nás na začátku vždy dozvíte nějaké informace o probíraném tématu,
+většinou doplněné o ukázky nad rámec textu v těchto materiálech.
+Na cvičeních vytvořené ukázky k textu vždy připojíme.
+Na (téměř) každém cvičení dostanete nějakou úlohu,
+kterou můžete plnit na cvičení a/nebo doma.
+Termín odevzdání úlohy je zpravidla pondělí (včetně) 12 dní po cvičení,
+na kterém byl úkol zadán.
+U některých úloh se termín může lišit.
+Protože úlohy na sebe mnohdy navazují,
+dáme vám někdy k dispozici referenční řešení úlohy z minula,
+aby vám tz. neujel vlak.
+
+Úlohy se odevzdávají výhradně jako gitové repozitáře.
+Preferujeme použití https://github.com/[GitHubu],
+kde jako studenti s e-mailovou adresou ``++@fit.cvut.cz++`` máte nárok na
+https://education.github.com/pack[Student Developer Pack]
+a tedy na neomezené množství privátních repozitářů.
+V případě, že si velmi nepřejete používat GitHub,
+můžete využít místo toho například https://gitlab.fit.cvut.cz/[fakultní GitLab].
+Nezapomeňte do repozitářů pozvat jako spolupracovníky nás, tedy uživatele
+https://github.com/hroncok[hroncok] a https://github.com/MarekSuchanek[MarekSuchanek].
+
+Pokud s gitem a GitHubem nejste velcí kamarádi, doporučujeme ještě před kurzem pročíst
+https://help.github.com/categories/bootcamp/[GitHub Bootcamp] a použít
+https://education.github.com/git-cheat-sheet-education.pdf[git cheat sheet],
+případně https://githowto.com/[GitHowTo].
+Podrobnosti k odevzdání zjistíte u zadání jednotlivých úloh.
+
+V případě dotazu k předmětu, který může být položen veřejně, neváhejte založit
+https://github.com/cvut/MI-PYT/issues[issue].
+V případě dotazu k materiálům prosím zakládejte
+https://github.com/pyvec/naucse.python.cz/issues[issue v projektu naucse.python.cz].

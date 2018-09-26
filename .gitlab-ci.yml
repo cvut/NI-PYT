@@ -1,0 +1,10 @@
+# Build pages and deploy to courses.fit.cvut.cz
+course-pages:
+  stage: deploy
+  image: gitlab.fit.cvut.cz:5000/course-pages/course-pages:master
+  script:
+    - course-pages public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 hour
