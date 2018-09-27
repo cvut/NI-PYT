@@ -4,7 +4,7 @@
 
 Hodnocení předmětu se skládá z částí uvedených v následující tabulce.
 Druhý sloupeček obsahuje maximální počet bodů, které mohou studenti získat.
-Třetí sloupeček určuje minimální počet bodů nutný k úspěšnému získání zápočtu a zkoušky.
+Třetí sloupeček určuje minimální počet bodů nutný k úspěšnému získání zápočtu a známky.
 
 [options="header"]
 |===
