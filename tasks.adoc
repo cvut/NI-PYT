@@ -5,8 +5,23 @@
 Součástí hodnocení jsou především úlohy.
 Uvítáme, pokud je budete řešit na cvičeních, po skončení výkladu.
 Rádi vám poradíme osobně.
-Co nestihnete na cvičeních doděláte doma.
+Co nestihnete na cvičeních, doděláte doma.
 Rádi vám poradíme i v GitHub issue.
 
+Hotové úlohy odevzdáte jako gitový repozitář na https://github.com[GitHubu],
+případně fakultním https://gitlab.fit.cvut.cz[GitLabu].
+V obou případech nám nezapomeňte
+https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/[dát přístup].
+
+Vzhledem k tomu, že všichni máte stejné zadání, doporučujeme použít privátní
+repozitář. Svůj kód můžete zveřejnit pod nějakou open-source licencí po našem
+zkontrolování všech navazujících úloh.
+
+Odkaz na (nový) repozitář nám pošlete e-mailem.
+Pro odevzdání v repozitáři vždy nastavíte nový tag, dle zadání úlohy.
+
+Termín odevzdání úlohy je zpravidla pondělí (včetně) 12 dní po cvičení,
+na kterém byl úkol zadán.
+U některých úloh se termín může lišit.
 
 WARNING: Zde budou odkazy na zadání jednotlivých úloh a jejich deadliny.
