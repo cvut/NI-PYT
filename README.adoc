@@ -37,7 +37,7 @@ Protože úlohy na sebe mnohdy navazují,
 dáme vám někdy k dispozici referenční řešení úlohy z minula,
 aby vám tz. neujel vlak.
 
-Úlohy se odevzdávají výhradně jako gitové repozitáře.
+xref:tasks#[Úlohy] se odevzdávají výhradně jako gitové repozitáře.
 Preferujeme použití https://github.com/[GitHubu],
 kde jako studenti s e-mailovou adresou ``++@fit.cvut.cz++`` máte nárok na
 https://education.github.com/pack[Student Developer Pack]

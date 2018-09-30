@@ -23,6 +23,27 @@ Pro odevzdání v repozitáři vždy nastavíte nový tag, dle zadání úlohy.
 
 Termín odevzdání úlohy je zpravidla pondělí (včetně) 12 dní po cvičení,
 na kterém byl úkol zadán.
-U některých úloh se termín může lišit.
+U některých úloh se termín může lišit,
+je u nich symbol 🌴 (termín prodloužen), nebo 💀 (termín zkrácen).
 
-WARNING: Zde budou odkazy na zadání jednotlivých úloh a jejich deadliny.
+== Úloha filabel (CLI): 15.10.2018 🌴
+
+Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s GitHub API,
+pomocí knihoven http://docs.python-requests.org[requests] a
+http://click.pocoo.org[click].
+
+Aplikace slouží ke štítkování (labelování) Pull Requestů (PR) na GitHub podle
+souborů, které se mění. Příklad: Když vaše aplikace zjistí, že PR mění soubor
+`templates/cool.html`, nastaví štítek `templates`. Když zjistí, že mění soubor
+`README.rst`, nastaví štítek `docs` apod.
+
+Zadání a testy::
+  https://github.com/cvut/filabel/tree/basic[github.com/cvut/filabel @basic]
+
+== Úloha filabel (webová aplikace): 15.10.2018
+
+Vaším úkolem za 5 bodů je přidat do apliakce *filabel* webový server,
+který bude reagovat na události na GitHubu automaticky.
+Použijete webový framework http://flask.pocoo.org/[Flask].
+
+WARNING: Zadání bude doplněno.
