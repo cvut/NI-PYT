@@ -1,4 +1,5 @@
 = MI-PYT
+:note-caption: :information_source:
 
 Díváte se na materiály předmětu
 http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/04/87/12/p4871206.html[MI-PYT (Pokročilý Python)]

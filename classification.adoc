@@ -1,4 +1,5 @@
 = Hodnocení
+:note-caption: :information_source:
 
 == Položky hodnocení
 

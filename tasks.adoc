@@ -1,5 +1,6 @@
 = Úlohy (nejen na doma)
 :toc:
+:warning-caption: :warning:
 
 
 Součástí hodnocení jsou především úlohy.
