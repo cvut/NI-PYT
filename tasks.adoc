@@ -46,4 +46,5 @@ Vaším úkolem za 5 bodů je přidat do apliakce *filabel* webový server,
 který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
-WARNING: Zadání bude doplněno.
+Zadání a testy::
+  https://github.com/cvut/filabel/tree/web[github.com/cvut/filabel @web]
