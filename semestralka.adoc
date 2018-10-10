@@ -105,3 +105,43 @@ Aplikace bude mít webové rozhraní, přes které uživatel:
 Aplikace musí umožňovat autentizaci proti https://ict.fit.cvut.cz/~web/current/web/ict/GoogleApps/[Google Apps for Education] na FIT. Volitelně by aplikace mohla pracovat se _zdroji_ (https://support.google.com/a/answer/1686462?hl=en[Calendar Resources]), pro alokaci místnosti, ve které se událost koná.
 
 Kontaktní osoba: https://usermap.cvut.cz/profile/vlnasjan/[Jan Vlnas].
+
+
+
+
+=== Synchronization between Google and Phabricator calendars
+
+In Showmax, we have two calendar systems which need to be synchronized.
+
+See also SSP portal and subscribe there to earn: https://is.fit.cvut.cz/group/ssp/sponsor/assignmentdetail?aid=900
+
+==== Goals 
+
+* Investigate possibilities of synchronization (both calendars have slightly different features) and representation of different pieces of information in both calendars.
+
+* Investigate ways to keep them in sync when editing happens on either side.
+
+* Create a tool to synchronize calendar events from google calendar to internal Showmax Phabricator installation via APIs, email or other automated means. Tool should:
+
+a) be documented (basic README, commented source code);
+
+b) have proper logging implemented;
+
+c) be either triggered regularly or run as a daemon.
+
+There is an interface to synchronize Google calendar one way to Phabricator: https://secure.phabricator.com/book/phabricator/article/calendar_imports/. However that doesn’t fit our requirements. For example:
+
+* Many calendars are too big on google so the import ends with “Timeout”.
+
+* We need to be able to filter events somehow.
+
+* Events are not paired by email with Phabricator users.
+
+==== Required outputs
+
+Working prototype in Python that would pass code review and would run on our Jenkins machine in our Debian based docker container (we’ll help with this step) or in our private cloud (also running Debian based docker containers). It can use postgres database if needed. In case it is going to run as a daemon, it should be implemented as 12 factor app.
+
+==== Kontaktní osoby
+
+* adam.cincura@showmax.com[Adam Činčura]
+* jan.pipek@showmax.com[Jan Pipek]
