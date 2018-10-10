@@ -113,7 +113,7 @@ Kontaktní osoba: https://usermap.cvut.cz/profile/vlnasjan/[Jan Vlnas].
 
 In Showmax, we have two calendar systems which need to be synchronized.
 
-See also SSP portal and subscribe there to earn: https://is.fit.cvut.cz/group/ssp/sponsor/assignmentdetail?aid=900
+See also SSP portal and subscribe there to earn: https://is.fit.cvut.cz/group/ssp/assignee/assignmentdetail?aid=900
 
 ==== Goals 
 
@@ -142,6 +142,8 @@ There is an interface to synchronize Google calendar one way to Phabricator: htt
 Working prototype in Python that would pass code review and would run on our Jenkins machine in our Debian based docker container (we’ll help with this step) or in our private cloud (also running Debian based docker containers). It can use postgres database if needed. In case it is going to run as a daemon, it should be implemented as 12 factor app.
 
 ==== Kontaktní osoby
+
+Showmax, s.r.o.
 
 * adam.cincura@showmax.com[Adam Činčura]
 * jan.pipek@showmax.com[Jan Pipek]
