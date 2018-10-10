@@ -26,7 +26,7 @@ na kterém byl úkol zadán.
 U některých úloh se termín může lišit,
 je u nich symbol 🌴 (termín prodloužen), nebo 💀 (termín zkrácen).
 
-== Úloha filabel (CLI): 15.10.2018 🌴
+== Úloha filabel (CLI): 22.10.2018 🌴
 
 Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s GitHub API,
 pomocí knihoven http://docs.python-requests.org[requests] a
@@ -40,7 +40,7 @@ souborů, které se mění. Příklad: Když vaše aplikace zjistí, že PR měn
 Zadání a testy::
   https://github.com/cvut/filabel/tree/basic[github.com/cvut/filabel @basic]
 
-== Úloha filabel (webová aplikace): 15.10.2018
+== Úloha filabel (webová aplikace): 22.10.2018
 
 Vaším úkolem za 5 bodů je přidat do apliakce *filabel* webový server,
 který bude reagovat na události na GitHubu automaticky.
