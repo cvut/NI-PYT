@@ -123,11 +123,11 @@ See also SSP portal and subscribe there to earn: https://is.fit.cvut.cz/group/ss
 
 * Create a tool to synchronize calendar events from google calendar to internal Showmax Phabricator installation via APIs, email or other automated means. Tool should:
 
-a) be documented (basic README, commented source code);
+** be documented (basic README, commented source code);
 
-b) have proper logging implemented;
+** have proper logging implemented;
 
-c) be either triggered regularly or run as a daemon.
+** be either triggered regularly or run as a daemon.
 
 There is an interface to synchronize Google calendar one way to Phabricator: https://secure.phabricator.com/book/phabricator/article/calendar_imports/. However that doesn’t fit our requirements. For example:
 
