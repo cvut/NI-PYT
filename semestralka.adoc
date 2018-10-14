@@ -107,43 +107,44 @@ Aplikace musí umožňovat autentizaci proti https://ict.fit.cvut.cz/~web/curren
 Kontaktní osoba: https://usermap.cvut.cz/profile/vlnasjan/[Jan Vlnas].
 
 
-
-
 === Synchronization between Google and Phabricator calendars
 
 In Showmax, we have two calendar systems which need to be synchronized.
 
-See also SSP portal and subscribe there to earn: https://is.fit.cvut.cz/group/ssp/assignee/assignmentdetail?aid=900
+See also https://is.fit.cvut.cz/group/ssp/assignee/assignmentdetail?aid=900[SSP portal and subscribe there] to earn.
 
 ==== Goals 
 
-* Investigate possibilities of synchronization (both calendars have slightly different features) and representation of different pieces of information in both calendars.
-
+* Investigate possibilities of synchronization (both calendars have slightly different features)
+  and representation of different pieces of information in both calendars.
 * Investigate ways to keep them in sync when editing happens on either side.
-
-* Create a tool to synchronize calendar events from google calendar to internal Showmax Phabricator installation via APIs, email or other automated means. Tool should:
-
+* Create a tool to synchronize calendar events from Google calendar to internal Showmax Phabricator installation via APIs,
+  email or other automated means. The tool should:
 ** be documented (basic README, commented source code);
-
 ** have proper logging implemented;
-
 ** be either triggered regularly or run as a daemon.
 
-There is an interface to synchronize Google calendar one way to Phabricator: https://secure.phabricator.com/book/phabricator/article/calendar_imports/. However that doesn’t fit our requirements. For example:
+There is
+https://secure.phabricator.com/book/phabricator/article/calendar_imports/[an interface to synchronize Google calendar one way to Phabricator].
+However that doesn’t fit our requirements. For example:
 
-* Many calendars are too big on google so the import ends with “Timeout”.
-
+* Many calendars are too big on Google so the import ends with a timeout.
 * We need to be able to filter events somehow.
-
-* Events are not paired by email with Phabricator users.
+* Events are not paired with Phabricator users (by email address).
 
 ==== Required outputs
 
-Working prototype in Python that would pass code review and would run on our Jenkins machine in our Debian based docker container (we’ll help with this step) or in our private cloud (also running Debian based docker containers). It can use postgres database if needed. In case it is going to run as a daemon, it should be implemented as 12 factor app.
+Working prototype in Python that would pass code review
+and would run on our Jenkins machine in our Debian based docker container
+(we’ll help with this step)
+or in our private cloud (also running Debian based docker containers).
+It can use PostgreSQL database if needed.
+In case it is going to run as a daemon,
+it should be implemented as a https://12factor.net/[12 factor app].
 
-==== Kontaktní osoby
+==== Point of contact
 
 Showmax, s.r.o.
 
-* adam.cincura@showmax.com[Adam Činčura]
-* jan.pipek@showmax.com[Jan Pipek]
+* mailto:adam.cincura@showmax.com[Adam Činčura]
+* mailto:jan.pipek@showmax.com[Jan Pipek]
