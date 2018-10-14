@@ -13,6 +13,8 @@ Hotové úlohy odevzdáte jako gitový repozitář na https://github.com[GitHubu
 případně fakultním https://gitlab.fit.cvut.cz[GitLabu].
 V obou případech nám nezapomeňte
 https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/[dát přístup].
+Na GitHubu jsme jako https://github.com/hroncok[hroncok] a https://github.com/MarekSuchanek[MarekSuchanek].
+Na GitLabu jako hroncmir a suchama4.
 
 Vzhledem k tomu, že všichni máte stejné zadání, doporučujeme použít privátní
 repozitář. Svůj kód můžete zveřejnit pod nějakou open-source licencí po našem
