@@ -109,6 +109,7 @@ Kontaktní osoba: https://usermap.cvut.cz/profile/vlnasjan/[Jan Vlnas].
 
 === Synchronization between Google and Phabricator calendars
 
+
 In Showmax, we have two calendar systems which need to be synchronized.
 
 See also https://is.fit.cvut.cz/group/ssp/assignee/assignmentdetail?aid=900[SSP portal and subscribe there] to get a financial reward too.
@@ -141,6 +142,61 @@ or in our private cloud (also running Debian based docker containers).
 It can use PostgreSQL database if needed.
 In case it is going to run as a daemon,
 it should be implemented as a https://12factor.net/[12 factor app].
+
+==== Point of contact
+
+Showmax, s.r.o.
+
+* mailto:adam.cincura@showmax.com[Adam Činčura]
+* mailto:jan.pipek@showmax.com[Jan Pipek]
+
+
+=== Automated API documentation
+
+
+In Showmax, we have a manually maintained API documentation. We want to move the documentation to
+the code using OpenAPI specification.
+
+See also https://is.fit.cvut.cz/group/ssp/assignee/assignmentdetail?aid=899[SSP portal and subscribe there]
+to get financial reward too.
+
+==== Goals
+
+* Given a Grape API and a corresponding hand-written documentation in the RST (ReStructuredText) format,
+annotate the source code of the API with the information found in the docs.
+
+* This requires you to parse the RST and for each documented Grape API end-point,
+locate the end-point in the given source file, and attach the information
+into the source in the format required by Swagger.
+
+* Then, Swagger can be executed to generate the actual documentation output.
+
+* The ultimate goal is to get rid of the handwritten doc altogether.
+
+* There are some troubles: the documentation is handwritten, and hence it will
+contain little deviations in style. You need to come up with heuristics at times
+to stick the right information from the handwritten doc into the appropriate places
+in the source code. However, this is doable, as the handwritten doc is fairly simple.
+
+* In case the tool would fail (this should be at most few percent of documentation
+that doesn’t repeat) it should give operator enough information on what to handle manually and how.
+
+==== Required outputs
+
+A working tool with complete source code. It must be possible to run the tool you’ve provided on
+at least three API source files and obtain correct, swagger-processable source file containing
+the original API with all the metadata from the original handwritten doc.
+
+==== Recommended sources
+
+* https://github.com/OAI/OpenAPI-Specification/
+
+* https://swagger.io/
+
+* https://github.com/ruby-grape/grape-swagger
+
+* https://swagger.io/tools/open-source/open-source-integrations/
+
 
 ==== Point of contact
 
