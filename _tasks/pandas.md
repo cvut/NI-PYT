@@ -2,7 +2,7 @@ Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže
 
 Řešení bude zpracováno jako **Jupyter Notebook**, ve kterém bude patrné,
 která část kódu odpovídá na kterou otázku.
-Případně je možné řešení odevzdat nebo jako skript v jazyce Python,
+Případně je možné řešení odevzdat jako skript v jazyce Python,
 který otázky a odpovědi bude vypisovat na standardní výstup např. tímto stylem:
 
     Počet památných stromů v Brně:
@@ -14,7 +14,7 @@ který otázky a odpovědi bude vypisovat na standardní výstup např. tímto s
 Řešení odevzdejte standardně jako gitový repozitář.
 V případě odevzdání přes GitHub (což preferujeme) **dejte přístup** kromě
 uživatelů [hroncok](https://github.com/hroncok) a
-[MarekSuchanek](https://github.com/MarekSuchanek) i Petrovi Viktorinovi,
+[MarekSuchanek](https://github.com/MarekSuchanek) i Petru Viktorinovi
 (uživatelské jméno [encukou](https://github.com/encukou)).
 
 Repozitář musí obsahovat všechny soubory potřebné k běhu skriptu či Notebooku,
