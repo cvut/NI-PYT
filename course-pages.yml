@@ -11,5 +11,6 @@ navigation:
     - README.*
     - LICENSE
     - stats/
+    - _*/
 excludedFiles:
   - _build

@@ -50,3 +50,11 @@ Použijete webový framework http://flask.pocoo.org/[Flask].
 
 Zadání a testy::
   https://github.com/cvut/filabel/tree/web[github.com/cvut/filabel @web]
+
+== Úloha Pandas: 29.10.2018
+
+Vašim úkolem za 5 bodů je analyzovat výsledky **Python Developers Survey**,
+odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
+
+Zadání::
+  xref:_tasks/pandas#[Úloha Pandas]
