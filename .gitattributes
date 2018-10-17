@@ -1,0 +1,4 @@
+* linguist-detectable=true
+stats/B*/*.ipynb linguist-detectable=false
+stats/B*/*.csv linguist-detectable=false
+
