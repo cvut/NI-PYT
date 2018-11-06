@@ -44,7 +44,7 @@ Zadání a testy::
 
 == Úloha filabel (webová aplikace): 22.10.2018
 
-Vaším úkolem za 5 bodů je přidat do apliakce *filabel* webový server,
+Vaším úkolem za 5 bodů je přidat do aplikace *filabel* webový server,
 který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
