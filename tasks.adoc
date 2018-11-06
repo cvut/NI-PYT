@@ -75,3 +75,13 @@ http://www.numpy.org[numpy].
 
 Zadání a testy::
   https://github.com/cvut/beeclust/tree/basic[github.com/cvut/beeclust @basic]
+
+== Úloha filabel (testování): 19.11.2018
+
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu *filabel* testy 
+s použitím https://docs.pytest.org/en/latest/[pytest] (a případně dalších knihoven), 
+umožnit spouštění testů pomocí `setup.py` a spouštět testy také na 
+https://travis-ci.org[Travis CI].
+
+Zadání::
+  https://github.com/cvut/filabel/tree/tests[github.com/cvut/filabel @tests]
