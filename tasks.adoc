@@ -90,7 +90,7 @@ Zadání::
 
 Vaším úkolem za 5 bodů je zrychlit implementaci simulace shlukovacího algoritmu
 http://heikohamann.de/pub/schmickl_beeclust_2011.pdf[BeeClust] s využitím 
-[Cythonu](https://cython.readthedocs.io/en/latest/index.html) tak, aby dokázala 
+[Cythonu](https://cython.readthedocs.io/) tak, aby dokázala 
 v rozumném čase (viz zadání) pracovat s většími mapami.
 
 Zadání a testy::
