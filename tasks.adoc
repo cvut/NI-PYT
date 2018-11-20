@@ -96,7 +96,7 @@ v rozumném čase (viz zadání) pracovat s většími mapami.
 Zadání a testy::
   https://github.com/cvut/beeclust/tree/speedup[github.com/cvut/beeclust @speedup]
 
-== Úloha filabel (testování): 3.12.2018
+== Úloha filabel (dokumentace): 3.12.2018
 
 Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu *filabel* dokumentaci 
 pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
