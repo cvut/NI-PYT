@@ -104,4 +104,4 @@ jak funguje uvnitř, a to včetně doctestů, které poběží také na https://
 společně s testy z minulého úkolu.
 
 Zadání::
-  https://github.com/cvut/filabel/tree/tests[github.com/cvut/filabel @docs]
+  https://github.com/cvut/filabel/tree/docs[github.com/cvut/filabel @docs]
