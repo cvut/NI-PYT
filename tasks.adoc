@@ -105,3 +105,13 @@ společně s testy z minulého úkolu.
 
 Zadání::
   https://github.com/cvut/filabel/tree/docs[github.com/cvut/filabel @docs]
+  
+== Úloha beeclust (GUI): 17.12.2018 🌴
+
+Vaším úkolem za 5 bodů je pro zrychlenou implementaci simulace shlukovacího algoritmu
+http://heikohamann.de/pub/schmickl_beeclust_2011.pdf[BeeClust] vytvořit grafické
+rozhraní umožňující upravovat a prohlížet mapu i simulaci krokovat pomocí knihovny
+https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
+
+Zadání a testy::
+  https://github.com/cvut/beeclust/tree/gui[github.com/cvut/beeclust @gui]
