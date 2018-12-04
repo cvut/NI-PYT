@@ -115,3 +115,12 @@ https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
   https://github.com/cvut/beeclust/tree/gui[github.com/cvut/beeclust @gui]
+  
+== Úloha filabel (asyncio): 31.12.2018 🌴🎁🎇
+
+Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci `filabel` o asynchronní
+komunikaci s GitHub API pomocí knihovny https://aiohttp.readthedocs.io[aiohttp]
+za účelem zrychlení práce, které se bude zapínat přepínačem `-x/--async`.
+
+Zadání a testy::
+  https://github.com/cvut/filabel/tree/asyncio[github.com/cvut/filabel @asyncio]
