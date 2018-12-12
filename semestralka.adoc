@@ -39,7 +39,7 @@ Je tedy možné mít 35 bodů ze semestru a 25-10 ze semestrálky a stále dosta
 Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud nemáte téma vlastní. V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte. I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
 
-=== CalDAV server pro Sirius
+=== CalDAV server pro Sirius (zabráno)
 
 
 Na FIT funguje API https://github.com/cvut/sirius[Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu https://en.wikipedia.org/wiki/ICalendar[iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
