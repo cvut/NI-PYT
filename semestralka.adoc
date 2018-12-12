@@ -91,7 +91,7 @@ ICT oddělení, místnost TH-A:1324
 * https://usermap.cvut.cz/profile/jirutjak/[Jakub Jirůtka]
 
 
-=== Synchronizace Sirius s Google Calendar (Zabráno)
+=== Synchronizace Sirius s Google Calendar (zabráno)
 
 
 Podstata práce je stejná jako u zadání <<caldav-server-pro-sirius,CalDAV server pro Sirius>>. Google Calendar podporuje přístup přes CalDAV, ale slouží pouze jako CalDAV server, nikoliv klient. Synchronizace s Google Calendar by proto byla řešená samostatnou aplikací, která by importovala data do Google Calendar přes https://developers.google.com/google-apps/calendar/caldav/v2/guide[CalDAV rozhraní], nebo přes https://developers.google.com/google-apps/calendar/overview[Google Calendar API].
