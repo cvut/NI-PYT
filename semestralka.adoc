@@ -204,3 +204,27 @@ Showmax, s.r.o.
 
 * mailto:adam.cincura@showmax.com[Adam Činčura]
 * mailto:jan.pipek@showmax.com[Jan Pipek]
+
+
+=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/...
+
+Zadání spočívá ve vytvoření služby,
+která bude mít na starost synchronizaci definic štítků mezi různými repozitáři
+na různých službách.
+
+Uživatel připraví konfiguraci štítků (jména, barvy, popisy) a konfiguraci
+repozitářů (služba, identifikátor repozitáře).
+Ideálně do gitového repozitáře.
+
+Služba pak zajistí, že všechny definované repozitáře budou mít tyto štítky definované.
+
+Přístupové údaje ke službám se budou zadávat postranním kanálem.
+Nebudou tedy součástí konfigurace, aby konfigurace mohla být veřejná.
+
+Mělo by se jednat o modulární aplikaci, která musí být jednoduše rozšířitelná
+o další platformy. Součástí odevzdání musí být podpora pro GitHub a další jinou
+službu (Pagure, GitLab...).
+
+Možno implementovat jako webovou aplikaci nebo jako cron job běžící na nějakém CI.
+
+Kontaktní osobou je Miro Hrončok.
