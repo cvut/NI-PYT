@@ -206,7 +206,7 @@ Showmax, s.r.o.
 * mailto:jan.pipek@showmax.com[Jan Pipek]
 
 
-=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/...
+=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/... (zabráno)
 
 Zadání spočívá ve vytvoření služby,
 která bude mít na starost synchronizaci definic štítků mezi různými repozitáři
