@@ -7,7 +7,7 @@ Hodnocení předmětu se skládá z částí uvedených v následující tabulce
 Druhý sloupeček obsahuje maximální počet bodů, které mohou studenti získat.
 Třetí sloupeček určuje minimální počet bodů nutný k úspěšnému získání zápočtu a známky.
 
-[options="header"]
+[options="autowidth,header"]
 |===
 | Položka                                  | Max. poč. bodů | Min. poč. bodů
 | xref:tasks#[Úlohy] (10)                  | 50             | 25
@@ -56,15 +56,15 @@ Semestrálku však může vypracovat pro radost.
 
 == Celkové hodnocení
 
-Hodnocení se řídí https://www.cvut.cz/sites/default/files/content/7e72349e-3ea5-4693-9853-5147f1238481/cs/20160519-studijni-a-zkusebni-rad-pro-studenty-cvut-ze-dne-8-7-2015.pdf[Studijním a zkušebním řádem ČVUT].
-
-[options="header"]
-|===
+[options="autowidth,header"]
+|====
 | Známka | Bodové rozmezí | Slovní hodnocení
-| A      | 90 a více      | výborně
-| B      | 80 - 89        | velmi dobře
-| C      | 70 - 79        | dobře
-| D      | 60 - 69        | uspokojivě
-| E      | 50 - 59        | dostatečně
-| F      | méně než 50    | nedostatečně
-|===
+| **A**  | 90 a více      | výborně
+| **B**  | 80-89          | velmi dobře
+| **C**  | 70-79          | dobře
+| **D**  | 60-69          | uspokojivě
+| **E**  | 50-59          | dostatečně
+| **F**  | méně než 50    | nedostatečně
+|====
+
+Hodnocení se řídí https://www.cvut.cz/vnitrni-predpisy#szr[📖 Studijním a zkušebním řádem ČVUT], který najdete na stránce s https://www.cvut.cz/vnitrni-predpisy[vnitřními předpisy ČVUT].

@@ -27,100 +27,98 @@ Termín odevzdání úlohy je zpravidla pondělí (včetně) 12 dní po cvičen�
 na kterém byl úkol zadán.
 U některých úloh se termín může lišit,
 je u nich symbol 🌴 (termín prodloužen), nebo 💀 (termín zkrácen).
+Úlohy jsou seřazeny podle termínu odevzdání,
+takže některé dříve zadané úlohy mohu být v seznamu níže.
 
-== Úloha filabel (CLI): 22.10.2018 🌴
+== Úloha GHIA (CLI): 14.10.2019 🌴
 
 Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s GitHub API,
 pomocí knihoven http://docs.python-requests.org[requests] a
 http://click.pocoo.org[click].
 
-Aplikace slouží ke štítkování (labelování) Pull Requestů (PR) na GitHub podle
-souborů, které se mění. Příklad: Když vaše aplikace zjistí, že PR mění soubor
-`templates/cool.html`, nastaví štítek `templates`. Když zjistí, že mění soubor
-`README.rst`, nastaví štítek `docs` apod.
+Aplikace slouží k přiřazování issues na GitHub podle jejich obsahu.
+Příklad: Když text issue obsahuje „network error“,
+přiřadí se uživateli `PepaNovak`, protože je expertem na sítě.
+_GHIA_ znamená _GitHub Issue Assigner_.
 
 Zadání a testy::
-  https://github.com/cvut/filabel/tree/basic[github.com/cvut/filabel @basic]
+  TBD
 
-== Úloha filabel (webová aplikace): 22.10.2018
+== Úloha GHIA (webová aplikace): 23.10.2019 🌴
 
-Vaším úkolem za 5 bodů je přidat do aplikace *filabel* webový server,
+Vaším úkolem za 5 bodů je přidat do aplikace _GHIA_ webový server,
 který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
 Zadání a testy::
-  https://github.com/cvut/filabel/tree/web[github.com/cvut/filabel @web]
+  TBD
 
-== Úloha Pandas: 29.10.2018
+== Úloha Pandas: 28.10.2019
 
-Vašim úkolem za 5 bodů je analyzovat výsledky **Python Developers Survey**,
+Vašim úkolem za 5 bodů je analyzovat dodaný dataset,
 odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
 
 Zadání::
-  xref:_tasks/pandas#[Úloha Pandas]
+  TBD
 
-== Úloha filabel (balíček): 5.11.2018
+== Úloha GHIA (balíček): 4.11.2019
 
-Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu *filabel*
+Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _GHIA_
 balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
 
 Zadání a testy::
-  https://github.com/cvut/filabel/tree/modular[github.com/cvut/filabel @modular]
+  TBD
   
-== Úloha beeclust (numpy): 12.11.2018
+== Úloha bludiště (NumPy): 11.11.2019
 
-Vaším úkolem za 5 bodů je implementovat dle zadání simulaci shlukovacího algoritmu
-http://heikohamann.de/pub/schmickl_beeclust_2011.pdf[BeeClust] pomocí knihovny 
-http://www.numpy.org[numpy].
+Vaším úkolem za 5 bodů je implementovat dle zadání algoritmus řešení bludiště
+pomocí knihovny http://www.numpy.org[NumPy].
 
 Zadání a testy::
-  https://github.com/cvut/beeclust/tree/basic[github.com/cvut/beeclust @basic]
+  TBD
 
-== Úloha filabel (testování): 3.12.2018 🌴
+== Úloha bludiště (zrychlení): 25.11.2019
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu *filabel* testy 
-s použitím https://docs.pytest.org/en/latest/[pytest] (a případně dalších knihoven), 
-umožnit spouštění testů pomocí `setup.py` a spouštět testy také na 
-https://travis-ci.org[Travis CI].
-
-Zadání::
-  https://github.com/cvut/filabel/tree/tests[github.com/cvut/filabel @tests]
-  
-== Úloha beeclust (zrychlení): 26.11.2018
-
-Vaším úkolem za 5 bodů je zrychlit implementaci simulace shlukovacího algoritmu
-http://heikohamann.de/pub/schmickl_beeclust_2011.pdf[BeeClust] s využitím 
+Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu řešení bludiště s využitím 
 https://cython.readthedocs.io/[Cythonu] tak, aby dokázala 
-v rozumném čase (viz zadání) pracovat s většími mapami.
+v rozumném čase (viz zadání) pracovat s většími bludišti.
 
 Zadání a testy::
-  https://github.com/cvut/beeclust/tree/speedup[github.com/cvut/beeclust @speedup]
+  TBD
 
-== Úloha filabel (dokumentace): 3.12.2018
+== Úloha GHIA (testování): 2.12.2019 🌴
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu *filabel* dokumentaci 
-pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
-jak funguje uvnitř, a to včetně doctestů, které poběží také na https://travis-ci.org[Travis CI]
-společně s testy z minulého úkolu.
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ testy
+s použitím frameworku https://docs.pytest.org/en/latest/[pytest] (a případně dalších knihoven), 
+umožnit spouštění testů pomocí `setup.py` a spouštět testy také na 
+https://travis-ci.org[Travis CI] či jiném veřejném CI.
 
 Zadání::
-  https://github.com/cvut/filabel/tree/docs[github.com/cvut/filabel @docs]
-  
-== Úloha beeclust (GUI): 17.12.2018 🌴
+  TBD
 
-Vaším úkolem za 5 bodů je pro zrychlenou implementaci simulace shlukovacího algoritmu
-http://heikohamann.de/pub/schmickl_beeclust_2011.pdf[BeeClust] vytvořit grafické
-rozhraní umožňující upravovat a prohlížet mapu i simulaci krokovat pomocí knihovny
+== Úloha GHIA/bludiště (dokumentace): 9.12.2019 🌴
+
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ nebo bludiště dokumentaci 
+pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
+jak funguje uvnitř, a to včetně doctestů, které poběží také na CI.
+
+Zadání::
+  TBD
+  
+== Úloha bludiště (GUI): 16.12.2019 🌴
+
+Vaším úkolem za 5 bodů je pro zrychlenou implementaci bludiště vytvořit grafické
+rozhraní umožňující upravovat, prohlížet a řešit bludiště pomocí knihovny
 https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
-  https://github.com/cvut/beeclust/tree/gui[github.com/cvut/beeclust @gui]
+  TBD
   
-== Úloha filabel (asyncio): 31.12.2018 🌴🎁🎇
+== Úloha GHIA (asyncio): 31.12.2019 🌴🎁🎇
 
-Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci `filabel` o asynchronní
+Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci _GHIA_ o asynchronní
 komunikaci s GitHub API pomocí knihovny https://aiohttp.readthedocs.io[aiohttp]
-za účelem zrychlení práce, které se bude zapínat přepínačem `-x/--async`.
+za účelem zrychlení práce, které se bude zapínat přepínačem `--async`.
 
 Zadání a testy::
-  https://github.com/cvut/filabel/tree/asyncio[github.com/cvut/filabel @asyncio]
+  TBD

@@ -6,10 +6,10 @@ Součástí hodnocení je semestrální práce. Uvítáme, pokud si vyberete vla
 
 Ve všech případech (kromě případných explicitních výjimek) musí práce splňovat tyto požadavky:
 
-* musí být napsaná v jazyce Python verze 3.4 nebo vyšší (Cython se samozřejmě také počítá),
+* musí být napsaná v jazyce Python verze 3.6 nebo vyšší (Cython se samozřejmě také počítá),
 * musí splnit zadání, na kterém jsme se dohodli,
 * musí být v gitovém repozitáři,
-* kód musí splňovat https://www.python.org/dev/peps/pep-0008/[konvence],
+* kód musí splňovat https://www.python.org/dev/peps/pep-0008/[konvence PEP8],
 * kód, komentáře i dokumentace musí být v angličtině,
 * commity musí obsahovat vhodně atomické změny a mít vysvětlující message,
 * kód musí být dostatečně pokryt testy (nechceme stanovovat číselnou hranici, použijte selský rozum),
@@ -24,12 +24,12 @@ Pro nerozhodné časem připravíme několik témat, které můžete použít, b
 == Termíny
 
 
-* *Téma schváleno do:* 19.12.2018 (předposlední cvičení)
-* *Odevzdáno do:* 31.1.2019 včetně, možnost pozdního odevzdání do 9.2.2019 s penalizací
+* *Téma schváleno do:* 11.12.2019 (předposlední cvičení)
+* *Odevzdáno do:* 31.1.2020 včetně, možnost pozdního odevzdání do 9.2.2020 s penalizací
 
-Pozdní odevzdání semestrálky do 9.2.2019 včetně s penalizací -10 bodů.
+Pozdní odevzdání semestrálky do 9.2.2020 včetně s penalizací -10 bodů.
 Tato penalizace se nepočítá do podmínky 25 bodů za semestrálku.
-Je tedy možné mít 35 bodů ze semestru a 25-10 ze semestrálky a stále dostat E.
+Je tedy možné mít 35+ bodů ze semestru a 25-10 ze semestrálky a stále dostat E.
 
 
 
@@ -39,7 +39,7 @@ Je tedy možné mít 35 bodů ze semestru a 25-10 ze semestrálky a stále dosta
 Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud nemáte téma vlastní. V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte. I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
 
-=== Synchronizace Sirius s Google Calendar (zabráno)
+=== Synchronizace Sirius s Google Calendar
 
 Na FIT funguje API https://github.com/cvut/sirius[Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu https://en.wikipedia.org/wiki/ICalendar[iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
 
@@ -155,7 +155,7 @@ Showmax, s.r.o.
 * mailto:jan.pipek@showmax.com[Jan Pipek]
 
 
-=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/... (zabráno)
+=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/...
 
 Zadání spočívá ve vytvoření služby,
 která bude mít na starost synchronizaci definic štítků mezi různými repozitáři

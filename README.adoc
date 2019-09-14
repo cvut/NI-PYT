@@ -21,7 +21,7 @@ Tento kurz vzniká pod záštitou firmy https://www.redhat.com/en/global/czech-r
 
 image:https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png[width=88,height=31]
 
-NOTE: http://naucse.python.cz/2018/mipyt-zima/[Materiály a harmonogram.]
+NOTE: http://naucse.python.cz/2019/mipyt-zima/[Materiály a harmonogram.]
 
 == Průběh cvičení
 
