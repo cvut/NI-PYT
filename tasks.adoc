@@ -42,7 +42,7 @@ přiřadí se uživateli `PepaNovak`, protože je expertem na sítě.
 _GHIA_ znamená _GitHub Issue Assigner_.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/ghia/tree/basic[github.com/cvut/ghia @basic]
 
 == Úloha GHIA (webová aplikace): 23.10.2019 🌴
 
