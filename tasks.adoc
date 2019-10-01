@@ -51,7 +51,7 @@ který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/ghia/tree/web[github.com/cvut/ghia @web]
 
 == Úloha Pandas: 28.10.2019
 
