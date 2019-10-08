@@ -177,3 +177,24 @@ službu (Pagure, GitLab...).
 Možno implementovat jako webovou aplikaci nebo jako cron job běžící na nějakém CI.
 
 Kontaktní osobou je Miro Hrončok.
+
+=== Lazy converter of YouTube playlists into podcasts
+
+The LinuxDays conference has produced a lot of video recordings of many interesting presentations. It would be nice if there was a service turning those recordings into audio-only podcasts which could then allow listeners to download and listen to them without internet connection.
+
+The goal is to automate this without need to download and convert all the audio files in advance.
+
+==== Goals 
+
+* Investigate a way how to interact with YouTube API to get the list of videos' metadata from given playlist.
+* Create a web service presenting these metadata in a form of RSS/Atom feed. Each item should contain linked audio file which would be generated on-the-fly when downloaded by user.
+* Whenever a user tries to download some linked audio file, the app should download the MPEG-DASH audio from YouTube using https://ytdl-org.github.io/youtube-dl/index.html[youtube-dl] or anything similar, convert the downloaded file in order to be accepted by common player (ie. change container from MPEG-DASH to regular MPEG using for instance FFmpeg) and stream it to the user
+* The converted audio files should be cached by the app. If there are two concurrent downloads of the same file, the pull from YouTube should be done only once.
+
+==== Required outputs
+
+A standalone application configured by a simple config file. The app should be published under some open-source license.
+
+==== Point of contact
+
+mailto:ondrej.caletka@cesnet.cz[Ondřej Caletka]
