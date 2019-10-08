@@ -193,7 +193,7 @@ The goal is to automate this without need to download and convert all the audio 
 
 ==== Required outputs
 
-A standalone application configured by a simple config file. The app should be published under some open-source license.
+A standalone application configured by a simple config file. The app should be published under a free software license of your choice.
 
 ==== Point of contact
 
