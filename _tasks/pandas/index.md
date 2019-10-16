@@ -1,4 +1,4 @@
-Vašim úkolem za pět bodů je pomocí frameworku Pandas "vyčistit" data od Policie ČR a odpovědět na otázky níže.
+Vašim úkolem za pět bodů je pomocí frameworku Pandas „vyčistit“ data od Policie ČR a odpovědět na otázky níže.
 
 Řešení bude zpracováno jako **Jupyter Notebook**, ve kterém bude patrné,
 která část kódu připravuje data a která odpovídá na otázky.
@@ -39,7 +39,8 @@ Podíváte-li se na data, zjistíte dvě věci:
 * Je tam spousta čísel, na které potřebujete dekódovací klíč.
 
 Klíč PČR dodává na stránce výše jako „popis položek formuláře“ ve formátu XLSX.
-Pro zjednodušení si stáhněte a naimportujte `explanations.py`, kde máte připravené (rovnou jako Pythonní proměnné):
+Pro zjednodušení si stáhněte a naimportujte [`explanations.py`](./explanations.py),
+kde máte připravené (rovnou jako pythonní proměnné):
 
 * `file_names` je slovník {jméno souboru: kraj}
 * `main_columns` je seznam jmen sloupců v souborech `??.csv` (ve správném pořadí)
@@ -80,7 +81,7 @@ samotné číslo. (Viz příklad odpovědí výše.)
 Vytvořte tabulku (pandas DataFrame) s daty o nehodách v roce 2018.
 Jména sloupců (kromě `weekday(p2a)` a `a`-`t`) musí být pojmenované slovně, tak aby se v nich člověk vyznal. (Využijte `explanations.py`.)
 
-Tabulka musí obsahovat všechny informace ze souborů `data/2018/*.csv` a navíc `kraj`, určující kraj ve kterém k nehodě došlo. Každá zaznamenaná nehoda musí odpovídat jednomu řádku v tabulce. (Pozor na to že soubor `CHODCI.csv` se váže k nehodám z ostatních souborů.)
+Tabulka musí obsahovat všechny informace ze souborů `data/2018/*.csv` a navíc `kraj`, určující kraj, ve kterém k nehodě došlo. Každá zaznamenaná nehoda musí odpovídat jednomu řádku v tabulce. (Pozor na to, že soubor `CHODCI.csv` se váže k nehodám z ostatních souborů.)
 Pro zjednodušení můžete ignorovat **jeden** řádek z `CHODCI.csv`, popíšete-li v `README` co to pro další analýzu znamená.
 
 Tabulka musí mít index s unikátními hodnotami.

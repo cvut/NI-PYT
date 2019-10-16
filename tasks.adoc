@@ -59,7 +59,7 @@ Vašim úkolem za 5 bodů je analyzovat dodaný dataset,
 odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
 
 Zadání::
-  TBD
+  xref:_tasks/pandas/index#[Úloha Pandas]
 
 == Úloha GHIA (balíček): 4.11.2019
 
