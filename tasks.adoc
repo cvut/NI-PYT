@@ -67,7 +67,7 @@ Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _GHIA_
 balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/ghia/tree/modular[github.com/cvut/ghia @modular]
   
 == Úloha bludiště (NumPy): 11.11.2019
 
