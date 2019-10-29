@@ -75,7 +75,7 @@ Vaším úkolem za 5 bodů je implementovat dle zadání algoritmus řešení bl
 pomocí knihovny http://www.numpy.org[NumPy].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/edgemaze/tree/numpy[github.com/cvut/edgemaze @numpy]
 
 == Úloha bludiště (zrychlení): 25.11.2019
 
