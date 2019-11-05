@@ -85,6 +85,7 @@ v rozumném čase (viz zadání) pracovat s většími bludišti.
 
 Zadání a testy::
   TBD
+
 == Úloha GHIA (testování): 2.12.2019 🌴
 
 Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ testy
