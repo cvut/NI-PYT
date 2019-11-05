@@ -77,16 +77,7 @@ pomocí knihovny http://www.numpy.org[NumPy].
 Zadání a testy::
   https://github.com/cvut/edgemaze/tree/numpy[github.com/cvut/edgemaze @numpy]
 
-== Úloha bludiště (zrychlení): 25.11.2019
-
-Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu řešení bludiště s využitím 
-https://cython.readthedocs.io/[Cythonu] tak, aby dokázala 
-v rozumném čase (viz zadání) pracovat s většími bludišti.
-
-Zadání a testy::
-  TBD
-
-== Úloha GHIA (testování): 2.12.2019 🌴
+== Úloha GHIA (testování): 25.11.2019 🌴
 
 Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ testy
 s použitím frameworku https://docs.pytest.org/en/latest/[pytest] (a případně dalších knihoven), 
@@ -94,8 +85,17 @@ umožnit spouštění testů pomocí `setup.py` a spouštět testy také na
 https://travis-ci.org[Travis CI] či jiném veřejném CI.
 
 Zadání::
-  TBD
+  https://github.com/cvut/ghia/tree/tests[github.com/cvut/ghia @tests]
 
+== Úloha bludiště (zrychlení): 2.12.2019 🌴
+
+Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu řešení bludiště s využitím 
+https://cython.readthedocs.io/[Cythonu] tak, aby dokázala 
+v rozumném čase (viz zadání) pracovat s většími bludišti.
+
+Zadání a testy::
+  TBD
+  
 == Úloha GHIA/bludiště (dokumentace): 9.12.2019 🌴
 
 Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ nebo bludiště dokumentaci 
