@@ -94,7 +94,7 @@ umožnit spouštění testů pomocí `setup.py` a spouštět testy také na
 https://travis-ci.org[Travis CI] či jiném veřejném CI.
 
 Zadání::
-  TBD
+  https://github.com/cvut/ghia/tree/tests[github.com/cvut/ghia @tests]
 
 == Úloha GHIA/bludiště (dokumentace): 9.12.2019 🌴
 
