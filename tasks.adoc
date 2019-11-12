@@ -84,7 +84,7 @@ https://cython.readthedocs.io/[Cythonu] tak, aby dokázala
 v rozumném čase (viz zadání) pracovat s většími bludišti.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/edgemaze/tree/cython[github.com/cvut/edgemaze @cython]
 
 == Úloha GHIA (testování): 2.12.2019 🌴
 
