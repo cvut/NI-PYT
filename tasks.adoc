@@ -96,14 +96,14 @@ https://travis-ci.org[Travis CI] či jiném veřejném CI.
 Zadání::
   https://github.com/cvut/ghia/tree/tests[github.com/cvut/ghia @tests]
 
-== Úloha GHIA/bludiště (dokumentace): 9.12.2019 🌴
+== Úloha GHIA (dokumentace): 9.12.2019 🌴
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ nebo bludiště dokumentaci 
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ dokumentaci 
 pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
-jak funguje uvnitř, a to včetně doctestů, které poběží také na CI.
+jak funguje uvnitř, a to včetně doctestů.
 
 Zadání::
-  TBD
+  https://github.com/cvut/ghia/tree/docs[github.com/cvut/ghia @docs]
   
 == Úloha bludiště (GUI): 16.12.2019 🌴
 
