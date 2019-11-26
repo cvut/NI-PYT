@@ -112,7 +112,7 @@ rozhraní umožňující upravovat, prohlížet a řešit bludiště pomocí kni
 https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/edgemaze/tree/pyqt[github.com/cvut/edgemaze @pyqt]
   
 == Úloha GHIA (asyncio): 31.12.2019 🌴🎁🎇
 
