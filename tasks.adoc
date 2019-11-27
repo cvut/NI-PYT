@@ -105,7 +105,7 @@ jak funguje uvnitř, a to včetně doctestů.
 Zadání::
   https://github.com/cvut/ghia/tree/docs[github.com/cvut/ghia @docs]
   
-== Úloha bludiště (GUI): 16.12.2019 🌴
+== Úloha bludiště (GUI): 31.12.2019 🌴💣
 
 Vaším úkolem za 5 bodů je pro zrychlenou implementaci bludiště vytvořit grafické
 rozhraní umožňující upravovat, prohlížet a řešit bludiště pomocí knihovny
