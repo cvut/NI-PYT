@@ -155,7 +155,7 @@ Showmax, s.r.o.
 * mailto:jan.pipek@showmax.com[Jan Pipek]
 
 
-=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/...
+=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/... (zabráno)
 
 Zadání spočívá ve vytvoření služby,
 která bude mít na starost synchronizaci definic štítků mezi různými repozitáři
@@ -178,7 +178,7 @@ Možno implementovat jako webovou aplikaci nebo jako cron job běžící na něj
 
 Kontaktní osobou je Miro Hrončok.
 
-=== Lazy converter of YouTube playlists into podcasts
+=== Lazy converter of YouTube playlists into podcasts (taken)
 
 The LinuxDays conference has produced a lot of video recordings of many interesting presentations. It would be nice if there was a service turning those recordings into audio-only podcasts which could then allow listeners to download and listen to them without internet connection.
 
