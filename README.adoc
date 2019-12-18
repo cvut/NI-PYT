@@ -9,7 +9,7 @@ interně pro studenty FITu https://courses.fit.cvut.cz/MI-PYT/[na Course Pages]
 a https://gitlab.fit.cvut.cz/MI-PYT/MI-PYT/[na GitLabu],
 a pro všechny veřejně https://github.com/cvut/MI-PYT[na GitHubu].
 V repozitáři na GitHubu jsou pouze věci specifické pro předmět,
-výukové materiály vznikají v projektu http://naucse.python.cz/2018/mipyt-zima/[Nauč se Python],
+výukové materiály vznikají v projektu http://naucse.python.cz/2019/mipyt-zima/[Nauč se Python],
 taktéž dostupné na https://github.com/pyvec/naucse.python.cz[GitHubu].
 
 Kde není uvedeno jinak,
