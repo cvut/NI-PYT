@@ -198,3 +198,23 @@ A standalone application configured by a simple config file. The app should be p
 ==== Point of contact
 
 mailto:ondrej.caletka@cesnet.cz[Ondřej Caletka]
+
+
+
+=== MicroPythonator
+
+Design and implement an application that allows mass flashing and testing of ESP8266/ESP32 devices with MicroPython.
+The user provides an image with MicroPython and a script to run on the flashed devices.
+When a new device is plugged in, it gets immediately flashed and the script is run on the device.
+When the script exists cleanly or errors, signalize it on the device appropriately (for example via the builtin LED).
+
+ * use existing free software tools to flash individual devices
+ * asynchronously run the flashing in parallel
+ * provide an user interface for the tool (GUI, TUI or web UI)
+   * it lets the user select the image, the script and configure how success/failure is signaled
+   * it displays the list of ports and their status
+ * release as a well documented and tested free (open source) software
+
+==== Point of contact
+
+mailto:encukou@gmail.com[Petr Viktorin]
