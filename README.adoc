@@ -1,13 +1,13 @@
-= MI-PYT
+= NI-PYT (née MI-PYT)
 :note-caption: :information_source:
 
 Díváte se na materiály předmětu
-http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/04/87/12/p4871206.html[MI-PYT (Pokročilý Python)]
+http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/06/16/56/p6165606.html[NI-PYT (Pokročilý Python)]
 na http://fit.cvut.cz/[FIT ČVUT].
 Materiály jsou dostupné v dvojí podobě,
-interně pro studenty FITu https://courses.fit.cvut.cz/MI-PYT/[na Course Pages]
-a https://gitlab.fit.cvut.cz/MI-PYT/MI-PYT/[na GitLabu],
-a pro všechny veřejně https://github.com/cvut/MI-PYT[na GitHubu].
+interně pro studenty FITu https://courses.fit.cvut.cz/NI-PYT/[na Course Pages]
+a https://gitlab.fit.cvut.cz/NI-PYT/NI-PYT/[na GitLabu],
+a pro všechny veřejně https://github.com/cvut/NI-PYT[na GitHubu].
 V repozitáři na GitHubu jsou pouze věci specifické pro předmět,
 výukové materiály vznikají v projektu http://naucse.python.cz/2019/mipyt-zima/[Nauč se Python],
 taktéž dostupné na https://github.com/pyvec/naucse.python.cz[GitHubu].
@@ -16,12 +16,12 @@ Kde není uvedeno jinak,
 jsou materiály dostupné pod licencí
 http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International],
 kde autorem je Petr Viktorin, Miro Hrončok a Marek Suchánek (vyučující předmětu)
-a https://github.com/cvut/MI-PYT/graphs/contributors[další přispěvatelé].
+a https://github.com/cvut/NI-PYT/graphs/contributors[další přispěvatelé].
 Tento kurz vzniká pod záštitou firmy https://www.redhat.com/en/global/czech-republic[Red Hat Czech, s.r.o.]
 
 image:https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png[width=88,height=31]
 
-NOTE: http://naucse.python.cz/2019/mipyt-zima/[Materiály a harmonogram.]
+NOTE: http://naucse.python.cz/2020/nipyt-zima/[Materiály a harmonogram.]
 
 == Průběh cvičení
 
@@ -54,6 +54,6 @@ případně https://githowto.com/[GitHowTo].
 Podrobnosti k odevzdání zjistíte u zadání jednotlivých úloh.
 
 V případě dotazu k předmětu, který může být položen veřejně, neváhejte založit
-https://github.com/cvut/MI-PYT/issues[issue].
+https://github.com/cvut/NI-PYT/issues[issue].
 V případě dotazu k materiálům prosím zakládejte
 https://github.com/pyvec/naucse.python.cz/issues[issue v projektu naucse.python.cz].

@@ -1,11 +1,11 @@
 course:
-  code: MI-PYT
+  code: NI-PYT
+  altCodes: [ MI-PYT ]
   name: Pokročilý Python
-semester: B181
 language: cs
 repository:
-  webUrl: https://github.com/cvut/MI-PYT
-  openIssueUrl: https://github.com/cvut/MI-PYT/issues/new?title={srcPath}:%20
+  webUrl: https://github.com/cvut/NI-PYT
+  openIssueUrl: https://github.com/cvut/NI-PYT/issues/new?title={srcPath}:%20
 navigation:
   hiddenFiles:
     - README.*

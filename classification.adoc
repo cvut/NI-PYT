@@ -16,7 +16,7 @@ Třetí sloupeček určuje minimální počet bodů nutný k úspěšnému získ
 | *Celkem*                                 | 105            | 50
 |===
 
-NOTE: Váš aktuální počet bodů najdete v aplikaci https://grades.fit.cvut.cz/courses/MI-PYT/my-classification[Klasifikace].
+NOTE: Váš aktuální počet bodů najdete v aplikaci https://grades.fit.cvut.cz/courses/NI-PYT/my-classification[Klasifikace].
 
 
 == Záchranná úloha
