@@ -1,12 +1,12 @@
-= Úlohy (nejen na doma)
+= Úlohy
 :toc:
 :warning-caption: :warning:
 
 
 Součástí hodnocení jsou především úlohy.
 Uvítáme, pokud je budete řešit na cvičeních, po skončení výkladu.
-Rádi vám poradíme osobně.
-Co nestihnete na cvičeních, doděláte doma.
+Rádi vám poradíme přes video nebo sdílenou obrazovku.
+Co nestihnete na cvičeních, doděláte později.
 Rádi vám poradíme i v GitHub issue.
 
 Hotové úlohy odevzdáte jako gitový repozitář na https://github.com[GitHubu],
@@ -30,95 +30,95 @@ je u nich symbol 🌴 (termín prodloužen), nebo 💀 (termín zkrácen).
 Úlohy jsou seřazeny podle termínu odevzdání,
 takže některé dříve zadané úlohy mohu být v seznamu níže.
 
-== Úloha GHIA (CLI): 14.10.2019 🌴
+== Úloha committee (CLI): 12.10.2020 🌴
 
 Vaším úkolem za 5 bodů je vytvořit command line aplikaci pracující s GitHub API,
 pomocí knihoven http://docs.python-requests.org[requests] a
 http://click.pocoo.org[click].
 
-Aplikace slouží k přiřazování issues na GitHub podle jejich obsahu.
-Příklad: Když text issue obsahuje „network error“,
-přiřadí se uživateli `PepaNovak`, protože je expertem na sítě.
-_GHIA_ znamená _GitHub Issue Assigner_.
+Aplikace slouží ke kontrole commitů na GitHubu podle jejich obsahu.
+Příklad: Když commit message obsahuje „fuck this shit“,
+nastaví se status commitu na _failed_,
+protože message obsahuje zakázané slovo „this“.
 
 Zadání a testy::
-  https://github.com/cvut/ghia/tree/basic[github.com/cvut/ghia @basic]
+  TBD
 
-== Úloha GHIA (webová aplikace): 23.10.2019 🌴
+== Úloha committee (webová aplikace): 12.10.2020
 
-Vaším úkolem za 5 bodů je přidat do aplikace _GHIA_ webový server,
+Vaším úkolem za 5 bodů je přidat do aplikace _committee_ webový server,
 který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
 Zadání a testy::
-  https://github.com/cvut/ghia/tree/web[github.com/cvut/ghia @web]
+  TBD
 
-== Úloha Pandas: 28.10.2019
+== Úloha Pandas: 19.10.2020
 
 Vašim úkolem za 5 bodů je analyzovat dodaný dataset,
 odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
 
 Zadání::
-  xref:_tasks/pandas/index#[Úloha Pandas]
+  TBD
 
-== Úloha GHIA (balíček): 4.11.2019
+== Úloha committee (balíček): 2.11.2020
 
-Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _GHIA_
+Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _committee_
 balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
 
 Zadání a testy::
-  https://github.com/cvut/ghia/tree/modular[github.com/cvut/ghia @modular]
+  TBD
   
-== Úloha bludiště (NumPy): 11.11.2019
+== Úloha grid (NumPy): 9.11.2020
 
-Vaším úkolem za 5 bodů je implementovat dle zadání algoritmus řešení bludiště
+Vaším úkolem za 5 bodů je implementovat dle zadání algoritmus pracující na 2D mřížce
 pomocí knihovny http://www.numpy.org[NumPy].
 
 Zadání a testy::
-  https://github.com/cvut/edgemaze/tree/numpy[github.com/cvut/edgemaze @numpy]
+  TBD
 
-== Úloha bludiště (zrychlení): 25.11.2019
+== Úloha grid (zrychlení): 23.11.2020
 
-Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu řešení bludiště s využitím 
+Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu pracujícího na 2D mřížce s využitím 
 https://cython.readthedocs.io/[Cythonu] tak, aby dokázala 
-v rozumném čase (viz zadání) pracovat s většími bludišti.
+v rozumném čase (viz zadání) pracovat s většími mřížkami.
 
 Zadání a testy::
-  https://github.com/cvut/edgemaze/tree/cython[github.com/cvut/edgemaze @cython]
+  TBD
 
-== Úloha GHIA (testování): 2.12.2019 🌴
+== Úloha committee (testování): 30.11.2020 🌴
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ testy
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _committee_ testy
 s použitím frameworku https://docs.pytest.org/en/latest/[pytest] (a případně dalších knihoven), 
 umožnit spouštění testů pomocí `setup.py` a spouštět testy také na 
-https://travis-ci.org[Travis CI] či jiném veřejném CI.
+nějakém veřejném CI.
 
 Zadání::
-  https://github.com/cvut/ghia/tree/tests[github.com/cvut/ghia @tests]
+  TBD
 
-== Úloha GHIA (dokumentace): 9.12.2019 🌴
+== Úloha committee/grid (dokumentace): 7.12.2020 🌴
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _GHIA_ dokumentaci 
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _committee_ nebo 2D algoritmu dokumentaci 
 pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
-jak funguje uvnitř, a to včetně doctestů.
+jak funguje uvnitř, a to včetně doctestů, které poběží také na CI.
 
 Zadání::
-  https://github.com/cvut/ghia/tree/docs[github.com/cvut/ghia @docs]
+  TBD
   
-== Úloha bludiště (GUI): 31.12.2019 🌴💣
+== Úloha grid (GUI): 14.12.2020 🌴
 
-Vaším úkolem za 5 bodů je pro zrychlenou implementaci bludiště vytvořit grafické
-rozhraní umožňující upravovat, prohlížet a řešit bludiště pomocí knihovny
+Vaším úkolem za 5 bodů je pro zrychlenou implementaci 2D algoritmu vytvořit grafické
+rozhraní umožňující upravovat, prohlížet a řešit problémy pomocí knihovny
 https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
-  https://github.com/cvut/edgemaze/tree/pyqt[github.com/cvut/edgemaze @pyqt]
+  TBD
   
-== Úloha GHIA (asyncio): 31.12.2019 🌴🎁🎇
+== Úloha grid (asyncio): 31.12.2020 🌴🎁🎇
 
-Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci _GHIA_ o asynchronní
+Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci _committee_ o asynchronní
 komunikaci s GitHub API pomocí knihovny https://aiohttp.readthedocs.io[aiohttp]
 za účelem zrychlení práce, které se bude zapínat přepínačem `--async`.
 
 Zadání a testy::
-  https://github.com/cvut/ghia/tree/asyncio[github.com/cvut/ghia @asyncio]
+  TBD
