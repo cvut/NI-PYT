@@ -61,7 +61,7 @@ odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
 Zadání::
   TBD
 
-== Úloha committee (balíček): 2.11.2020
+== Úloha committee (balíček): 26.10.2020
 
 Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _committee_
 balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
