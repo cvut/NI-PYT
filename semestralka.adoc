@@ -39,23 +39,6 @@ Je tedy možné mít 35+ bodů ze semestru a 25-10 ze semestrálky a stále dost
 Následuje seznam témat, které si můžete po dohodě s námi zvolit, pokud nemáte téma vlastní. V žádném případě není vhodné na zde vypsaném tématu rovnou začít pracovat a doufat, že ho potom prostě jen odevzdáte. I téma z tohoto seznamu musí být odladěno a schváleno, témata uvedená zde jsou pouze rámcová.
 
 
-=== Synchronizace Sirius s Google Calendar
-
-Na FIT funguje API https://github.com/cvut/sirius[Sirius], které slouží jako zdroj dat pro aplikaci Fittable a poskytuje exporty rozvrhů ve formátu https://en.wikipedia.org/wiki/ICalendar[iCalendar] (ICS) pro kalendářní aplikace. Nevýhodou exportu ICS je, že kalendářní aplikace neumožňují kalendář modifikovat, případně pokud si uživatel soubor ICS importuje, ztratí možnost synchronizace.
-
-Google Calendar podporuje přístup přes CalDAV, ale slouží pouze jako CalDAV server, nikoliv klient. Synchronizace s Google Calendar by proto byla řešená samostatnou aplikací, která by importovala data do Google Calendar přes https://developers.google.com/google-apps/calendar/caldav/v2/guide[CalDAV rozhraní], nebo přes https://developers.google.com/google-apps/calendar/overview[Google Calendar API].
-
-Aplikace bude mít webové rozhraní, přes které uživatel:
-
-* autorizuje přístup k API Sirius přes OAuth server,
-* udělí přístup ke svému Google kalendáři a zvolí do kterého kalendáře se mají události importovat;
-* alternativně mu je zpřístupněn samostatný kalendář ve správě aplikace.
-
-Aplikace musí umožňovat autentizaci proti https://ict.fit.cvut.cz/~web/current/web/ict/GoogleApps/[Google Apps for Education] na FIT. Volitelně by aplikace mohla pracovat se _zdroji_ (https://support.google.com/a/answer/1686462?hl=en[Calendar Resources]), pro alokaci místnosti, ve které se událost koná.
-
-Kontaktní osoba: https://usermap.cvut.cz/profile/vlnasjan/[Jan Vlnas].
-
-
 === Synchronization between Google and Phabricator calendars
 
 
@@ -155,7 +138,7 @@ Showmax, s.r.o.
 * mailto:jan.pipek@showmax.com[Jan Pipek]
 
 
-=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/... (zabráno)
+=== Synchronizace definic štítků mezi repozitáři na různých GitHubech/Labech/...
 
 Zadání spočívá ve vytvoření služby,
 která bude mít na starost synchronizaci definic štítků mezi různými repozitáři
@@ -178,7 +161,7 @@ Možno implementovat jako webovou aplikaci nebo jako cron job běžící na něj
 
 Kontaktní osobou je Miro Hrončok.
 
-=== Lazy converter of YouTube playlists into podcasts (taken)
+=== Lazy converter of YouTube playlists into podcasts
 
 The LinuxDays conference has produced a lot of video recordings of many interesting presentations. It would be nice if there was a service turning those recordings into audio-only podcasts which could then allow listeners to download and listen to them without internet connection.
 
