@@ -25,6 +25,9 @@ NOTE: http://naucse.python.cz/2020/nipyt-zima/[Materiály a harmonogram.]
 
 == Průběh cvičení
 
+Cvičení probíhají vzhledem k vládním opatřením až do odvolání vzdáleně,
+v čase dle rozvrhu.
+
 Na cvičení se od nás na začátku vždy dozvíte nějaké informace o probíraném tématu,
 většinou doplněné o ukázky nad rámec textu v těchto materiálech.
 Na cvičeních vytvořené ukázky k textu vždy připojíme.
