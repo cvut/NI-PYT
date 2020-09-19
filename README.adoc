@@ -39,9 +39,7 @@ aby vám tz. neujel vlak.
 
 xref:tasks#[Úlohy] se odevzdávají výhradně jako gitové repozitáře.
 Preferujeme použití https://github.com/[GitHubu],
-kde jako studenti s e-mailovou adresou ``++@fit.cvut.cz++`` máte nárok na
-https://education.github.com/pack[Student Developer Pack]
-a tedy na neomezené množství privátních repozitářů.
+(všichni mají neomezené množství privátních repozitářů).
 V případě, že si velmi nepřejete používat GitHub,
 můžete využít místo toho například https://gitlab.fit.cvut.cz/[fakultní GitLab].
 Nezapomeňte do repozitářů pozvat jako spolupracovníky nás, tedy uživatele
