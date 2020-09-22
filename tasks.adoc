@@ -42,7 +42,7 @@ nastaví se status commitu na _failed_,
 protože message obsahuje zakázané slovo „this“.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/committee/tree/basic[github.com/cvut/committee @basic]
 
 == Úloha committee (webová aplikace): 12.10.2020
 
