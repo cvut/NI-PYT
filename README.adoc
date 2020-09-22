@@ -1,5 +1,6 @@
 = NI-PYT (née MI-PYT)
 :note-caption: :information_source:
+:important-caption: :microbe:
 
 Díváte se na materiály předmětu
 http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/06/16/56/p6165606.html[NI-PYT (Pokročilý Python)]
@@ -25,8 +26,11 @@ NOTE: http://naucse.python.cz/2020/nipyt-zima/[Materiály a harmonogram.]
 
 == Průběh cvičení
 
-Cvičení probíhají vzhledem k vládním opatřením až do odvolání vzdáleně,
+IMPORTANT: Cvičení probíhají vzhledem k vládním opatřením až do odvolání vzdáleně,
 v čase dle rozvrhu.
+Cičení se konají v aplikaci **Teams**.
+Pokud jste si předmět zapsali nedávno a v aplikaci nejste součástí příslušného teamu,
+můžeme vás manuálně přidat (ale musíte se nám ozvat např. e-mailem).
 
 Na cvičení se od nás na začátku vždy dozvíte nějaké informace o probíraném tématu,
 většinou doplněné o ukázky nad rámec textu v těchto materiálech.
