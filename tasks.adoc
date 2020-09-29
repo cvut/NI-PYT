@@ -51,7 +51,7 @@ který bude reagovat na události na GitHubu automaticky.
 Použijete webový framework http://flask.pocoo.org/[Flask].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/committee/tree/web[github.com/cvut/committee @web]
 
 == Úloha Pandas: 19.10.2020
 
