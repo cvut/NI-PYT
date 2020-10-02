@@ -74,7 +74,7 @@ světě? Odpovídejte v Kč měsíčně.
 ČR/SR uvedli, ukáže průměrnou měsíční mzdu lidí z ČR/SR, kteří tento
 jazyk používají* (podle dat dostupných z dotazníku).
 
-* Používání jazyka znamená, že v něm daný člověk poslední rok intenzivně
++*+ Používání jazyka znamená, že v něm daný člověk poslední rok intenzivně
 pracoval.
 
 Zkratka „ČR/SR” znamená Česko a Slovensko dohromady; není potřeba udávat
