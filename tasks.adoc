@@ -59,7 +59,7 @@ Vašim úkolem za 5 bodů je analyzovat dodaný dataset,
 odpovědět na otázky a vyřešit úkoly ve frameworku Pandas.
 
 Zadání::
-  https://github.com/cvut/NI-PYT/tree/master/_tasks/pandas.md[https://github.com/cvut/NI-PYT/tree/master/_tasks/pandas.md]
+  xref:_tasks/pandas#[Úloha Pandas]
 
 == Úloha committee (balíček): 26.10.2020
 
