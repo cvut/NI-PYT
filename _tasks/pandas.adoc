@@ -82,6 +82,7 @@ výsledek pro každou z těchto zemí zvlášť.
 
 Použijte pouze informace z dotazníku, tedy např. kurzy měn nehledejte
 jinde na internetu.
+Z dat v dotazníku lze vyčíst výplatu v amerických dolarech i spočítat kurz české koruny.
 
 === Referenční řešení
 
