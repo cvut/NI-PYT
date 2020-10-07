@@ -1,0 +1,90 @@
+== Úloha Pandas
+
+Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže.
+
+Řešení bude zpracováno jako *Jupyter Notebook*, ve kterém bude patrné,
+která část kódu odpovídá na kterou otázku. Alternativně je možné řešení
+odevzdat jako skript v jazyce Python, který otázky a odpovědi pak
+vypisuje na standardní výstup např. tímto stylem:
+
+....
+Počet památných stromů v Brně:
+44
+
+Celková délka deseti nejdelších řek (km):
+56289
+....
+
+Řešení odevzdejte standardně jako gitový repozitář. V případě odevzdání
+přes GitHub (což preferujeme) *dejte přístup* kromě uživatelů
+https://github.com/hroncok[hroncok] a
+https://github.com/MarekSuchanek[MarekSuchanek] i Petru Viktorinovi
+(uživatelské jméno https://github.com/encukou[encukou]).
+
+K řešení použijte data z programátorského dotazníku
+https://insights.stackoverflow.com/survey/[Stack Overflow Annual
+Developer Survey] roku 2020. Soubory se vstupními daty uložte do
+adresáře `+data+`, tj. jako `+data/survey_results_public.csv+`,
+`+data/survey_results_schema.csv+` a `+data/README_2020.txt+`. Tyto
+soubory není třeba přidávat do repozitáře; pokud se rozhodnete je
+nepřidat, vhodně nastavte `+.gitignore+` a v `+README+` uveďte kde se
+dají získat a že jsou pod licencí Open Database License (ODbL).
+
+=== Obecná pravidla
+
+Repozitář musí obsahovat všechny soubory potřebné k běhu skriptu či
+Notebooku, kromě vstupních dat (viz výše) a knihoven. Můžete
+předpokládat, že skript/notebook bude spouštěn z kořenového adresáře
+repozitáře v prostředí s nainstalovanými knihovnami `+notebook+`,
+`+pandas+`, `+matplotlib+` a jejich závislostmi.
+
+Kód musí názorným způsobem vypočítat výsledek ze zadaných dat a nesmí
+způsobit neošetřenou výjimku. V případě Notebooku nesmí neošetřenou
+výjimku způsobit žádná buňka.
+
+Váš kód *nesmí používat cykly* na procházení jednotlivých záznamů.
+Použijte funkcionalitu Pandas. Na procházení „sloupců“ cyklus použít
+můžete. („Sloupce“ tu definujeme tak, že počet sloupců by nerostl bez
+omezení kdyby na dotazník odpovádalo více lidí.)
+
+U úloh, kde je výstupem graf, musí být *graf součást výstupu* Notebooku.
+Odevzdáváte-li skript, tento skript musí graf uložit do souboru a
+odkázat na něj ze std. výstupu.
+
+Případné grafy musí odpovídat zobrazovaným hodnotám, např. body by
+neměly být propojeny čárou, pokud interpolace mezi nimi nedává smysl.
+
+Kód musí korektně zpracovávat neznámé hodnoty (např. člověk s neznámým
+věkem nemá 0 let).
+
+Nezapomeňte uvést *jednotky* (např. km, %, Kč) v případech, kdy nestačí
+samotné číslo. (Viz příklad odpovědí výše.)
+
+=== Otázky a úkoly
+
+. Kolik lidí celkem vyplnilo dotazník?
+. Kolik z nich bylo z ČR/SR?
+. Jaká je, podle dotazníku, průměrná mzda programátorů v ČR/SR? Ve
+světě? Odpovídejte v Kč měsíčně.
+. Kolik lidí z ČR/SR uvedlo, že používá* Python?
+. Kolik z nich chce v používání* Pythonu pokračovat?
+. Kolik lidí Python nepoužívá*, ale chce ho začít používat*?
+. Předcházející tři otázky odpovězte také pro Javu místo Pythonu.
+. Vykreslete graf, který pro každý programovací jazyk, který lidi z
+ČR/SR uvedli, ukáže průměrnou měsíční mzdu lidí z ČR/SR, kteří tento
+jazyk používají* (podle dat dostupných z dotazníku).
+
++*+ Používání jazyka znamená, že v něm daný člověk poslední rok intenzivně
+pracoval.
+
+Zkratka „ČR/SR” znamená Česko a Slovensko dohromady; není potřeba udávat
+výsledek pro každou z těchto zemí zvlášť.
+
+Použijte pouze informace z dotazníku, tedy např. kurzy měn nehledejte
+jinde na internetu.
+Z dat v dotazníku lze vyčíst výplatu v amerických dolarech i spočítat kurz české koruny.
+
+=== Referenční řešení
+
+Naše refereční řešení bude k dispozici po termínu. (Není-li, prosím,
+stěžujte si nám.)
