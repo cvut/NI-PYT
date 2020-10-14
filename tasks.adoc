@@ -67,7 +67,7 @@ Vaším úkolem za 5 bodů je udělat z vašeho dosavadního projektu _committee
 balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/committee/tree/modular[github.com/cvut/committee @modular]
   
 == Úloha grid (NumPy): 9.11.2020
 
