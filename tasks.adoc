@@ -69,15 +69,15 @@ balíček instalovatelný přes pip a nahrát jej na testovací PyPI.
 Zadání a testy::
   https://github.com/cvut/committee/tree/modular[github.com/cvut/committee @modular]
   
-== Úloha grid (NumPy): 9.11.2020
+== Úloha spacegrid (NumPy): 9.11.2020
 
-Vaším úkolem za 5 bodů je implementovat dle zadání algoritmus pracující na 2D mřížce
+Vaším úkolem za 5 bodů je implementovat dle zadání hledání cest na 2D mřížce
 pomocí knihovny http://www.numpy.org[NumPy].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/spacegrid/tree/numpy[github.com/cvut/spacegrid @numpy]
 
-== Úloha grid (zrychlení): 23.11.2020
+== Úloha spacegrid (zrychlení): 23.11.2020
 
 Vaším úkolem za 5 bodů je zrychlit implementaci algoritmu pracujícího na 2D mřížce s využitím 
 https://cython.readthedocs.io/[Cythonu] tak, aby dokázala 
@@ -96,25 +96,25 @@ nějakém veřejném CI.
 Zadání::
   TBD
 
-== Úloha committee/grid (dokumentace): 7.12.2020 🌴
+== Úloha committee/spacegrid (dokumentace): 7.12.2020 🌴
 
-Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _committee_ nebo 2D algoritmu dokumentaci 
+Vaším úkolem za 5 bodů je napsat k vašemu dosavadnímu projektu _committee_ nebo _spacegrid_ dokumentaci
 pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikací pracovat i
 jak funguje uvnitř, a to včetně doctestů, které poběží také na CI.
 
 Zadání::
   TBD
   
-== Úloha grid (GUI): 14.12.2020 🌴
+== Úloha spacegrid (GUI): 14.12.2020 🌴
 
-Vaším úkolem za 5 bodů je pro zrychlenou implementaci 2D algoritmu vytvořit grafické
-rozhraní umožňující upravovat, prohlížet a řešit problémy pomocí knihovny
+Vaším úkolem za 5 bodů je pro 2D vesmírnou mřížku vytvořit grafické
+rozhraní umožňující upravovat a prohlížet mřížku, a vizualizovat cesty pomocí knihovny
 https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
   TBD
   
-== Úloha grid (asyncio): 31.12.2020 🌴🎁🎇
+== Úloha committee (asyncio): 31.12.2020 🌴🎁🎇
 
 Vaším úkolem za 5 bodů je rozšířit existující CLI aplikaci _committee_ o asynchronní
 komunikaci s GitHub API pomocí knihovny https://aiohttp.readthedocs.io[aiohttp]
