@@ -94,7 +94,7 @@ umožnit spouštění testů pomocí `setup.py` a spouštět testy také na
 nějakém veřejném CI.
 
 Zadání::
-  TBD
+  https://github.com/cvut/committee/tree/tests[github.com/cvut/committee @tests]
 
 == Úloha committee/spacegrid (dokumentace): 7.12.2020 🌴
 
