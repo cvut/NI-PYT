@@ -84,7 +84,7 @@ https://cython.readthedocs.io/[Cythonu] tak, aby dokázala
 v rozumném čase (viz zadání) pracovat s většími mřížkami.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/spacegrid/tree/cython[github.com/cvut/spacegrid @cython]
 
 == Úloha committee (testování): 30.11.2020 🌴
 
