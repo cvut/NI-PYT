@@ -103,7 +103,7 @@ pomocí http://www.sphinx-doc.org[Sphinx], která bude popisovat, jak s aplikac�
 jak funguje uvnitř, a to včetně doctestů, které poběží také na CI.
 
 Zadání::
-  TBD
+  https://github.com/cvut/committee/tree/docs[github.com/cvut/committee @docs]
   
 == Úloha spacegrid (GUI): 14.12.2020 🌴
 
