@@ -112,7 +112,7 @@ rozhraní umožňující upravovat a prohlížet mřížku, a vizualizovat cesty
 https://www.riverbankcomputing.com/software/pyqt/intro[PyQt5].
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/spacegrid/tree/pyqt[github.com/cvut/spacegrid @pyqt]
   
 == Úloha committee (asyncio): 31.12.2020 🌴🎁🎇
 
