@@ -121,4 +121,4 @@ komunikaci s GitHub API pomocí knihovny https://aiohttp.readthedocs.io[aiohttp]
 za účelem zrychlení práce, které se bude zapínat přepínačem `--async`.
 
 Zadání a testy::
-  TBD
+  https://github.com/cvut/committee/tree/async[github.com/cvut/committee @async]
